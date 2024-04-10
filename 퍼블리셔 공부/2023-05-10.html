@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/2023-05-10.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./js/jquery-3.6.4.js"></script>
+
+    <!-- 내려가는슬라이드 -->
+    <div class="slide">
+        <ul class="img-box">
+            <li class="img1"></li>
+            <li class="img2"></li>
+            <li class="img3"></li>
+        </ul>
+        <h1>hello</h1>
+    </div>
+    <button onclick="slidePlay()">위로올라가는 실행</button>
+    <button onclick="slidePlayDown()">아래로내려가는 실행</button>
+    <script>
+
+        function slidePlay(){
+            $('.slide ul').animate({marginTop:'-300px'},function(){
+                $('.slide li').first().appendTo('.slide ul');
+                $('.slide ul').css('margin-top','0px');
+            });
+        };
+
+        function slidePlayDown(){
+            $('.slide li').last().prependTo('.slide ul');
+            $('.slide ul').css('margin-top','-300px');
+            $('.slide ul').animate({marginTop:'0px'});
+        };
+
+    </script>
+
+    <br>
+
+    <!-- 가로슬라이드 -->
+    <div class="myslide">
+        <ul>
+            <li class="redbox">slide1</li>
+            <li class="bluebox">slide2</li>
+            <li class="pinkbox">slide3</li>
+        </ul>
+    </div>
+    <button onclick="goleft()">왼쪽으로움직이기(다음슬라이드)</button>
+    <button onclick="goright()">오른쪽으로움직이기(이전슬라이드)</button>
+    <script>
+        function goleft(){
+            $('.myslide ul').animate({'marginLeft':'-400px'},function(){
+                $('.myslide li').first().appendTo('.myslide ul');
+                $('.myslide ul').css('margin-left','0px');
+            });
+        };
+
+
+        function goright(){
+            $('.myslide li').last().prependTo('.myslide ul');
+            $('.myslide ul').css('margin-left','-400px');
+            $('.myslide ul').animate({marginLeft:'0px'});
+        }
+    </script>
+
+    
+
+</body>
+</html>

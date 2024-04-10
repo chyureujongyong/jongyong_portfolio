@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+.service_box{
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid black;
+    max-width: 100%;
+}
+.service_box>h1{
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 3rem;
+}
+.service_option{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+}
+.service_option>div{
+    width: 32%;
+    padding: 10px;
+    border: 5px solid rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.option_box>i{
+    padding: 20px 10px 10px 5px;
+    font-size: 30px;
+    color: darkblue;
+}
+.option_box>div{
+    padding: 15px 0 10px 5px;
+}
+.option_box>div>p{
+    font-size: 20px;
+}
+.option_box:hover{
+    box-shadow: 3px 3px 5px rgb(0,255,255);
+  
+}
+@media(max-width:800px){
+    .service_option>div{
+        width: 49%;
+    }
+}
+@media(max-width:500px){
+    .service_option>div{
+        width: 99%;
+    }
+}
+
+
+/* ---------footer(하단부분)---------------------------------- */
+
+
+.up-box{
+    background-color: green;
+    padding: 40px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+.up-box>div{
+    display: flex;
+    flex-direction: column;
+}
+.up-box h3{
+    font-size: 2rem;
+}
+.up1{
+    margin-top: 20px;
+    display: flex;
+}
+.up1 i{
+    color: greenyellow;
+}
+.up1 p{
+    margin-left: 10px;
+}
+.up2-1{
+    margin-top: 20px;
+    color: greenyellow;
+}
+.up2-2{
+    margin-top: 20px;
+    color: whitesmoke;
+}
+.down-box{
+    background-color: black;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    font-size: 1.1rem;
+}
+.down-box i{
+    margin-left: 3px;
+    margin-right: 3px;
+}

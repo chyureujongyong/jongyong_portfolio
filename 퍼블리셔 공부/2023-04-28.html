@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/2023-04-28.css">
+    <title>Document</title>
+</head>
+<body>
+   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.4.js"></script>
+    <section>
+        <div>
+            <input type="text" id="mycontents">
+            <button>선택</button>
+        </div>
+        <div class="circle-list">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+        </div>
+    </section>
+    <script>
+        $('button').click(function(){
+            var mycontents = $('#contents').val();
+            $('.circle-list').append('<div>'+mycontents+'</div>');
+        });
+
+    </script>
+
+    <hr>
+
+    <ul id="box">
+        <li>자동차</li>
+        <li>자전거</li>
+        <li>비행기</li>
+    </ul>
+    <p id="addbtn">뒤에추가하기</p>
+    <p id="addbtn2">앞에추가하기</p>
+    <script>
+        $('#addbtn').click(function(){
+            // $('#box').append('<li>배</li>');
+
+            //위에꺼랑 똑같음 ( 이거를 이거한테 넣겠다!!)
+            $('<li>배</li>').appendTo('#box');
+        });
+
+        $('#addbtn2').click(function(){
+            // $('#box').prepend('<li>킥보드</li>');
+
+            //위에꺼랑 똑같음 ( 이거를 이거한테 넣겠다!!)
+            $('<li>킥보드</li>').prependTo('#box');
+        });
+    </script>
+
+    <hr>
+
+    <input type="checkbox" name="trip" value="부산">부산<br>
+    <input type="checkbox" name="trip" value="강릉">강릉<br>
+    <input type="checkbox" name="trip" value="통영">통영<br>
+    <input type="checkbox" name="trip" value="속초">속초<br>
+    <input type="checkbox" name="trip" value="목포">목포<br>
+    <input type="checkbox" name="trip" value="여수">여수<br>
+    <button id="tripbtn">여행지확인</button>
+    <script>
+        $('#tripbtn').click(function(){
+            // 인풋에있는 네임이 트립인걸 체크되있는친구를 잡을떄
+            // var mytrip = $('input[name="trip"]:checked').val();
+            // console.log(mytrip);
+            // 근데 이렇게하면 하나만나온다 (그래서 반복문의 형태로 적어줘야된다!!)
+            
+            // 요롷게 적어줘야된다 each(반복문)(여러개를 받아올떄!!!)
+            $('input[name="trip"]:checked').each(function(){
+                console.log( $(this).val() );
+                            //  ㄴ본인의  ㄴ벨류값
+            });
+        });
+    </script>
+
+    <hr>
+
+    <input type="radio" name="age" value="10대입니다">10대<br>
+    <input type="radio" name="age" value="20대입니다">20대<br>
+    <input type="radio" name="age" value="30대입니다">30대<br>
+    <input type="radio" name="age" value="40대입니다">40대<br>
+    <input type="radio" name="age" value="50대입니다">50대<br>
+    <button id="agebtn">연령대확인</button>
+    <script>
+        $('#agebtn').click(function(){
+            var myage = $('input[name="age"]:checked').val();
+            alert(myage);
+
+        });
+    </script>
+
+    <hr>
+
+    원하시는 컬러를 고르세요!
+    <input type="color" id="mycolor">
+    <script>
+        // mycolor.onchange = function(){
+        //     alert('aa');
+        // };
+
+        $('#mycolor').change(function(){
+            // alert( $('#mycolor').val() );
+            var bgcolor = $(this).val();
+            $('body').css('background-color',bgcolor);
+        });
+    </script>
+
+    <hr>
+
+    <input type="date" id="mydate">
+    <script>
+        $('#mydate').change(function(){
+            var date1 = $(this).val();
+            alert('당신의 기념일은 '+date1+'입니다');
+        });
+    </script>
+
+    <hr>
+
+    <input type="file" id="myfile">
+    <script>
+        $('#myfile').change(function(){
+            console.log( $(this).val() );
+        });
+
+    </script>
+
+    <hr>
+
+    <input type="week" id="myweek">
+    <script>
+        myweek.onchange=function(){
+            console.log( $('#myweek').val() );
+        };
+    </script>
+
+    <hr>
+
+    <input type="range" id="myrange" max="30000" step="10000">
+    <span></span>
+    <script>
+        myrange.onchange=function(){
+            $('span').html( $('#myrange').val() );
+        };
+    </script>
+
+
+
+</body>
+</html>

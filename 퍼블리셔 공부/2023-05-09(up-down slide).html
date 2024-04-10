@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/2023-05-09.css">
+    <title>Document</title>
+    <style>
+        .slide-window{
+            width: 600px;
+            height: 250px;
+            border: 10px solid black;
+            overflow: hidden;
+        }
+        [class^='slide-item']{
+            width: 600px;
+            height: 250px;
+        }
+        .slide-item1{
+            background-color: skyblue;
+        }
+        .slide-item2{
+            background-color: salmon;
+        }
+        .slide-item3{
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <script src="./js/jquery-3.6.4.js"></script>
+
+     <!--<div class="p_box">
+        <ol>
+            <li id="p1">안녕하세요<br>
+                저는 <span>퍼블리셔 홍길동</span>입니다
+            </li>
+            <li id="p1">열심히 만든<br>
+                저의 <span>포트폴리오</span>를 소개합니다
+            </li>
+            <li id="p1">배우는 자세로<br> 
+                항상 열심히하겠습니다
+            </li>
+        </ol>
+    </div>
+    <script>
+        $('#p1').eq(0).show();
+
+        setInterval(function(){
+            $('#p1').eq(0).fadeOut(1000).next().fadeIn(1000);
+            $('#p1').eq(0).appendTo('.p_box');
+        },2000);
+    </script> -->
+
+    <h1>up-down slide</h1>
+    <div class="slide-window">
+        <div class="slide-wrap">
+            <div class="slide-item1"></div>
+            <div class="slide-item2"></div>
+            <div class="slide-item3"></div>
+        </div>
+    </div>
+    <button style="font-size: 50px;margin-top: 20px;", id="btn">슬라이드 움직이기</button>
+    <script>
+        btn.onclick=function(){
+            $('.slide-wrap').animate({marginTop:'-250px'},2000,function(){
+                //$('.slide-wrap>div:first-child')
+                $('.slide-wrap>div').eq(0).appendTo('.slide-wrap');
+                $('.slide-wrap').css('margin-top','0px');
+
+                
+            });
+        };
+    </script>
+
+    <div class="img-window">
+        <ul class="img-box">
+            <li class="img1"></li>
+            <li class="img2"></li>
+            <li class="img3"></li>
+        </ul>
+        <p class="img-text">hello</p>
+    </div>
+    <button style="margin-top: 20px;font-size: 30px;" id= "imgbtn">이미지버튼</button>
+    <script>
+
+        //버튼눌렀을떄 올라가는슬라이드
+        // imgbtn.onclick=function(){
+        //     $('.img-box').animate({marginTop:'-300px'},1000,function(){
+        //         $('.img-box>li').eq(0).appendTo('.img-box');
+        //         $('.img-box').css('marginTop','0px');
+        //     });
+        // };
+
+        //자동으로 올라가는슬라이드
+        setInterval(slidePlay,3000);
+        function slidePlay(){
+            $('.img-window ul').animate({marginTop:'-300px'},function(){
+                $('.img-window li').eq(0).appendTo('.img-window ul');
+                $('.img-window ul').css('margin-top','0px');
+            });
+            
+        };
+
+    </script>
+
+
+</body>
+</html>

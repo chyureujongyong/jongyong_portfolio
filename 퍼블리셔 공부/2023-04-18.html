@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1,.box2,.box3{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: orangered;
+        }
+        .boxlist{
+            display: flex;
+        }
+        .boxlist>div{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            margin-left: 10px;
+            color: white;
+            font-size: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>강릉</li>
+        <li>서울</li>
+        <li>부산</li>
+        <li>강릉</li>
+        <li>서울</li>
+        <li>부산</li>
+        <li>강릉</li>
+        <li>서울</li>
+        <li>부산</li>
+        <li>강릉</li>
+        <li>서울</li>
+        <li>부산</li>
+        <li>강릉</li>
+        <li>서울</li>
+        <li>부산</li>
+        <li>강릉</li>
+        <li>서울</li>
+        <li>부산</li>
+    </ol>
+    <script>
+        var place = document.getElementsByTagName('li');
+        // place[0].style.color='blue';
+        // place[1].style.color='blue';
+        // place[2].style.color='blue';
+
+        for(var i=0;i<place.length;i++){
+            place[i].style.color='blue';
+        };
+
+    </script>
+
+    <div>
+        <p class="txt">hello</p>
+        <h1 class="txt">happy</h1>
+        <div>hi</div>
+        <p>hello</p>
+        <h1>happy</h1>
+        <div class="txt">hi</div>
+    </div>
+    <script>
+        var mytxt = document.getElementsByClassName('txt');
+        console.log(mytxt);
+
+        var color = prompt('무슨 색을 좋아하세요?');
+        for(var i=0;i<mytxt.length;i++){
+            mytxt[i].style.color= color;
+        }
+    </script>
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <script>
+        var color2 = confirm('색을 변경할까요?');
+        
+        if(color2){
+            var boxnumber = prompt('몇번쨰 박스를 변경할까요?');
+            document.getElementsByClassName('box'+boxnumber)[0].style.backgroundColor = 'green';
+
+        }
+        else{
+        }
+    </script>
+
+    <section>
+        <h2>hello</h2>
+        <h2 class="happy">오늘의 웹수업</h1>
+        <ul>
+            <li id="hh">html</li>
+            <li class="happy">css</li>
+            <li>js</li>
+        </ul>
+        <p class="happy">우리는 js를 배우는 중입니다</p>
+        <h2>테스트 h2입니다</h2>
+    </section>
+    <script>
+        // 쿼리셀레터는 첫번째것밖에 잡을수없다.
+        document.querySelector('h2').style.color = 'gold';
+        document.querySelector('.happy').style.backgroundColor='skyblue';
+        document.querySelector('#hh').style.backgroundColor='yellow';
+
+        // 모두잡겠다. 배열로 잡아오는거임!@!
+        document.querySelectorAll('.happy')[1].style.backgroundColor='gray';
+    </script>
+
+    <hr>
+
+    <div class="boxlist">
+        <div class="mybox1"></div>
+        <div class="mybox2"></div>
+        <div class="mybox3"></div>
+        <div class="mybox4"></div>
+        <div class="mybox5"></div>
+    </div>
+    <script>
+        // var fruit = prompt('좋아하는 과일을 입력해주세요');
+        // var boxnum = prompt('몇번쨰 박스에 넣을까요?');
+        
+        // // 안에 글자입력
+        // document.querySelector('.mybox'+boxnum).innerHTML=fruit;
+
+        // //배경 변경
+        // document.querySelector('.mybox'.boxnum).style.backgroundColor='red';
+
+        var myboxlist = document.querySelector('.boxlist');
+
+        // 이친구의 자식요소 가져오는방법!!
+        // var myboxlist_kids = myboxlist.childNodes;
+        var myboxlist_kids = myboxlist.children;
+        console.log(myboxlist_kids);
+
+        var myboxlist_parents = myboxlist.parentNode;
+        console.log(myboxlist_parents);
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>

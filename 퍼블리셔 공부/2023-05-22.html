@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bottom_banner{
+            width: 100%;
+            height: 50px;
+            background-color: orangered;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            text-align: center;
+            line-height: 50px;
+            font-size: 2rem;
+            
+            animation: itemup 1s;
+            display: none;
+        }
+        @keyframes itemup{
+            0%{transform: translateY(100%);}
+        }
+        #topbutton{
+            position: fixed;
+            bottom: 5px;
+            right: 5px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: orange;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <!-- window객체 -->
+    <script>
+        console.log(window.innerWidth);
+        document.write('화면의 너비는 '+window.innerWidth+'입니다<br>');
+        document.write('화면의 높이는 '+window.innerHeight+'입니다<br>');
+        document.write('창 너비는 '+window.outerWidth+'입니다<br>');
+        document.write('창 높이는 '+window.outerHeight+'입니다<br>');
+        document.write('브라우저 위쪽 면과 모니터 위쪽 끝 사이는 '+window.screenTop+'입니다<br>');
+        document.write('브라우저 위쪽 면과 모니터 위쪽 끝 사이는 '+window.screenLeft+'입니다<br>');
+        document.write('현재 페이지의 Y옵셋값'+window.pageYOffset+'입니다<br>');
+
+        document.onscroll = function(){
+            console.log(window.pageYOffset);
+        }
+    </script>
+    <p style="font: 50px;">
+    [서울=뉴시스]권안나 기자 = 샐러드를 주식으로 먹는 인구가 늘고 있다. 최근 강남, 여의도 등 직장인들이 즐비한 동네에서는 고개만 돌리면 샐러드 점포 2~3개가 눈에 들어오는 건 특별한 일도 아니다. 수많은 샐러드 가게가 생겨나고 있지만 167억원(시리즈B)의 대규모 투자를 받고, 1700평의 공장을 보유한 스타트업은 스윗밸런스 뿐이다.
+    "저흰 샐러드를 돈주고 사먹는 것을 이해하지 못했던 사람들"이라는 두 남자가 '샐러드계의 코스맥스'를 표방하기까지, 시장의 가능성과 문제점에 대한 끊임없는 고찰이 없었다면 불가능했을 일이다. 반복된 실패에도 좌절하지 않고 분석과 보완, 재도전을 반복하며 '업사이드(성장)'를 고민해왔던 스윗밸런스의 스토리를 들어봤다.
+    이운성(33) 스윗밸런스 대표는 최근 뉴시스와의 인터뷰에서 "처음 창업할 때 감당할 수 있는 실패를 해야한다. 그래야 다시 할 수 있다"며 "지금 생각하면 아찔한데, 무모했던 일들이 많았다. 리스크가 생길 지점들을 잘 챙겨서 관리하는 것이 중요하다"고 강조했다.
+    처음 이 대표와 장지만(36) 공동대표가 샐러드 사업을 접한 건 서울대학교 재학 중 창업동아리에서 실시한 '10만원 프로젝트'에서였다. 초기 자금 10만원으로 더 많은 돈을 벌어오는 팀에게 수상하는 대회였는데, 당시 무용을 전공하며 식단 관리를 하던 이 대표의 아내가 교내 샐러드 판매를 제안했다.
+    이들은 샐러드를 만들어 이른 아침부터 점심시간까지 지하철, 버스정류소, 교내 등지로 장소를 옮겨가며 판매에 나섰다. 처음에는 별다른 성과가 없었지만, 점심 시간 근처에 자리잡은 자하연 호수 주변에서는 달랐다. 점심 시간이 가까워오자 사람들의 발걸음 느려지면서 시선이 옮겨오기 시작했고, 50개의 샐러드가 팔려나갔다. 결국 그 자리에서 2주간 샐러드를 판매한 결과 매출 180만원, 수익 80만원을 얻으며 시장의 가능성을 엿봤다.
+    이후 본격 창업에 뛰어들었을 때는 투자유치를 위해 전략적으로 정보기술(IT) 사업에 도전했지만 실패를 맛봤고, 다시 돌아온 곳이 '샐러드'였다. 시작은 점포 사업이었다. 2015년 점포를 오픈할 당시 농산물 전처리 시장은 10년 사이 2배가 커졌고, 미국과 유럽의 샐러드 시장은 연 30%씩 급격한 성장에 대한 기대가 있었다.
+    사업을 시작하면 무조건 대박날 줄 알았지만 결과는 '쪽박'이었다. 두 공동대표와 이 대표 아내까지 3명이서 일했지만 첫날 매출은 7만원에 불과했던 것이다. 이후 메뉴와 플레이팅, 메뉴판 등의 개선 작업을 여러차례 거치면서 한 점포에서 월 매출 5000만~6000만원, 순 수익 1000만~2000만원을 낼 정도로 성장했다.
+    하지만 사업을 이어가며 깨달은 건, '야채를 썰어 토핑을 올리고 먹으면 되는' 단순해 보이는 샐러드가 사업적인 관점에서는 그리 까다로울 수 없다는 점이었다. 원재료 가격의 변동성이 커서 원가구조가 쉽게 무너졌고, 인적 자원을 무제한 투입해야 한다는 점 등이 대표적이었다.
+    특히 점포 비즈니스를 뛰어넘는 성장을 위해 '샐러드 자판기'에 도전하면서 이 같은 어려움을 여실히 느꼈다. 당시 자판기 운영법상 제조시설에서 만들어진 제품만 유통이 가능했고, 가격 경쟁력을 잃으면서 고객들이 발길을 돌린 것이다.
+    이때 스윗밸런스는 오히려 샐러드 제조업으로 눈을 돌렸다. 아직 이 분야에서 잘하는 업체가 없다는 생각이 들었기 때문이다. 샐러드 사업이 가진 고질적인 문제를 케파(생산능력)를 늘리는 방법으로 해결한다면 승산이 있다고 봤다.
+    당장의 물량을 확보하기 위한 전략으로는 '가맹사업'을 택했다. 동시에 65평 남짓되는 공장을 짓고, 그 속에 최대 50여명까지 투입해가며 열악한 환경속에서 샐러드 전처리와 유통에 대한 노하우를 익혀갔다.
+    높이는 방식으로 폐기율을 거의 없앴다"며 "처음 공장 이전 이후 폐기율은 30~40%였지만 변동성이 높은 문제들을 모든 이해관계 대상과 협의와 조율을 통해 만들어 나갔고 2년 정도 쌓이니 운영 노하우가 생겼다"고 설명했다.
+    [서울=뉴시스]권안나 기자 = 샐러드를 주식으로 먹는 인구가 늘고 있다. 최근 강남, 여의도 등 직장인들이 즐비한 동네에서는 고개만 돌리면 샐러드 점포 2~3개가 눈에 들어오는 건 특별한 일도 아니다. 수많은 샐러드 가게가 생겨나고 있지만 167억원(시리즈B)의 대규모 투자를 받고, 1700평의 공장을 보유한 스타트업은 스윗밸런스 뿐이다.
+    "저흰 샐러드를 돈주고 사먹는 것을 이해하지 못했던 사람들"이라는 두 남자가 '샐러드계의 코스맥스'를 표방하기까지, 시장의 가능성과 문제점에 대한 끊임없는 고찰이 없었다면 불가능했을 일이다. 반복된 실패에도 좌절하지 않고 분석과 보완, 재도전을 반복하며 '업사이드(성장)'를 고민해왔던 스윗밸런스의 스토리를 들어봤다.
+    이운성(33) 스윗밸런스 대표는 최근 뉴시스와의 인터뷰에서 "처음 창업할 때 감당할 수 있는 실패를 해야한다. 그래야 다시 할 수 있다"며 "지금 생각하면 아찔한데, 무모했던 일들이 많았다. 리스크가 생길 지점들을 잘 챙겨서 관리하는 것이 중요하다"고 강조했다.
+    처음 이 대표와 장지만(36) 공동대표가 샐러드 사업을 접한 건 서울대학교 재학 중 창업동아리에서 실시한 '10만원 프로젝트'에서였다. 초기 자금 10만원으로 더 많은 돈을 벌어오는 팀에게 수상하는 대회였는데, 당시 무용을 전공하며 식단 관리를 하던 이 대표의 아내가 교내 샐러드 판매를 제안했다.
+    이들은 샐러드를 만들어 이른 아침부터 점심시간까지 지하철, 버스정류소, 교내 등지로 장소를 옮겨가며 판매에 나섰다. 처음에는 별다른 성과가 없었지만, 점심 시간 근처에 자리잡은 자하연 호수 주변에서는 달랐다. 점심 시간이 가까워오자 사람들의 발걸음 느려지면서 시선이 옮겨오기 시작했고, 50개의 샐러드가 팔려나갔다. 결국 그 자리에서 2주간 샐러드를 판매한 결과 매출 180만원, 수익 80만원을 얻으며 시장의 가능성을 엿봤다.
+    이후 본격 창업에 뛰어들었을 때는 투자유치를 위해 전략적으로 정보기술(IT) 사업에 도전했지만 실패를 맛봤고, 다시 돌아온 곳이 '샐러드'였다. 시작은 점포 사업이었다. 2015년 점포를 오픈할 당시 농산물 전처리 시장은 10년 사이 2배가 커졌고, 미국과 유럽의 샐러드 시장은 연 30%씩 급격한 성장에 대한 기대가 있었다.    
+    </p>
+    
+    <div id="bottom_banner">견적문의 바로가기 ></div>
+    <button id="naverbtn">네이버</button>
+    <script>
+        document.onscroll=function(){
+            if(window.pageYOffset>300){
+                bottom_banner.style.display='block';
+            }
+            else{
+                bottom_banner.style.display='none';
+            }
+        }
+
+        // window.alert();
+        // window.comfirm();
+        // window.prompt();
+
+        naverbtn.onclick=function(){
+            window.open('https://www.naver.com/','새창','width:500, height=300');  //새텝(새창)이 열리는거 = a태그 비슷
+        }
+    
+    </script>
+
+    <!-- 따움표 구분해줘야됨 "" , '' -->
+    <p onclick="window.open('http://kakao.com')">카카오로 바로가기</p>
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})">이동하기</button>
+    <button id="topbutton">▲</button>
+    <script>
+        topbutton.onclick=function(){
+            window.scrollTo({top:0, behavior:'smooth'});
+        }
+
+        document.write('이 문서의 제목: '+document.title+'<br>');
+        document.write('이 문서의 doctype: '+document.doctype+'<br>')
+        console.log(document.head);
+        console.log(document.body);
+
+        console.log(document.form);
+        console.log(document.images);
+
+        document.querySelector('.box');
+        document.getElementById();
+        document.getElementsByClassName();
+        document.getElementsByTagName();
+
+        document.write();
+        document.createElement();
+
+
+
+    </script>
+
+
+
+    <div style="height: 700px;"></div>
+
+    <script>
+        // setInterval(function(){},시간);
+        //  clearInterval();
+        //  setTimeout();
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>

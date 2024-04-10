@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/popol3.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./js/jquery-3.6.4.js"></script>
+
+
+    <div class="top_box">
+        <div class="top_left">
+            <a href="#"><div class="burgerking_logo"></div></a>
+            <a href="#"><p>버거킹</p></a>
+        </div>
+        <div class="top_right">
+            <i class="fa-solid fa-bars menu_bar_1"></i>
+            <a href="#" class="login_btn">로그인</a>
+              <div class="login_box">
+                  <div>ID</div>
+                  <input type="text" placeholder="ID">
+                  <div>PASSWORD</div>
+                  <input type="password" placeholder="PASSWORD">
+                  <button class="log_btn">로그인</button>
+                  <i class="fa-solid fa-xmark login_close"></i>
+              </div>
+            
+        </div>
+    </div>
+    
+
+    <!-- -----------menu_box------------------------------------ -->
+
+    <div class="main_background_color">
+        <div class="menu_box">
+            <i class="fa-solid fa-bars menu_bar_2"></i>
+            <div>새소식
+              <div class="menu_sub_menu">
+                <p>공지사항</p>
+                <p>업데이트</p>     
+              </div>
+            </div>
+            <div>메뉴소개
+              <div class="menu_sub_menu">
+                <p>신제품(new)</p>
+                <p>프리미엄</p>
+                <p>와퍼/주니어</p>
+                <p>음료&디저트</p>
+                <p>사이드</p>
+              </div>
+            </div>
+            <div>매장소개
+              <div class="menu_sub_menu">
+                <p>매장찾기</p>
+              </div>
+            </div>
+            <div>이벤트
+              <div class="menu_sub_menu">
+                <p>이벤트</p>
+              </div>
+            </div>
+            <a href="#" class="menu_1">가맹점 문의</a>
+            <a href="#" class="menu_2">딜리버리 주문</a>
+        </div>
+        
+
+        <!-- -----모바일화면 메뉴바체크될떄--------- -->
+        <div class="check">
+          <i class="fa-solid fa-xmark close_btn"></i>
+          <div>
+            <a href="#">새소식</a>
+            <ul class="check_sub">
+              <li>공지사항</li>
+              <li>업데이트</li>
+            </ul>
+          </div>
+          <div>
+            <a href="#">메뉴소개</a>
+            <ul class="check_sub">
+              <li>신제품(new)</li>
+              <li>프리미엄</li>
+              <li>와퍼/주니어</li>
+              <li>음료&디저트</li>
+              <li>사이드</li>
+            </ul>
+          </div>
+          <div>
+            <a href="#">매장소개</a>
+            <ul class="check_sub">
+              <li>매장소개</li>
+            </ul>
+          </div>
+          <div><a href="#">이벤트</a>
+            <ul class="check_sub">
+              <li>이벤트</li>
+            </ul>
+          </div>
+        </div>
+        
+
+
+        <!-- --- 슬라이드,뉴스바--- -->
+
+        <div class="swiper mySwiper menu_img_box">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide menu_img_1">
+                <img src="./img/버거킹_1.png" alt="헬로 디아블로 와퍼">
+              </div>
+              <div class="swiper-slide menu_img_2">
+                <img src="./img/버거킹_2.png" alt="와퍼주니어">
+              </div>
+              <div class="swiper-slide menu_img_3">
+                <img src="./img/버거킹_3.jpg" alt="하루종일 올데이킹!">
+              </div>
+              <div class="swiper-slide menu_img_4">
+                <img src="./img/버거킹_4.png" alt="치킨킹">
+              </div>
+              <div class="swiper-slide menu_img_5">
+                <img src="./img/버거킹_5.png" alt="제로슈가 에이드">
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="notice_bar">
+              <div class="notice_bar_left">
+                <h2>공지사항</h2>
+                <ul class="news_box">
+                  <li>버거킹 개인정보처리방침 개정 안내</li>
+                  <li>버거킹 이용약관 개정 안내</li>
+                  <li>버커킹 일부제품 가격 인상 안내</li>
+                </ul>
+              </div>
+              <div class="notice_bar_right">
+                <h2>제품검색</h2>
+                <input type="text" placeholder="제품명을 입력해주세요">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+          </div>
+          <script>
+              setInterval(newsPlay,4000);
+              function newsPlay(){
+                $('.news_box').animate({marginTop:'-78px'} ,function(){
+                  $('.news_box>li').first().appendTo('.news_box');
+                  $('.news_box').css('margin-top','0px');
+                });
+              }
+
+          </script>
+        
+          <!-- Swiper JS -->
+          <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+          <!-- Initialize Swiper -->
+          <script>
+            var swiper = new Swiper(".mySwiper", {
+              slidesPerView: 1,
+              spaceBetween: 30,
+              loop: true,
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+              autoplay : {
+                delay : 6000,
+                disableOnInteraction : false,  
+              },
+            });
+          </script>         
+    </div>
+    
+    <!-- ----------맨위경계선---------- -->
+    <div class="boundary big_screen"></div>
+
+    <!-- -----------section3----------- -->
+    <div class="section3">
+      <div class="section3_new_menu">
+            <div class="new_menu_top">
+              <h2>새로운 메뉴</h2>
+              <p>새로운 버거가 떙길떈,이건 어떠세요??</p>
+              <button class="new_btn">전체보기 ></button> 
+            </div>
+            <div class="new_menu_bottom">
+              <div class="new_left">
+                <div class="new1"></div>
+                <h3>헬로 디아블로 와퍼</h3>
+                <div class="new2"></div>
+                <h3>헬로 이나리우스 와퍼</h3>
+              </div>
+              <div class="new_middle">
+                <div class="new3"></div>
+                <div class="new3_sub">
+                  <div>
+                    <h3>헬로 릴리트 버거</h3>
+                    <p><span>강렬한 매운맛</span>을 바삭한 해쉬브라운과 함께!!</p>
+                    <p class="new3_spicy">맵기 : <span>★★</span></p>
+                  </div>                 
+                </div>
+              </div>
+              <div class="new_right">
+                <div class="new4"></div>
+                <h3>더블비프불고기버거</h3>
+                <div class="new5"></div>
+                <h3>BLT오믈렛킹모닝</h3>
+              </div>
+            </div> 
+                  
+      </div>
+    </div>
+
+    <!-- ----------경계선---------- -->
+    <div class="boundary"></div>
+    
+    <!-- ----------베스트메뉴---------- -->
+    <div class="best_menu_bigbox">
+      <div class="best_menu_box">
+        <div class="best_menu_title">
+          <h2>베스트 메뉴</h2>
+          <p>한 주간 가장 많이 팔린 인기메뉴</p>
+        </div>
+        <ul class="best_menu_imgbox">
+          <li>
+            <div class="best_menu_img1 bestimg"></div>
+            <div class="best_menu_name">헬로 릴리트 와퍼</div>
+          </li>
+          <li>
+            <div class="best_menu_img2 bestimg"></div>
+            <div class="best_menu_name">헬로 이나리우스 와퍼</div>
+          </li>
+          <li>
+            <div class="best_menu_img3 bestimg"></div>
+            <div class="best_menu_name">몬스터 와퍼</div>
+          </li>
+          <li>
+            <div class="best_menu_img4 bestimg"></div>
+            <div class="best_menu_name">통새우 와퍼</div>
+          </li>
+        </ul>
+        <a href="#" class="best_menu_btn">전체보기 ></a>
+      </div>
+
+    </div>
+
+    <!-- ----------경계선---------- -->
+    <div class="boundary"></div>
+
+    <!-- ------하단footer-------- -->
+    <footer>
+      <div class="footer_topbox">
+
+        <ul class="footer_top footer_top_sec1">
+          <li class="f_top_title">CALL CENTER</li>
+          <li class="f_top-num">1599-0505</li>
+          <li>10:00 – 22:00 / 연중무휴</li>
+          <li>(매장별로 상이할 수 있습니다.)</li>
+        </ul>
+
+        <ul class="footer_top">
+          <li class="f_top_title">SNS INFO</li>
+          <li class="footer_top_icon">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-facebook"></i>
+          </li>
+        </ul>
+
+        <ul class="footer_top">
+          <li class="f_top_title">community</li>
+          <li class="f_top_btn">            
+            <a href="#">FAQ</a>
+            <a href="#">공지사항</a>
+            <a href="#">1:1문의</a>
+            <a href="#">가맹점 신청</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer_midbox">
+        <ul class="footer_mid">
+          <li class="footer_mid_1">브랜드소개</li>
+          <li>개인정보처리방침</li>
+          <li>이용약관</li>
+          <li>이메일무단수집거부</li>
+        </ul>
+      </div>
+      <div class="footer_bot">
+          <div class="footer_bottombox">
+          <ul class="footer_bottom">
+            <li>(주)BKR</li>
+            <li>대표이사 이동형</li>
+            <li>전화주문: 1599-0505</li>
+          </ul>
+          <ul class="footer_bottom">
+            <li>주소: 서울 종로구 삼봉로 71 G 타워 4F,5F</li>
+            <li>사업자 등록번호: 101-86-76277</li>
+          </ul>
+          <div>Copyright 2019 BKR Co., Ltd. All right Reserved</div>
+        </div>
+      </div>
+      
+    </footer>
+
+    
+
+
+    <script src="./js/popol3.js"></script>
+</body>
+</html>

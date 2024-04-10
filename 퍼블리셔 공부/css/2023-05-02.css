@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+    box-sizing: border-box;
+}
+/* .bigbox{
+    width: 500px;
+  
+    border: 1px solid black;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.bigbox>h1{
+    margin: 10px auto 10px;
+}
+.bigbox>input{
+    margin: 10px auto 10px;
+    width: 80%;
+    height: 50px;
+    border-radius: 50px;
+    text-align: center;
+}
+.bigbox>div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 100%;
+}
+
+.bigbox>div>div{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.bigbox>button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: blue;
+    width: 40%;
+    height: 50px;
+    border-radius: 50px;
+} */
+
+
+
+
+body{
+    background-color: gray;
+}
+section{
+    width: 600px;
+    margin: 50px auto;
+    background-color: white;
+    border: 5px solid black;
+    padding: 40px;
+    border-radius: 30px;
+}
+section>h1{
+    text-align:center;
+    font-size: 2.5rem;
+}
+.myname{
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+    background-color: #ccc;
+    border-radius: 40px;
+    border: 0;
+    padding: 10px;
+    margin-top: 15px;
+}
+.questionbox{
+    font-size: 1.5rem;
+    padding: 30px 0;
+}
+.questionbox p{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.questionbox+.questionbox{
+    border-top: 3px dashed gray;
+}
+#btn{
+    display: block;
+    margin: 0 auto;
+    background-color: blue;
+    color: white;
+    border: 0;
+    padding: 6px 50px;
+    border-radius: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+#btn:hover{
+    background-color: black;
+}
+#resultbox{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3.5rem;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0,0.5);
+}
+#mbtibox{
+    color: red;
+    
+}

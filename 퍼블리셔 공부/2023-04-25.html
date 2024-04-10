@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/2023-04-25.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+
+    <button onclick="gugu(3)">3단</button>
+    <button onclick="gugu(4)">4단</button>
+    <button onclick="gugu(5)">5단</button>
+    <div id="box"></div>
+    <script>
+         function gugu(num){
+            box.innerHTML = '';
+            for(var i=1;i<10;i++){
+                box.innerHTML += (num+'x'+i+'='+(num*i)+'<br>');
+            }
+            
+        }; 
+    </script>
+
+    <hr>
+
+    <script>       
+        function mysum(a,b){
+            console.log(a);
+            console.log(b);
+            return a+b;
+        }
+        console.log(mysum(150,560));
+
+        console.log('35+24는 '+mysum(35,24)+'입니다');
+    </script>
+
+    <div class="clickbox">
+    <div onclick="tabbtn('red')" id="box1">Tab1</div>
+    <div onclick="tabbtn('blue')" id="box2">Tab2</div>
+    <div onclick="tabbtn('green')" id="box3">Tab3</div>
+    </div>
+    <div id="tabbox">Tab content</div>
+    <script>
+        function tabbtn(colorbox){
+            tabbox.style.backgroundColor=colorbox;
+
+        }
+    box1.onclick=function(){
+        tabbox.innerHTML='Tab1 content';
+    }
+    box2.onclick=function(){
+        tabbox.innerHTML='Tab2 content';
+    }
+    box3.onclick=function(){
+        tabbox.innerHTML='Tab3 content';
+    }
+    </script>
+
+
+    <ul class="tabmenu">
+        <li onclick="tab('.tabcontent1')">Tab1</li>
+        <li onclick="tab('.tabcontent2')">Tab2</li>
+        <li onclick="tab('.tabcontent3')">Tab3</li>
+    </ul>
+    <div class="tabcontent1">Tab1 content...</div>
+    <div class="tabcontent2">Tab2 content...</div>
+    <div class="tabcontent3">Tab3 content...</div>
+    <script>
+        // function tabview0(){
+        //     document.querySelector('.tabcontent1').style.display='none';
+        //     document.querySelector('.tabcontent2').style.display='none';
+        //     document.querySelector('.tabcontent3').style.display='none';
+        //     document.querySelector('.tabcontent1').style.display='block';
+        // }
+        // function tabview(){
+        //     document.querySelector('.tabcontent1').style.display='none';
+        //     document.querySelector('.tabcontent2').style.display='block';
+        //     document.querySelector('.tabcontent3').style.display='none';
+        // }
+        // function tabview2(){
+        //     document.querySelector('.tabcontent1').style.display='none';
+        //     document.querySelector('.tabcontent2').style.display='none';
+        //     document.querySelector('.tabcontent3').style.display='block';
+        // }
+
+
+        function tab(mycontent){
+            // document.querySelector('.tabcontent1').style.display='none';
+            // document.querySelector('.tabcontent2').style.display='none';
+            // document.querySelector('.tabcontent3').style.display='none';
+            for(var i=1;i<4;i++){
+                document.querySelector('.tabcontent'+i).style.display='none';
+            }
+            document.querySelector(mycontent).style.display='block';
+        }
+    </script>
+
+    <hr>
+
+    <h1 class="mytitle">제이쿼리</h1>
+    <h1 class="mytitle">제이쿼리</h1>
+    <h2>제이쿼리 테스트!!</h2>
+    <button id="runbtn">실행</button>
+    <script>
+        document.querySelectorAll('.mytitle')[0].style.color = 'red';
+        document.querySelectorAll('.mytitle')[1].style.color = 'blue';
+
+        console.log($('.mytitle'));
+
+        $('h2').hide();
+
+        runbtn.onclick = function(){
+            $('h2').hide();
+        };
+
+        $('#runbtn').click(function(){$('h2').hide();})
+        ;
+
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 30px;
+            text-align: center;
+        }
+        input[type='date']{
+            font-size: 40px;
+        }
+        p{
+            font-size: 1.5em;    
+            font-weight: bold;
+        }
+        /* em은 부모요소의 몇배  rem은 최상위요소의 크키의 몇배 */
+    </style>
+</head>
+<body>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <script>
+        
+        var startDay = new Date('2023-02-13');
+        var endDay = new Date('2023-05-18');
+        console.log('시작일'+startDay);
+        console.log('종료일'+endDay);
+        console.log(startDay.getTime());
+        console.log(endDay.getTime());
+//      두 날짜의 차이
+        var gap = endDay.getTime()-startDay.getTime();
+        console.log('밀리초차이: '+gap);
+        console.log('초차이: '+gap/1000);
+        console.log('분차이: '+gap/(60*1000));
+        console.log('시차이: '+gap/(60*60*1000));
+        console.log('일자차이: '+gap/(24*60*60*1000));
+    </script>
+
+    <!-- 예1 -->
+    <h1>D+ 계산기</h1>
+    <input type="date" id="mydate" onchange="changeday">
+    <p id="txt">만난지 <span id="d_day">00</span>일 되었습니다<br><span style="color: hotpink;">축하합니다!!</span></p>
+    <script>
+        document.querySelector('p').style.display='none';
+
+
+        mydate.onchange = function(){
+            var meetDay = mydate.value;   //'2023-05-01'의 텍스트형태
+            console.log('우리가 처음만난 날: '+meetDay); 
+
+            var firstDay = new Date(meetDay);  //미드데이의 날짜
+            var today = new Date();            //현재날짜
+            var mygap = today.getTime()-firstDay.getTime();
+            console.log(mygap/(24*60*60*1000));
+
+            var mygap_result = Math.floor(mygap/(24*60*60*1000));
+            console.log(mygap_result+1);
+            
+            document.querySelector('p').style.display='block';
+            d_day.innerHTML = mygap_reult+1;
+
+        };
+    </script>
+
+    <hr>
+
+    <script>
+        var fruit = ['딸기','사과','바나나'];
+        fruit.push('키위');
+        console.log(fruit);
+        fruit.unshift('귤');
+        console.log(fruit);
+        fruit.pop();
+        console.log(fruit);
+        fruit.shift();
+        console.log(fruit);
+        fruit.reverse();
+        console.log(fruit);
+    </script>
+
+    <hr>
+
+    <script>
+        var num = 16.83283;
+        var num2 = 58.2121;
+        var num3 = -83.1;
+        console.log(Math.floor(num));    //안에있는값이 소수점이라도 소수점부분 날려줌
+        console.log(Math.ceil(num));     //올림
+        console.log(Math.round(num));    //반올림
+        console.log(Math.abs(num));      //절댓값(안에 마이너스여도 플러스)
+        console.log(Math.min(num,num2,num3)); //가장작은값
+        console.log(Math.max(20,35,48,39));   //가장큰값
+        console.log(Math.pow(2,10));  //2의10제곱
+
+        //난수(random)*****************중요!!!!
+        console.log('random: '+ Math.random()); //0에서 1사이
+        console.log(Math.random()*10);  //0에서 10사이
+    </script>
+
+    <button onclick="randomNumber()">숫자</button>
+    <script>
+        function randomNumber(){
+            var rannum = Math.random()*10;       //0~10사이의 랜덤값을
+            var rannum1 = Math.floor(rannum);    //소수점 날림
+            alert(rannum1);
+        }
+    </script>
+
+</body>
+</html>

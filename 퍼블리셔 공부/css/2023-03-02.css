@@ -1,0 +1,57 @@
+.myphoto{
+    width:150px;
+    /* 이미지를 글의 왼쪽으로붙어라 */
+    float:left;
+}
+.title{
+    font-size: 50px;
+}
+.cont{
+    font-size:30px;
+}
+.box{
+    width:1100px;
+    margin : 0 auto;
+    border:10px solid;   
+}
+
+  
+.mybox{
+    display:inline-block;
+    width:200px;
+    height:200px; 
+    /* float:left; */
+    /* float단점 :다음요소까지다영향을준다 그래서 거의안쓴다 */
+}
+.box1{   
+    background-color: green;     
+}
+.box2{    
+    background-color:red;   
+}
+.box3{  
+    background-color: purple;   
+}
+.box4{
+    background-color: blue;
+}
+p{clear:both;}
+.myboximg{width:300px;}
+
+
+.container{
+    display:flex;
+    background-color:pink;
+    font-size:100px;
+}
+.item:nth-child(1){
+    background-color:green;
+}
+.item:nth-child(2){
+    background-color:skyblue;
+}
+.item:nth-child(3){
+    background-color:violet;
+}
+
+

@@ -1,0 +1,122 @@
+a{display:inline-block;
+  width:100px;
+  height:100px;
+  /* 테두리둥글게 */
+  border-radius: 50%;  
+  background-color:red;
+  border:3px solid black;
+}
+
+a[href*="naver"]{background-color:greenyellow;}
+a[href*="kakao"]{background-color:yellow;}
+a[href*="nate"]{background-color:red;}
+
+/* span테그는 좌우가없으니 ex1(엄마태그)한테 텍스트일라인센터를준다 */
+.ex1{text-align:center;}
+.ex1 p{
+        background-color: pink;
+        font-size: 40px;
+        text-align: center;
+        width:300px;
+    /* p테그(block요소) 중앙으로 오게할라면 */
+        margin-right:auto;
+        margin-left:auto;
+        }
+.ex1 span{background-color: cyan;
+         font-size: 40px;}
+
+
+section{border:10px solid blue;
+        border-radius:50px;
+        width:700px;
+        /* margin-top: 50px;
+        margin-right:auto;
+        margin-bottom: 50px;
+        margin-left: auto; */
+        /* 위랑 똑같음 */
+        /* margin: 50px auto 5px auto;
+        위랑 똑같음 (줄여쓴거) */
+        margin: 50px auto;}
+section dl{
+    text-align: center;
+    line-height:50px;}
+section dt{
+    width:100px;
+    text-align:center;
+    display:inline-block;
+    background-color:red;
+    color:white;
+    padding: 10px 20px 10px 20px;
+    border-radius:30px 0 0 30px;    
+}
+section dd{
+    width: 500px;
+    display:inline-block;
+    background-color:black;
+    color:white;
+    margin-left: 0px;
+    padding:10px 20px;
+    border-radius:0 30px 30px 0;
+    text-align:left;
+    font-size:30px;   
+}
+
+/* 묶어야됨 */
+.redboxmotter{text-align:center;}
+.redbox{
+    width: 50px;
+    height:50px;
+    background-color:red;
+    margin: 100px auto;
+    display:inline-block;
+}
+
+.일기{
+    text-align:center;
+    width:400px;
+    margin:0 auto;
+}
+.제목{
+    background-color:blueviolet;
+    color:white;
+    font-size: 5px;
+    /* width: 400px; */
+    height:50px;
+    display:inline-block;
+    font-size:30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+
+}
+.내용{
+    background-color:brown;
+    color:white;
+    /* width: 340px; */
+    height:200px;
+    font-size:22px;
+    /* 블럭요소를 중앙으로오게할라면 마진 */
+    /* margin: 5px auto; */
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left:30px;
+    /* 투명도
+    opacity:0; */
+    display:none;
+}
+/* + 는 동생요소 */
+/* opacity로 처리했을떄
+.제목:hover+.내용{opacity: 1;} */
+/* display로 처리했을때 */
+.제목:hover+.내용{display:block;} 
+
+section:hover .제목{background-color:orange;}
+
+/* opacity:0로 처리하면 링크같은거걸면 안보이지만 클릭하면 이동한다 */
+/* display:none 으로 처리하면 그부분은 없는거로처리한다  */
+img{width:1200px;}
+
+section:hover>.내용{
+    display:block;
+}

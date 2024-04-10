@@ -1,0 +1,209 @@
+.topbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+}
+.topbox a{
+    color: black;
+    text-decoration: none;
+}
+.topbox a:hover{
+    text-decoration: underline;
+}
+.topbox button{
+    background-color: #1a73e8;
+    color: #fff;
+    padding: 9px 23px;
+    border: 0;
+}
+.store_box a{
+    margin-right: 20px;
+}
+.right_top *{
+    margin-left: 20px;
+}
+.right_top i{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: red;
+    font-size: 20px;
+    vertical-align:middle;
+    margin-top: -2px;
+    /* 아이콘을 가운데가 놔둘라고 */
+    text-align: center;
+    line-height: 33px;
+    /* 다른요소와 라인을 맞출라고 */
+    vertical-align:middle;
+    margin-top: -3px;
+}
+.right_top i:hover{
+    background-color: #ccc;
+}
+
+
+
+/* .bg1{
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.googlephoto{
+    background-image:url('../img/googlelogo_color_272x92dp.png');
+    width: auto;
+    background-size: cover;
+    background-position: center;
+    margin: 198px auto 0; 
+}   
+.bg2{
+    width: 100%;
+    height: 140px;
+    font-size: 14px;
+    color: black;
+    padding: 20px;
+}
+.bg3{
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 582px;
+    height: 44px;
+    color: black;
+    margin: 0 auto;
+    padding: 5px 8px 0px 13px;
+    display: flex;
+    align-items: center;
+}
+  
+.bg3 .searchbox{
+    border: 0.5px solid white;
+    width: 440px;
+    height: 34px;
+}
+.bg3 i{
+    display: flex;
+    width: 30px;
+    font-size: 20px;
+} */
+
+.searchbox{
+    width: 592px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:200px;
+    text-align: center;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 570px;
+    height: 42px;
+    border: 1px solid #aaa;
+    border-radius: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.search:hover{
+    border: 1px solid white;
+
+}
+.search i{
+    color: #9aa0a6;
+}
+.search i.xi-keyboard{
+    color: #555;
+    font-size: 18px;
+}
+.search .help{
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border: 1px solid #fff;
+    padding: 6px 12px;
+    box-shadow: 0 1px 4px;
+    display: none;
+}
+.search .xi-keyboard:hover+.help{
+    display: block;
+}
+.search .help:nth-of-type(2){
+    right: 20px;
+}
+.search img:hover+.help{
+    display:block;
+}
+.search input{
+    width: 450px;
+    border: 0;
+    font-size: 18px;
+    /* 까망 라인 없어진다 */
+    outline: none;
+}
+.buttonbox a{
+    text-decoration: none;
+    /* padding줄때 인라인블럭 */
+    display: inline-block;
+    padding: 7px 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    color: #000;
+    font-size: 14px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.buttonbox a:hover{
+    box-shadow: 0px 2px 5px #ccc;
+}
+
+
+
+.q1{
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    padding-left: 10px ;
+    display: flex;
+    align-items: center;
+}
+.bottombox{
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottombox div a{
+    padding: 9px 20px;
+    color: #555;
+    text-decoration: none;
+}
+.bottombox div a:hover{
+    text-decoration: underline;
+}
+.q2{
+    margin-left: 15px;
+    
+}
+.q3{
+    margin-right: 15px;
+}

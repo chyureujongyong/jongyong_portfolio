@@ -1,0 +1,142 @@
+.photo1{
+    width: 600px;
+}
+.photo2{
+    width: 300px;
+    height:400px;
+}
+
+.bgbox{
+    width: 700px;
+    height: 700px;
+    border: 10px solid black;
+    background-image: url('../img/나뭇잎.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.bgbox>img{
+    /* 엄마요소크기에 딱 맞추는거 */
+    width: 100%;
+}
+#bgtitle{
+    text-align: center;
+    font-size: 70px;
+}
+/* 세로값설정!! 설정안하면0이라 안나옴 */
+.box1{
+    background-image: url('../img/거리사진.jpg');
+    height:800px;
+    background-size: 500px; 
+    background-color: black;
+    /* 반복시키지않겠다 (한번만 보여줄거다)*/
+    background-repeat: no-repeat;
+    /* right, left, center, top, bottom가 있다 */
+    /* background-position: right top ; */
+    /* %, px로 직접선언가능 */
+    background-position: 10% 40% ;
+
+}
+.box2{
+     background-image: url('../img/나뭇잎.jpg');
+     height:400px;
+     background-size: cover; 
+     background-position: center;
+     /* 회면에 부착 고정으로 */
+     background-attachment: fixed;
+}
+.box2 h3{font-size:100px;
+    margin-bottom: 20px;}
+.box2 p{
+    font-size:30px;
+}
+.box a{
+    display:inline-block;
+    padding: 10px 30px;
+    font-size: 25px;
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+}
+.box3{
+     background-image: url('../img/빵.jpg');
+     height:700px;
+     background-size: cover; 
+     background-position: center;
+     background-attachment: fixed;
+ }
+
+.myline{
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+/* .예1{
+    margin-right:20px;
+    width: 650px;
+    height: 500px;
+    float: left;    
+}
+.ex1{
+    height: 500px;
+    background-image: url('../img/빵.jpg');
+    background-size: 650px 500px;
+    background-position:left;
+    background-repeat: no-repeat;
+}
+.묶음{
+    float: left;
+    display: inline-block;
+    width:650px;
+    height: 500px;
+}
+.ex2{
+    background-color: pink;
+    color: white;
+    font-size: 80px;
+    width: 650px;
+    height: 250px;
+    background-position: right top;
+}
+.ex3{
+    background-color: black;
+    color: white;
+    font-size: 80px;
+    width: 650px;
+    height: 250px;
+    background-position: right top;
+} */
+
+.box1300{
+    width: 1300px;
+    border: 5px solid black;
+    margin: 0 auto;
+    display: flex;
+}
+.box1300 .left{
+    width: 50%;
+    height: 500px;
+    background-image: url('../img/빵.jpg');
+    background-size: cover;
+    background-position:center;
+}
+.box1300 .right{
+    width: 50%;
+}
+.box1300 .right div{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    height:50%;
+    color: white;
+    font-size: 60px;
+}
+.happy{
+    background-color: violet;
+    font-weight: bold;
+}
+.monday{
+    background-color: black;
+}
+

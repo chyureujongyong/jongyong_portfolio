@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .thumbnail_list{
+            display: flex;
+            justify-content: center;
+        }
+        .thumbnail_list img{
+            height: 250px;
+        }
+        .big-img{
+            width: 600px;
+            display: block;
+            margin: 50px auto;
+        }
+        figcaption{
+            font-size: 40px;
+            text-align: center;
+            margin: 10 auto;
+        }
+    </style>
+</head>
+<body>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <!-- <a href="http://naver.com">naver</a>
+    <button>구글을 더 좋아합니다</button>
+    <script>
+        $('button').click(function(){
+            $('a').html('google');
+            $('a').attr('href','http://google.com');
+        })          
+    </script> -->
+
+    <ul class="thumbnail_list">
+        <li>
+            <img src="./img/thum1.jpg" alt="바다사진" class="img0">
+        </li>
+        <li>
+            <img src="./img/thum2.jpg" alt="꽃사진" class="img1">
+        </li>
+        <li>
+            <img src="./img/thum3.jpg" alt="여우사진" class="img2">
+        </li>
+        <li>
+            <img src="./img/thum4.jpg" alt="풀사진" class="img3">
+        </li>
+    </ul>
+
+    <figure>
+        
+        <img src="./img/thum1.jpg" alt="" class="big-img">
+        <figcaption>바다사진</figcaption>       
+    </figure>
+    <script>
+        $('.thumbnail_list img').click(function(){
+
+            $('.big-img').attr( 'src',$(this).attr('src') )
+            $('figcaption').html($(this).attr('alt'));
+
+        });
+
+
+        var random_number = Math.floor( Math.random()*4);
+        $('.big-img').attr('src',$('.img'+random_number).attr('src'));
+        $('figcaption').html($('.img'+random_number).attr('alt') );
+
+    </script>
+
+    <hr>
+
+    <section>
+        <h2>2023년 5월 29일</h2>
+        <h1>오늘은 월요일</h1>
+        <p>오늘은 <span>대체공휴일</span>이지만 우리는 열심히 공부하고있어요</p>
+        <p>오늘은 <span>대체공휴일</span>이지만 우리는 열심히 공부하고있어요</p>
+        <p>오늘은 <span>대체공휴일</span>이지만 우리는 열심히 공부하고있어요</p>
+        <ul class="mylist">
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+        </ul>
+    </section>
+    <script>
+
+        $('.mylist li').click(function(){
+            var mymyindex = $(this).index();
+            console.log('나는'+(mymyindex+1)+'번쨰 아이템입니다');
+        })
+
+        // $('.mylist li').first().css('color','red');
+        // $('.mylist li').eq(0).css('background-color','red');
+        // $('.mylist li').last().css('background-color','gold');
+
+        // $('h1').siblings().css('background-color','skyblue');
+//                   ㄴ형제요소 다 잡음(위아래구분없이 형제 싹다)
+
+        // $('span').parent().css('color','red');
+//                 ㄴ부모요소를 잡음
+
+        // $('span').click(function(){
+        //     $(this).parent().css('background-color','yellow');
+        // })
+
+        // $('.mylist').find('li').css('background-color','pink');
+//                     ㄴ찾겠다 (마이리스트안에있는 li)
+
+        $('p').click(function(){
+            $(this).find('span').css('background-color','yellow');
+        });
+
+        // $('p').next().css('border','3px solid red');
+//                 ㄴp테그의 다음요소들 싹다
+
+        $('p').prev().css('border','3px solid green')
+//                ㄴp테그의 이전요소들 싹다
+    </script>
+
+  
+
+
+
+
+
+
+
+</body>
+</html>

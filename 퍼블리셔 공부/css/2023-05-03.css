@@ -1,0 +1,21 @@
+.box{
+    width: 200px;
+    height: 100px;
+    background-color: blue;
+}
+.circle{
+    position: relative;
+
+    width: 150px;
+    height: 150px;
+    background-color: orangered;
+    border-radius: 50%;
+}
+.heart{
+    font-size: 100px;
+    color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+ 
+}

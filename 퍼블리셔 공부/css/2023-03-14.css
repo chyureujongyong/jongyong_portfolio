@@ -1,0 +1,32 @@
+/* 힘이 테그는약하다 클래스가 더 쌔다
+쌘놈한테 적용된다 */
+/* 똑같은놈끼리 싸운다면 아래쪽에 있는애가 더쌔다 */
+/* (!important > style > id > class > 클래스 ) = 힘순서(우선순위) */
+
+/* 테그와함께 명확하게적은다면 이게더 쌔진다 
+h1.title{
+    color: red;
+} */
+.title{
+    color: hotpink;   
+    background-color:yellow;
+    text-decoration: none;
+}
+section #myp{
+    background-color: green;
+}
+#myp{
+    background-color: #ccc;
+}
+/* h1{
+    color: green;
+    background-color: red;
+    text-decoration: underline;
+}
+#tt{
+    color: white;
+} */
+p{
+    background-color:black !important;
+}
+

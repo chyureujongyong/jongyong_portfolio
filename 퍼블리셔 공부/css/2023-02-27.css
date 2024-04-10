@@ -1,0 +1,50 @@
+body{background-color:yellow;}
+.btn{background-color:green;
+  color:white;
+  font-size: 50px;
+  width:250px;
+  text-align: center;
+  border-radius:0 70px 0 70px; 
+  display: inline-block;
+  /* 여백 */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  /* 변화줄때 */
+  transition:background-color 1s;
+  }
+  
+   /* padding:글자 여백
+  margin:테두리밖 여백 */
+
+  .btn>span{font-weight: bold;}
+  .violet{background-color:violet;}
+  .btn:hover{background-color:red;
+    width:550px;
+   }
+
+.box1{width: 150px;
+    background-color:red;}
+.box1:nth-of-type(2n){background-color:greenyellow;}
+
+.box2{background-color:blue;
+    /* width:500px설정해도 적용안된다 */}
+
+.box3{background-color:violet;}  
+.box4{background-color:greenyellow;}    
+
+/* display: inline-block
+    인라인요소랑 블럭요소 같이할수있다 */
+.fir{background-color:gray;
+    width:100px;
+    height:100px;
+    color:white;
+    display: inline-block;}
+.sec{background-color: mediumaquamarine;
+    width:100px;
+    height:100px;
+    color:white;
+    display: inline-block;}
+
+    
+

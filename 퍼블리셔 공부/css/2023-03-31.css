@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding:0;
+    list-style: none;
+    box-sizing: border-box;
+}
+.number-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:2.5rem;
+
+}
+.number-list *{
+    cursor: pointer;
+    transition: 0.23s;
+}
+.num{
+    width: 80px;
+    height: 80px;
+
+    text-align: center;
+    line-height: 75px;
+}
+.number-list .num.active{
+    background-color: hotpink;
+    color: white;
+}.num:hover{
+    background-color:#ccc;
+    color: white;
+}
+.number-list i:hover{
+    color: red;
+}
+
+
+.box{
+    width:1000px;
+    height:300px;
+    background-color: #00ff00;
+    font-size: 40px;
+
+    /* 넘어가는부분을 가려주겠다 */
+    /* overflow: hidden; */
+    /* 넘어가는부분 보여준다 */
+    /* overflow: visible; */
+    /* 넘어가는부분은 스크롤로 보여준다 */
+    /* overflow: scroll; */
+    /* 넘어간부분만 스크롤로 보여준다 */
+    /* overflow: auto; */
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.예제 p{
+    width: 300px;
+    font-size: 25px;
+    border: 2px solid blue;
+
+    /* (중요!!!)밑으로 떨어트리지않고 무조건 한줄로 만들고(white-space: nowrap)
+    넘어간 뒷부분은 overflow로 처리후  ellipsis쓰면 ... 으로된다 */
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.ex1{
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    margin: 0 auto;
+}
+.ex1>.i-box{
+    display: flex;
+    flex-direction: column;
+
+}
+.ex1 i{
+    width:70px;
+    height: 70px;
+}
+.ex-box{
+    height:100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.ex-box>p{
+    margin-top: 10px;
+    font-size:30px;
+}

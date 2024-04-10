@@ -1,0 +1,162 @@
+*{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+.skillbars{
+    width: 1000px;
+    margin: 100px auto;
+    max-width: 100%;
+}
+.bar{
+
+    height:60px;
+    background-color: #ccc;
+
+    margin-top: 10px;
+    margin-bottom: 50px;
+
+    border-radius: 30px;
+    overflow: hidden;
+
+}
+.bar>div{
+    border-radius: 30px;
+    height: 100%;
+    animation: skill 1s;
+    color: white;
+    font-size: 25px;
+    text-align: right;
+    line-height: 60px;
+}
+@keyframes skill{
+    from{transform:translateX(-100%)}
+    to{transform:translateX(0%)}
+}
+.skill1{
+    width: 80%;
+    background-color:orangered;
+}
+.skill2{
+    width: 90%;
+    background-color:darkblue;
+}
+.skill3{
+    width: 30%;
+    background-color:violet;
+}
+
+.skill4{
+    width: 95%;
+    background-color:green;
+}
+
+
+
+.box1{
+    width: 0px;
+    height: 0px;
+    margin: 0 auto;
+    /* 보더패팅값이 영향을준다 */
+    box-sizing: content-box;
+    /* transparent : 투명하게 */
+    border-top: 30px solid black;
+    border-right: 50px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 50px solid transparent;
+
+}
+.bluebox{
+    position: relative;
+    width: 600px;
+    height: 300px;
+    background-color: orangered;
+
+    margin: 0 auto;
+}
+.bluebox::after{
+    /* 위치 */
+    position: absolute;
+    /* top: 100%; */
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,100%);
+
+    /* after요소(안잡히고 모양만) */
+    content: '';
+    /* 인라인블럭을 꼭써줘야 모양이먹는다 */
+    display: inline-block;
+
+    /* 삼각형 */
+    width: 0;
+    height: 0;
+    border-top: 30px solid blue;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid transparent;
+
+}
+
+
+
+.mybox_container{
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-around;
+    max-width: 100%;
+}
+.mybox1,.mybox2{
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 400px;
+    height: 250px;
+    color: white;
+
+    font-size: 40px;
+    border-radius: 30px;
+    opacity: 0.5;
+    transition: 1s;
+}
+
+.mybox1{background-color: red;}
+.mybox2{background-color: green;}
+
+.mybox_container>div::after{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%,100%);
+
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+
+    border: 30px solid transparent;
+    border-top: 30px solid red;
+}
+.mybox_container>.mybox2::after{
+    border-top: 30px solid green;
+}
+
+.mybox_container>div:hover{
+    transform: translateY(-50px);
+    opacity: 1;
+}
+
+@media(max-width: 1000px){
+
+    .mybox_container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .mybox1,.mybox2{
+        margin-bottom: 50px;
+    }
+}
+    

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/20230602.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- ----------------- 메뉴바 ----------------------- -->
+    <header>
+        <div class="inner">
+            <h1>Under the Sea</h1>
+            <div class="header-right">
+                <p><i class="fa-solid fa-clock"></i>09:00AM - 05:00PM</p>
+                <p><i class="fa-solid fa-phone"></i>+1 031-123-1234</p>
+                <a href="#" class="btn">Contact us</a>
+            </div>
+        </div>
+        <nav>
+            <div class="inner">
+                <ul class="gnb">
+                    <li class="home">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                        <ul class="submenu">
+                            <li>about1</li>
+                            <li>about2</li>
+                            <li>about3</li>
+                            <li>about4</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Service</a>
+                        <ul class="submenu">
+                            <li>service1</li>
+                            <li>service2</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact us</a>
+                        <ul class="submenu">
+                            <li>contact1</li>
+                            <li>contact2</li>
+                            <li>contact3</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="snslist">
+                    <li>
+                        <i class="fa-brands fa-facebook"></i>
+                    </li>
+                    <li> 
+                        <i class="fa-brands fa-twitter"></i>
+                    </li>
+                    <li>  
+                        <i class="fa-brands fa-instagram"></i>
+                    </li>
+                    <li>  
+                        <i class="fa-brands fa-google"></i>
+                    </li>                                                 
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <script>
+        $('.gnb>li').mouseover(function(){
+            //    find(this)는 자신의 자식요소를 찾겠다
+            //    슬라이드같은거 써줄떄 stop()써주면 좋다=다른게 실행되었다면 다른걸 멈추겠다
+            $(this).find('.submenu').stop().slideDown();
+        });
+        $('.gnb>li').mouseout(function(){
+            $(this).find('.submenu').stop().slideUp();
+        });
+
+    </script>
+    <!-- ------------------slide----------------------- -->
+    <section class="slide-down">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide1">
+                    <div class="inner">
+                        <h4>web class</h4>
+                        <h3>Hello world</h3>
+                        <a href="#" class="btn3">Read More</a>
+                    </div>
+                </div>
+                <div class="swiper-slide slide2">
+                    <div class="inner">
+                        <h4>web class</h4>
+                        <h3>Under the Sea</h3>
+                        <a href="#" class="btn3">Read More</a>
+                    </div>
+                </div>
+                <div class="swiper-slide slide3">
+                    <div class="inner">
+                        <h4>web class</h4>
+                        <h3>Good Bye</h3>
+                        <a href="#" class="btn3">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      loop:true
+    });
+    </script>
+
+
+
+
+
+    <!-- -----------------For our children!---------------------------------------- -->
+    <section class="tab-section">
+        <div class="inner">
+            <div class="tab-left" data-aos="fade-right" data-aos-duration="3000">
+                <img src="./img/grid2.jpg" alt="바다">
+            </div>
+            <div class="tab-right" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="300">
+                <h2 class="s-name">For our children!</h2>
+                <div class="tab-box">
+                    <div class="tab-menu">
+                        <div class="select">About Us</div>
+                        <div>Why Choose Us</div>
+                        <div>Our Mission</div>
+                    </div>
+                    <div class="tab-contents">
+                        <div class="show">
+                            About....Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eum nostrum illo aut velit doloremque eius, ea adipisci natus ipsum autem dolor repellat provident aspernatur.
+                        </div>
+                        <div>
+                            Why Choose Us....Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eum nostrum illo aut velit doloremque eius, ea adipisci natus ipsum autem dolor repellat provident aspernatur
+                        </div>
+                        <div>
+                            Our Mission....Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eum nostrum illo aut velit doloremque eius, ea adipisci natus ipsum autem dolor repellat provident aspernatur.
+                        </div>
+                    </div>
+                </div>
+
+
+                <button class="btn">Get in Touch</button>
+                <button class="btn">Read more</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        $('.tab-menu div').click(function(){
+            $('.tab-menu div').removeClass('select');
+            $(this).addClass('select');
+
+            // 텝메뉴의 인덱스번호
+            var num = $(this).index();
+            console.log(num);
+            $('.tab-contents div').hide();
+            $('.tab-contents div').eq(num).show();
+        })
+    </script>
+
+    <!-- -------------------------------- -->
+    <section class="big-bg">
+        <h2>Under the Sea</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Vitae eum nostrum illo aut velit doloremque eius, ea adipisci natus ipsum autem dolor repellat provident aspernatur.<br> Blanditiis at natus recusandae maiores.</p>
+        <a href="#" class="btn">Read More</a>        
+    </section>
+
+    <!-- ------------Our service---------------------------------- -->
+    <section class="service">       
+        <div class="inner">
+            <h2>Our Service</h2>
+            <ul>
+                <li class="iconbox" data-aos="fade-up">
+                    <div class="icon">
+                        <i class="fa-solid fa-fish"></i>
+                    </div>
+                    <div class="text">
+                        <h4>Fish</h4>
+                        <p>Lorem, ipsum dolor sit ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </li>
+                <li class="iconbox" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon">
+                        <i class="fa-solid fa-otter"></i>
+                    </div>
+                    <div class="text" data-aos="fade-up">
+                        <h4>Other</h4>
+                        <p>Lorem, ipsum dolor sit ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </li>
+                <li class="iconbox" data-aos="fade-up" data-aos-delay="600">
+                    <div class="icon">
+                        <i class="fa-solid fa-ship"></i>
+                    </div>
+                    <div class="text">
+                        <h4>Ship</h4>
+                        <p>Lorem, ipsum dolor sit ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </li>
+                <li class="iconbox" data-aos="fade-up" data-aos-delay="900">
+                    <div class="icon">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <div class="text">
+                        <h4>Wind</h4>
+                        <p>Lorem, ipsum dolor sit ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </li>
+                <li class="iconbox" data-aos="fade-up" data-aos-delay="1200">
+                    <div class="icon">
+                        <i class="fa-solid fa-shrimp"></i>
+                    </div>
+                    <div class="text">
+                        <h4>Shrimp</h4>
+                        <p>Lorem, ipsum dolor sit ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </li>
+                <li class="iconbox" data-aos="fade-up" data-aos-delay="1500">
+                    <div class="icon">
+                        <i class="fa-solid fa-anchor"></i>
+                    </div>
+                    <div class="text">
+                        <h4>Anchor</h4>
+                        <p>Lorem, ipsum dolor sit ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </li>           
+            </ul>
+        </div>     
+    </section>
+
+    <!-- ------------footer(하단부분)-------------------------------- -->
+    <footer>
+        <div class="footer-blue">
+            <div class="inner">
+                <div>
+                    <h4>CONTACT US</h4>
+                    <ul>
+                        <li onclick="location.href='tel:01012341234'">
+                            <i class="fa-solid fa-phone"></i>
+                            010-1234-1234</li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            test@test.com</li>
+                        <li>
+                            <i class="fa-solid fa-fax"></i>
+                            070-1234-1234</li>
+                        <li onclick="window.open()">
+                            <i class="fa-solid fa-location-dot"></i>
+                            경기도 수원시 팔달구 인계동</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>POPULAR NEWS</h4>
+                    <dl>
+                        <dt>Your Personal Guide to 5 Best<br>
+                            places to visit on Earth
+                        </dt>
+                        <dd>May 04, 2023</dd>
+                    </dl>
+                    <dl>
+                        <dt>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                            Laboriosam maxime voluptas nobis,<br>
+                             amet, vel corporis officia laborum dignissimos aperiam nam veritatis dolorem distinctio numquam.
+                        </dt>
+                        <dd>May 05, 2023</dd>
+                    </dl>
+                </div>
+                <div>
+                    <h4>QUICK LINKS</h4>
+                    <ul class="quicklist">
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">Menu1</a>
+                        </li>
+                        <li>
+                            <a href="#">Menu2</a>
+                        </li>
+                        <li>
+                            <a href="#">Menu3</a>
+                        </li>
+                        <li>
+                            <a href="#">Location</a>
+                        </li>
+                        <li>
+                            <a href="#">Admin</a>
+                        </li>
+                        <li>
+                            <a href="#">Link</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>     
+        </div>
+
+        <div class="footer-black">
+            <div class="inner">
+                <p>@ 2023 Under the Sea</p>
+                <div class="sns">
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-google"></i>
+                    </a>
+                </div>
+                <p>Privacy Policy</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init();
+      </script>
+
+</body>
+</html>

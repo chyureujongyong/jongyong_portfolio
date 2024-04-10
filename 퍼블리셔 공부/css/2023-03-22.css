@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+header{
+    background-color: pink;
+    margin-top: 100px;
+}
+.mainmenu{
+    display: flex;
+    margin-left: 100px;
+}
+.mainmenu>li>a{
+    display: inline-block;
+    width: 200px;
+    background-color:red;
+    color: white;
+    font-size: 30px;
+    font-weight:700;   
+    padding: 10px 0 10px 10px;
+    text-decoration: none;
+}
+.submenu{
+    display:none;
+    background-color:blue;
+    color: white;
+    /* 본인의크기를 다른애한테 영향안준다 / 그냥떠있는거 */
+     /* ->가로값이 없어진다 */
+    position: absolute;
+    /* 엄마크기(relative 선언해준거)만큼 가져간다 */
+    top: 100%;   /*엄마크기의높이*/
+    width: 100%;
+}
+/* 엄마선언(밑어꺼relative)해줘야함그래야 위에꺼 width100% 가능 */
+.mainmenu>li{
+    position: relative;
+}
+.submenu>li:hover{
+    background-color: skyblue;
+}
+.mainmenu>li:hover a{
+    background-color:black;
+}
+
+/* .mainmenu a:hover + .submenu{
+    display:block;
+}  */
+.submenu>li{
+    font-size: 22px;
+    padding: 10px 15px;
+}
+.mainmenu li:hover .submenu{
+    display: block;
+}
+.main_image{
+    background-image: url('../img/grid2.jpg');
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* .mainmenu:hover .submenu{
+    display: block;
+} */
+
+/* hover 띄어쓰기 중요!! */

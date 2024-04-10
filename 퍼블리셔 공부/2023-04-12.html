@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>자바스크립트 배열</h1>
+    <p>내가 가장좋아하는 과일은 <span id="myfruit">000</span>입니다</p>
+    <p>내가 좋아하는과일들:<li id="fruitlist"></li></p>
+    <p id="myfood"></p>
+    <script>
+        var fruit = '사과';
+        fruit = '오렌지';
+
+        var fruit2 = ['망고','사과','오렌지','바나나','키위'];
+        console.log(fruit2);
+
+        // fruit2에 있는 0번쨰 아이템을 콘솔에다가 보여줘
+        console.log('첫번쨰아이템: '+fruit2[0]);
+        console.log('두번쨰아이템: '+fruit2[1]);
+
+        document.querySelector('#myfruit').innerHTML=fruit2[0];
+        
+        // pop은 배열의 맨마지막있는 놈을 자른다
+        fruit2.pop();
+        console.log(fruit2);
+        fruit2.pop();
+        console.log(fruit2);
+
+        // push는 배열의 맨마지막에 추가해준다.
+        fruit2.push('귤');
+        console.log(fruit2);
+        fruit2.push('포도');
+        console.log(fruit2);
+
+        document.querySelector('#fruitlist').innerHTML=fruit2.join(' / ');
+
+        // shift는 맨처음 있는놈을 지워버린다.
+        fruit2.shift();
+        console.log(fruit2);
+
+        // unshift는 맨처음으로 집어넣는다
+        fruit2.unshift('레몬');
+        console.log(fruit2);
+
+        var food = ['떢볶이','짜장면','파스타'];
+        var food2 =prompt('오늘 점심에 무엇을 드시겠어요?');
+        food.unshift(food2);
+        console.log('당신이 좋아하는 음식은 :'+food+'입니다.');
+        document.querySelector('#myfood').innerHTML='당신이 좋아하는 음식은'+food+'입니다';
+        console.log('마지막요소: '+food[2]);
+        console.log(food);
+        console.log(food.length);
+
+        var car=['k7','셀토스','캐스퍼','bmw'];
+        console.log('car의 아이템수'+car.length);
+        console.log(car[0]);
+        console.log(car[1]);
+        console.log(car[2]);
+        console.log(car[3]);
+
+        console.log(car[car.length-1]);
+
+        // push랑 똑같음(마지막부분에 추가됨)
+        car[car.length] = '람보르기니';
+        car[0]='벤츠';
+
+        // 배열 합치기
+        var animal = ['토끼','사자'];
+        var tree=['소나무','사과나무'];
+        
+        var nature= animal.concat(tree);
+        console.log(nature);
+
+        // 중간에 끼워넣기
+        var planet = ['수성','금성','화성','목성'];
+        // 2번자리에 , 0=아무것도삭제하지않고 ,    지구를넣겠다
+        //             1=바로 뒤에하나를 삭제하고, (아무것도안넣으면 뒤에꺼 제거)
+        planet.splice(2,0,'지구');
+
+        var movie = ['신세계','주토피아','영웅'];
+        var answer = prompt('영화제목을 맞추어 주세요!');
+        if(answer==movie[0]){
+            console.log('정답입니다');
+        }
+        else if(answer==movie[1]){
+            console.log('정답입니다');
+        }
+        else if(answer==movie[2]){
+            console.log('정답입니다');
+        }
+        else{
+            console.log('틀렸습니다');
+        };
+        
+        var flowerlist = ['벚꽃','개나리','진달래'];
+        var flower = prompt('좋아하는 꽃을 적어주세요');
+        var springflower= confirm('그 꽃은 봄꽃인가요??')
+        if(springflower){
+            flowerlist.push(flower);
+            console.log(flowerlist);
+        }
+
+        var flower_idx = prompt('몇번쨰꽃?');
+        console.log(flowerlist[flower_idx-1]);
+      
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

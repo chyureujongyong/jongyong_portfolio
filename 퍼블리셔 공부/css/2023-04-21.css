@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+.title{
+    display: inline-block;
+}
+ol{
+    border: 2px solid black;
+}
+li{
+    background-color: orange;
+}
+li:nth-child(2n){
+    background-color: red;
+}
+
+.box{
+    border: 5px solid black;
+    padding: 20px;
+}
+.yellowbg{
+    background-color: yellow;
+}
+.name2{
+    background-color: rgba(255, 0, 0, 0.3);
+}

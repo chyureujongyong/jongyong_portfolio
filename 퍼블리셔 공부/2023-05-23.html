@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        dl{
+            display: flex;
+        }
+        dd{
+            color: blue;
+            margin-right: 10px;
+        }
+        .img1,.img2{
+            width: 300px;
+            height: 300px;
+            display: inline-block;
+            background-position: center;
+            background-size: cover;
+        }
+        .img1{
+            background-image: url('./img/grid1.jpg');
+        }
+        .img2{
+            background-image: url('./img/grid2.jpg');
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 요소를 만든다
+        var mybtn = document.createElement('button');
+        mybtn.innerHTML='click';
+        document.body.appendChild(mybtn);
+
+        var myp = document.createElement('p');
+        // myp.createTextNode('새로운 p태그');
+        myp.innerText='hello';
+
+        document.body.appendChild(myp);
+    </script>
+
+
+    <input type="text" id="contact_name" placeholder="이름">
+    <input type="text" id="contact_number" placeholder="연락처">
+    <button onclick="contactAdd()">확인</button>
+    <script>
+        function contactAdd(){
+            if(contact_name.value==""){
+                alert('이름을 입력해주세요');
+            }
+            else if(contact_number==''){
+                alert(contact_name.value+'전화번호를 입력해주세요');
+            }
+            else{
+                var newdl = document.createElement('dl');
+                var newdt = document.createElement('dt');
+                var newdd = document.createElement('dd');
+                newdt.innerHTML = contact_name.value;
+                newdd.innerHTML = contact_number.value;
+
+                newdl.appendChild(newdt);
+                newdl.appendChild(newdd);
+
+                document.body.appendChild(newdl);
+            }       
+        }
+    </script>
+
+    <hr>
+
+
+    <button onclick=" location.reload() ">location의 메소드</button>
+                     <!-- ㄴ새로고침   -->
+    <button onclick=" location.href='http://naver.com' ">새로운버튼</button>
+    <button id="naverbtn">네이버로 이동</button>
+    <script>
+        location.hash
+        console.log(location.href)
+
+        naverbtn.onclick=function(){
+            location.href='http://naver.com';
+        }
+    </script>
+
+    <hr>
+
+    <div class="img1" onclick="location.href='http://naver.com'"></div>
+    <div class="img2"></div>
+    <script>
+
+        // document.querySelector('.img1').onclick=function(){
+        //     location.href='http://naver.com';
+        // }
+        document.querySelector('.img2').onclick=function(){
+            window.open('https://www.daum.net/');
+        }
+        
+    </script>
+
+
+
+</body>
+</html>

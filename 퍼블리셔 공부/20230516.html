@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="./css/20230516.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <header>
+        <h1>Animals</h1>
+        <ul class="gnb">
+            <li class="mobile-title">
+                <h2>Animals</h2>
+            </li>
+            <li>
+                <a href="#">menu1</a>
+            </li>
+            <li>
+                <a href="#">menu2</a>
+            </li>
+            <li>
+                <a href="#">menu3</a>
+            </li>
+            <i class="xi-close"></i>
+        </ul>
+        <i class="xi-bars" ></i>
+    </header>
+    <script>
+        $('.xi-bars').click(function(){
+            $('.gnb').show();
+        });
+        $('.xi-close').click(function(){
+            $('.gnb').hide();
+        })
+    </script>
+
+
+    <div class="slide-window">
+        <div class="slidebox">
+            <div class="slide1">
+                <!-- slide1과 함께 움직이는 텍스트 -->
+                <span>첫번째</span>
+            </div>
+            <div class="slide2"></div>
+            <div class="slide3"></div>
+            <div class="slide4"></div>
+        </div>
+        <!-- 슬라이드가 움직일때 늘 고정되어있는 텍스트 -->
+        <p>lovely <br>animals</p>
+        <i class="xi-angle-left" onclick="goRight()"></i>
+        <i class="xi-angle-right" onclick="goLeft()"></i>
+
+        <div class="circlelist">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <script>
+        function goLeft(){
+            $('.slidebox').animate({marginLeft:'-100vw'},function(){
+                $('.slidebox>div').first().appendTo('.slidebox');
+                $('.slidebox').css('margin-left','0px');
+            });
+        }
+        function goRight(){
+            $('.slidebox>div').last().prependTo('.slidebox');
+            $('.slidebox').css('margin-left','-100vw');
+            $('.slidebox').animate({marginLeft:'0px'});
+        }
+    </script>
+</body>
+</html>

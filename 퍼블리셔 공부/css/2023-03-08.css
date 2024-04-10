@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+
+.circle{
+    width: 500px;
+    height: 500px;
+    color: #fff;
+    margin: 50px auto;
+    background-image: linear-gradient(to right bottom,yellow,orange);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 100px;
+    font-family: 'Secular One', sans-serif;
+    /* 오른쪽->아래쪽->흐릿한거->확산(퍼짐)->색상->반전
+    box-shadow: 5px 5px 5px 5px gray inset; */
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+
+}
+
+
+.myposition{
+    background-color: skyblue;
+    font-size: 50px;
+    margin: 0;   
+     /* 자신의 크기만큼만 잡음(스티커같은놈) 
+     스크롤을 내리든올리든 위치변화없다!(고정)*/
+    position: fixed;
+    top: 200px;
+    /* left: 300px; */
+    right: 300px;
+    
+}
+
+.myp2{
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    background-color: orange;
+    font-size: 60px;
+    width: 200px;
+    height:100px;
+}
+
+.버튼{
+    position: fixed;
+    bottom:10px;
+    right: 10px;
+
+    border-radius: 50%;
+    background-color: pink;
+    width: 200px;
+    height: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 50px;
+    text-decoration: none; /*a테그 밑줄제거*/
+    
+}

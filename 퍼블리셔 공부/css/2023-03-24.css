@@ -1,0 +1,36 @@
+.box{
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    font-size: 40px;
+    color: white;
+
+    /* 요소 회전 */
+    /* transform: rotate(20deg); */
+    /* transform: rotate3d(1,1,1,45deg); */
+    
+    /* 몇배(곱하기) */
+    /* transform: scale(1); */
+ 
+    /* 이동(위치조정 x축 y축) */
+    /* transform: translate(-30px,30px); */
+   /* 이동(위치조정 x축) */
+    /* transform: translateX(100px); */
+    /* 이동(위치조정 y축) */
+    /* transform: translateY(100px); */
+    transform: translateX(100%);
+
+    /* 비트는얘(자주쓰이진안음) */
+    /* transform: skew(20deg,50deg); */
+    transform: skewx(20deg);
+
+    /* 동시선언할때 한줄로써야됨 */
+    transform: scale(2) translate(20px,20px);
+
+
+}
+
+.box:hover{
+    transform: rotate(45deg);
+}

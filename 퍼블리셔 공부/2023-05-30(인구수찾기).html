@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/2023-05-30.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <h1>당신의 성은 무엇입니까?</h1>
+    <div class="inputbox">
+        <input type="text" placeholder="Last name" id="myname_input">
+        <button onclick="rankCheck()" >check!</button>
+    </div>
+    <div class="name-ranking">
+        <h2>성씨별 인구 순위</h2>
+        <dl>
+            <dt>1위</dt>
+            <dd>김</dd>
+        </dl>
+        <dl>
+            <dt>2위</dt>
+            <dd>이</dd>
+        </dl>
+        <dl>
+            <dt>3위</dt>
+            <dd>조</dd>
+        </dl>
+        <dl>
+            <dt>4위</dt>
+            <dd>최</dd>
+        </dl>
+        <dl>
+            <dt>5위</dt>
+            <dd>박</dd>
+        </dl>
+        <dl>
+            <dt>6위</dt>
+            <dd>문</dd>
+        </dl>
+        <dl>
+            <dt>7위</dt>
+            <dd>정</dd>
+        </dl>
+    </div>
+    <p>당신의 성은 인구 순위를 따졌을떄 , <span></span>위 입니다</p>
+    <div id="noname">자료가 없습니다</div>
+
+    <script>
+        $('p').hide();
+        $('#noname').hide();
+
+        function rankCheck(){
+            var myname = myname_input.value;
+
+            var namelist = document.getElementsByTagName('dd');
+
+            var myidx = 1000;
+
+            $('p').show();
+
+            //리스트의 모든 순위에서 디자인 삭제 초기화
+            $('dl').removeClass('blue');
+
+            
+            for(var i=0;i<namelist.length;i++){
+
+                 //각요소의 innerhtml이 같은지!!!
+                if(namelist[i].innerHTML==myname){
+                    myidx = i;
+                    $('dl').eq(i).addClass('blue');
+                    $('span').html(i+1);
+                    $('#noname').hide();
+                }
+
+            }
+            if(myidx==1000){
+                $('p').hide();
+                $('#noname').show();
+            }
+
+        }
+
+
+    </script>
+    
+    
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+}
+.box{
+    display: inline-block;
+    width: 500px;
+    height: 350px;
+    border: 10px solid #aaa; 
+
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.box1{
+    background-image: url(../img/grid2.jpg);
+}
+.box2{
+    background-image: url(../img/grid4.jpg);
+}
+.txtbox{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+
+    color: white;
+    font-size: 35px;
+    background-color:rgba(0,0,0,0.5);
+    height: 100%;
+    transition: 1s;
+    transform: translateX(-100%);
+}
+.box:hover .txtbox{
+    transform: translateX(0);
+}
+
+
+.mytxt{
+    font-size: 40px;
+    text-align: center;
+}

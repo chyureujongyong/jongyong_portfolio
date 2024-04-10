@@ -1,0 +1,41 @@
+
+/* body {background-color:pink;}
+li{background-color:blue;
+  color: white;
+  text-decoration-line:line-through;
+  font-size: 30px;
+}
+#까망{background-color:black;}
+#빨강{background-color:red;}
+#글자{font-size:50px;
+      color:yellow;}
+
+.ccc{
+    border:5px solid cyan;
+} */
+
+h2{background-color: black;
+color: white;
+width: 400px;
+border: 7px solid yellow;
+text-align: center;
+font-size: 50px;
+border-radius: 50px;}
+.team1{ width: 400px;
+    background-color: orangered;
+    color: white;
+    font-size:50px;}
+.team2{width: 400px;
+    background-color: darkred;
+    color: white;
+    font-size:50px;}
+.team3{width: 400px;
+    background-color:black;
+    color: white;
+    font-size:50px;}
+.team4{width: 400px;
+    background-color:blue;
+    color:red;
+    font-size:50px;}
+span{color:red;}
+ul{padding:0;}

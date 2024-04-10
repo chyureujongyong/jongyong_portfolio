@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="./css/2023-04-21.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="title">오늘의 할일</div>
+    <input type="text" id="todo_input">
+    <i class="xi-plus-circle" id="addbth"></i>
+    <ol>
+        <li>웹 수업 듣기</li>
+        <li>자격증 시험 공부하기</li>
+        <li>책 읽기</li>
+        <li>필라테스 다녀오기</li>
+    </ol>
+    <script>
+        addbth.onclick = function(){
+            // var todo = prompt('오늘 할일을 적어주세요.');
+            var todo = todo_input.value;
+            document.querySelector('ol').innerHTML += '<li>'+todo+'</li>';
+        }
+    </script>
+    
+    <p id="txtbox">오늘은 즐거운 금요일입니다</p>
+    <input type="text" placeholder="성함을 입력하세요" id="myname">
+    <button id="btn">실행</button>
+    <script>
+        btn.onclick=function(){
+            // var msg = txtbox.innerHTML;
+            // console.log(msg);
+            // console.log(txtbox.innerHTML); //위에꺼랑똑같음
+
+
+            // input안에있는정보는 value값으로 저장되있다
+            console.log(myname.value);
+
+        };
+    </script>
+
+    <input type="text" placeholder="ID" id="myid">
+    <input type="password" placeholder="password" id="mypw">
+    <button id="loginbtn">로그인</button>
+    <div id="info"></div>
+    <script>
+        // 예제1
+        // loginbtn.onclick = function(){
+        //     var login_id = document.querySelector('#myid').value;
+        //     var login_pw = document.querySelector('#mypw').value;
+        //     document.querySelector('#info').innerHTML='id: '+login_id+'<br>';
+        //     document.querySelector('#info').innerHTML +='pw: '+login_pw;
+        // }
+
+        // 예제2
+        loginbtn.onclick=function(){
+            var login_id=myid.value;
+            var login_pw=mypw.value;
+        // if(login_id=='happy'){
+        //     if(login_pw=='h1234'){
+        //         info.innerHTML='happy님 반갑습니다';
+        //     }
+        //     else{
+        //         info.innerHTML='비밀번호를 확인해주세요';
+        //     }
+        // }
+        // else{
+        //     info.innerHTML = '아이디가 없습니다';
+        // }
+
+            //  ' || ' = (or)둘중 하나만 맞춰도
+        // 예제3
+            if(login_id=='happy'&& login_pw=='h1234'){   
+                info.innerHTML = '아이디와 비밀번호 모두 맞춤!!';
+                info.style.color="black";
+            }
+            else if(login_id=='happy'){
+                info.innerHTML='비밀번호를 확인해주세요';
+                info.style.color="black";
+            }
+            else{
+                info.innerHTML='아이디가 없습니다';
+                info.style.color="red";
+            }
+
+        }
+    </script>
+
+    <hr>
+
+    <input type="text" placeholder="간단한 인사말" id="greeting_input">
+    <div id="greeting"></div>
+    <script>
+        greeting_input.onchange = function(){
+            greeting.innerHTML = greeting_input.value;
+        }
+
+    </script>
+
+    <hr>
+
+    <label for="name1">성함: </label>
+    <input type="text" id="name1">
+    <div class="box">
+        <span class="name2">홍길동</span>님 반갑습니다.<br>
+        <span class="name2">홍길동</span>님의 오늘 운세는 '<span class="yellowbg">아주좋음</span>'입니다.<br>
+        외출하시면 <span class="name2">홍길동</span>님의 운명의 상대를 만나실 수 있습니다.
+    </div>
+    <script>
+        name1.onchange=function(){
+            
+            // document.querySelectorAll('.name2')[0].innerHTML = name1.value;
+            // document.querySelectorAll('.name2')[1].innerHTML = name1.value;
+            // document.querySelectorAll('.name2')[2].innerHTML = name1.value;
+
+            // for(var i=0;i<document.querySelectorAll('.name2').length;i++){
+            //     document.querySelectorAll('.name2')[i].innerHTML = name1.value;
+            // }
+
+            var names = document.querySelectorAll('.name2');
+            for(var i=0;i<names.length;i++){
+                names[i].innerHTML = name1.value;
+            }
+        }
+    </script>
+
+
+
+
+</body>
+</html>

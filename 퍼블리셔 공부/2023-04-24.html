@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/2023-04-24.css">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="fruit" placeholder="과일 이름을 입력하세요">
+    <input type="button" value="실행" id="btn">
+    <div id="fruit_box"></div>
+    <script>
+        btn.onclick= function(){
+            fruit_box.innerHTML += ', '+fruit.value;
+            fruit.value ='';
+        };
+
+    </script>
+
+    <input type="text" id="input2">
+    <div id="input2box"></div>
+    <script>
+        // input2.onchange = function(){
+        //     input2box.innerHTML = input2.value;
+        // }
+
+        // onkeyup : 키보드가올라올때마다(입력할때마다)
+        // input2.onkeyup = function(){
+        //     input2box.innerHTML = input2.value;
+        // }
+    </script>
+
+    <hr>
+
+    <input type="checkbox" id="car1" name="cartype" value="소형">
+    <label for="car1">아반데</label>
+    <input type="checkbox" id="car2" name="cartype" value="중형">
+    <label for="car2">소나타</label>
+    <input type="checkbox" id="car3" name="cartype" value="대형">
+    <label for="car3">그렌져</label>
+    <button id="car_check">차종확인</button>
+    <script>
+        var carlist = document.getElementsByName('cartype');
+        // console.log(carlist);
+
+        // 네임가져올때 : checked
+        car_check.onclick = function(){
+            for(var i=0;i<carlist.length;i++){
+                if(carlist[i].checked ==true){
+                console.log(carlist[i].value);
+            }
+            }
+            // if(carlist[0].checked ==true){
+            //     console.log(carlist[0].value);
+            // }
+            // if(carlist[1].checked ==true){
+            //     console.log(carlist[1].value);
+            // }
+            // if(carlist[2].checked ==true){
+            //     console.log(carlist[2].value);
+            // }
+        };
+    </script>
+
+    <input type="radio" id="blood_a" name="bloodtype">
+    <label for="blood_a">A형</label>
+    <input type="radio" id="blood_b" name="bloodtype">
+    <label for="blood_b">B형</label>
+    <input type="radio" id="blood_o" name="bloodtype">
+    <label for="blood_o">O형</label>
+    <input type="radio" id="blood_ab" name="bloodtype">
+    <label for="blood_ab">AB형</label>
+
+    <button id="blood_check">혈액확인</button>
+    <p id="blood_result"></p>
+
+    <script>
+        var bloodlist = document.getElementsByName('boodtype')
+
+        blood_check.onclick=function(){
+            if(blood_o.checked){
+                blood_result.innerHTML="모두에게 수혈할수있습니다";
+            }
+            else{
+                blood_result.innerHTML='';
+            }
+        };    
+        
+    </script>
+
+    <hr>
+
+    <h1 onclick="aboutme()">자바스크립트 함수</h1>
+    <button onclick="numberPlus(10)">10</button>
+    <button onclick="numberPlus(20)">20</button>
+    <script>
+                //이름
+        function happy(){
+            console.log('행복합니다!!');
+            document.querySelector('body').style.backgroundColor='pink';
+        };
+        // 함수 호출하는방법, happy함수도 실행해라!!
+        happy();
+
+        function aboutme(){
+            alert('저는 000입니다');
+            document.querySelector('body').style.backgroundColor='blue';
+        };
+        // myname();
+
+        function numberPlus(num1){
+            console.log(num1 + 2);
+        };
+
+    </script>
+
+    <button onclick="color('red')">빨강</button>   
+    <button onclick="color('yellow')">노랑</button> 
+    <button onclick="color('purple')">보라</button> 
+    <button onclick="color('green')">초록</button> 
+    <div id="colorbox"></div> 
+    <script>
+        function color(colorname){
+            colorbox.style.backgroundColor = colorname;
+        };
+
+    </script>
+
+
+
+
+
+</body>
+</html>

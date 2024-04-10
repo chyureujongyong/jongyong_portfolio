@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 span{color: yellow;}
+    </style>
+</head>
+<body>
+    <input type="button" value="수요일">
+    <button>안녕</button>
+    <span class="txt">반가워</span>
+    <button id="green">초록</button>
+    <p>안녕하세요. 우리는 웹을 공부하는 중입니다</p>
+    <script>
+        var btn = document.querySelector('button');
+        console.log(btn);
+
+        document.querySelector('button').addEventListener('click',function(){
+            alert('나 지금 클릭했니??');
+        });
+
+        document.querySelector('.txt').addEventListener('click',function(){
+            document.querySelector('.txt').style.backgroundColor='yellow';
+        });
+
+        // document.querySelector('#green').onclick = function(){
+        //     document.querySelector('p').style.color = 'pink';
+        // };
+        
+        // (oncontextmenu) : 우클릭했을때 변함
+        // document.querySelector('#green').oncontextmenu = function(){
+        //     document.querySelector('p').style.color = 'pink';
+        // };
+
+        // (ondblclick) : 더블클랙했을때 변함
+        // document.querySelector('#green').ondblclick = function(){
+        //     document.querySelector('p').style.color = 'yellow';
+        // };
+
+        // (onmousedown) : 마우스가 눌렸을때 변함
+        // document.querySelector('#green').onmousedown = function(){
+        //     document.querySelector('p').style.color = 'skyblue';
+        // };
+ 
+        // (onmouseup) : 마우스가 떨어졌을떄 변함
+        // document.querySelector('#green').onmouseup = function(){
+        //     document.querySelector('p').style.color = 'red';
+        // };
+
+        // (onmouseenter) : 요소안에 마우스가 들어가면 변함
+        // document.querySelector('#green').onmouseenter = function(){
+        //     document.querySelector('p').style.color = 'violet';
+        // };
+
+        // (onmouseleave) : 요소안에 마우스가 나가면 변함
+        // document.querySelector('#green').onmouseleave = function(){
+        //     document.querySelector('p').style.color = 'gold';
+        // };
+
+        // 마우스가 요소안에서 움직인다
+        document.querySelector('#green').onmousemove = function(){
+            document.querySelector('p').style.color = 'pink';
+        };
+    </script>
+
+    <hr>
+
+    <button id="pen">형광펜</button>
+    <button id="r-color">빨강</button>
+    <button id="dark-color">다크모드</button>
+    <h1>자바스크립트</h1>
+    <div>
+        <span class="mytxt">자바스크립트</span>는 웨페이지에서 
+        <span class="mytxt">동작</span>을 담당합니다. 
+        <span class="mytxt">html</span>과 
+        <span class="mytxt">css</span>와 
+        더불어우리가 공부해야하는 언어입니다.
+    </div>
+    <script>
+        document.querySelector('#pen').onclick = function(){
+            for(var i=0;i<4;i++){
+            document.querySelectorAll('.mytxt')[i].style.backgroundColor = 'yellow' ;
+            }
+        };
+
+        document.querySelector('#r-color').onclick = function(){
+            document.querySelector('body').style.backgroundColor = 'red';
+            document.querySelector('body').style.color = 'white';
+
+        };
+
+        document.querySelector('#dark-color').onclick = function(){
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            document.querySelector('h1').innerHTML = '자바스크립트<span>(다크모드)</span>';
+        };
+
+    </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/2023-04-27.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./js/jquery-3.6.4.js"></script>
+
+    <p>hello</p>
+    <input type="text">
+    <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste officia ad fugit. Recusandae facilis fugit aperiam mollitia! Doloremque quos incidunt mollitia ad. Deserunt alias obcaecati error at, id unde voluptas.
+    </div>
+    <script>
+        // $('p').click(function(){
+        //     $('div').hide();
+        // });
+
+
+        // $('p').dblclick(function(){
+        //     $('div').hide();
+        // });
+
+
+        // $('p').mouseenter(function(){
+        //     $('div').css('background-color','red');
+        // });
+
+
+        // $('p').mouseleave(function(){
+        //     $('div').css('background-color','green');
+        // });
+
+
+        //왼쪽마우스건 오른쪽이건 휠이든 눌리면 변함
+        // $('p').mousedown(function(){            
+        //     $('div').css('color','red');
+        // });
+
+        //왼쪽마우스건 오른쪽이건 휠이든 마우스가 떨어지면 변함
+        // $('p').mouseup(function(){
+        //     $('div').css('background-color','orange');
+        // });
+
+        // $('p').hover(function(){
+        //     $('div').css('background-color','red');
+        // },function(){
+        //     $('div').css('background-color','skyblue');
+        // });
+
+        $('input').focus(function(){
+            $('input').css('background-color','cyan');
+        });
+    </script>
+
+    <input type="text" placeholder="연락처 입력" id="myphone">
+    <button>입력</button>
+    <script>
+        // document.querySelector('button').onclick = function(){
+        //     var phoneNumber = document.querySelector('#myphone').value;
+        //     console.log('전화번호: '+phoneNumber);
+        // }
+        //                        (위어꺼랑똑같음)
+        $('button').click(function(){
+            var phoneNumber = $('#myphone').val();
+            console.log('전화번호: '+phoneNumber);
+        });
+    </script>
+
+    <hr>
+
+    <input type="text" id="myname" placeholder="성함입력">
+    <button id="btn">실행</button>
+    <div id="resultbox"></div>
+    <script>
+        $('#btn').click(function(){
+            var yourName = $('#myname').val();
+            if(yourName == '홍길동'){
+                $('#resultbox').html('관리자님 반갑습니다!');
+            }
+            else{
+                $('#resultbox').html('안녕하세요. 관리자님은 아니시네요ㅠㅠ');
+            }
+        });
+    </script>
+
+    <hr>
+
+    <input type="text" placeholder="여행지" id="place">
+    <button id="addbtn">V</button>
+    <ol>
+        <li>강릉</li>
+        <li>부산</li>
+    </ol>
+    
+    <script>
+        $('#addbtn').click(function(){
+            var myplace = $('#place').val();
+            var myplace_txt = '<li>'+myplace+'</li>';
+
+            // document.querySelector('ol').innerHTML += myplace_txt;
+
+            // 요소의 가장마지막에 끼워주겠다!!
+            // $('ol').append(myplace_txt);
+
+            //요소의 가장앞쪽으로 끼워주겠다!!
+            $('ol').prepend(myplace_txt);
+
+        });
+    </script>
+
+
+    <input type="text" id="colorname">
+    <button id="colorbtn">선택</button>
+    <div class="boxbox">
+    <p id="gbox">a</p>
+    <p id="rbox">b</p>
+    <p id="bbox">c</p>
+    </div>  
+    <script>
+        $('#colorbtn').click(function(){
+            var mycolor = $('colorname').value();
+            $('.boxbox').append(mycolor);
+
+        })
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>

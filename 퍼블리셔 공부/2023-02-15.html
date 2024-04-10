@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>2023-02-15</title>
+        <style>
+            table,th,td{
+                border: 1px solid black;
+
+            }
+        </style>
+
+
+    </head>
+    <body>
+        <h1>table tag</h1>
+
+         <!--테이블태그 공부하기 표의 시작-->
+        <table style="width:600px">
+         <caption>과일게시판</caption>   
+         <thead>
+                <!--행 시작-->
+            <tr>
+                <!--열 시작-->
+                <th>NO</th>
+                <th>제목</th>
+                <th>글쓴이</th>
+                <th>작성일자</th>
+            </tr>
+         </thead>   
+         <tbody>
+            <tr>
+                <td>1</td>
+                <td>banana</td>
+                <td>홍길동</td>
+                <td>2023-02-15</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>strawberry</td>
+                <td>홍길동</td>
+                <td>2023-02-14</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+             <td>총 2개</td>
+             <td>-</td>
+             <td>-</td>
+             <td>2023-02-14</td>
+
+            </tr>
+
+
+         </tfoot>
+
+
+        </table>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="3">학생정보</th>
+                    <!-- <th>학생정보</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>개발</td>
+                    <td>홍길동</td>
+                    <td>33세</td>
+                </tr>
+                <tr>
+                    <td>디자인</td>
+                    <td>정성화</td>
+                    <td>27세</td>
+                </tr>
+                <tr>
+                    <td>마케팅</td>
+                    <td colspan="2">미정</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">기타</td>
+                    <td>김고은</td>
+                    <td>20세</td>
+                </tr>
+                <tr>
+                    <!-- <td>기타</td> -->
+                    <td>조우진</td>
+                    <td>40세</td>
+                </tr>
+                <tr>
+                    <!-- <td>기타</td> -->
+                    <td>나문희</td>
+                    <td>60세</td>
+                </tr>
+
+                <table>
+                    <tbody>
+                    <tr>
+                        <td colspan="2" rowspan="3">2월</td>
+                        <td>3일</td>
+                        <td>친구생일</td>
+                    </tr>
+                    <tr>
+                       
+                        <td>10일</td>
+                        <td>자격증시험</td>
+                    </tr>
+                    <tr>
+                       
+                        <td>22일</td>
+                        <td>할머니생신</td>
+                    </tr>
+                    <tr>
+                        <td>책읽기</td>
+                        <td colspan="3">아버지의 해방일지</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">*필라테스 10번 갔다오기*</td>
+                    </tr>
+                    </tbody> 
+                    
+
+
+                </table>
+
+
+
+            </tbody>
+
+
+        </table>
+
+        <!-- <img src="파일경로" alt="대체택스트"> -->
+
+        <!-- <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/12/08/116908429.1.jpg" alt="영웅,아바타"> -->
+
+        <img src="./img/구름사진.jpg" alt="구름이미지">
+
+    </body>
+
+
+</html>

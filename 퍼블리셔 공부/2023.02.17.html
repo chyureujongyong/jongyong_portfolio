@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>2월17일 입력 양식 태그</title>
+</head>
+<body>
+    <h1>입력 양식 태그</h1>
+
+    <form method="post">
+        <fieldset>
+        <legend>사용자 정보 입력</legend>
+
+        <label for="myid">아이디</label>
+        <input type="text" id="myid" placeholder="아이디입력">
+        
+
+        
+        <label for="yourpw">비밀번호</label>
+        <input type="password" id="yourpw" placeholder="비밀번호입력">
+        </fieldset>
+
+        <fieldset>
+        
+            <legend>배송지 정보 입력</legend>
+
+            <label for="myaddress">주소</label>
+            <input type="text" id="myaddress">
+
+            <label for="tel">연락처</label>
+            <input type="text" id="tel">
+
+        </fieldset>
+        
+        <!-- 검색어를 입력하는 입력창 -->
+        <input type="search">
+        <input type="url">
+        <input type="email" placeholder="이메일입력">
+
+        <!-- 숨겨진 입력필드 -->
+        <input type="hidden">
+
+        <input type="button" value="더보기">
+        <!-- <button>더더더더보기</button> -->
+
+        <fieldset>
+         <legend>이번주말에 하고싶은활동</legend>
+
+            <input type="checkbox" id="act1" name="holiday">
+            <label for="act1">영화보기</label>
+
+            <input type="checkbox" id="act2" name="holiday">
+            <label for="act2">책읽기</label>
+
+            <input type="checkbox" id="act3" name="holiday">
+            <label for="act3">스포츠관람</label>
+
+            <input type="checkbox" id="act4" name="holiday">
+            <label for="act4">미술관가기</label>         
+        </fieldset>
+
+        <input type="radio" id="male" name="gender">
+        <label for="male">남성</label>
+        <input type="radio" id="female" name="gender">
+        <label for="female">여성</label>
+        
+        <fieldset>
+            <legend>당생의 혈액형은??</legend>
+            <input type="radio" id="a" name="피">
+            <label for="a">a형</label>
+            <input type="radio" id="b" name="피">
+            <label for="b">b형</label>
+            <input type="radio" id="o" name="피">
+            <label for="o">o형</label>
+            <input type="radio" id="ab" name="피">
+            <label for="ab">ab형</label>
+        </fieldset>
+
+        <input type="color">
+        <input type="date">
+        <input type="file">
+        <input type="month">
+        <input type="time">
+        <input type="number" min="0" max="100" step="10">
+        <input type="range">
+        <input type="tel">
+        <input type="reset" value="다시자성">
+        <input type="submit">
+
+        <select name="address" id="addr">
+            <option value="suwon">수원시</option>
+            <option value="">화성시</option>  
+            <option value="">용인시</option>
+            <option value="">안산시</option>          
+        </select>
+        <select name="" id="">
+
+            <optgroup label="기아자동차">
+                <option value="">k9</option>
+            <option value="">k5</option>
+            <option value="">셀토스</option>
+            <option value="">쏘렌토</option>
+            </optgroup>
+           
+            <optgroup label="현대자동차">
+                <option value="">그랜져</option>
+                <option value="">아이오닉</option>
+                <option value="">투싼</option>
+            </optgroup>
+            
+        </select>
+
+        <textarea name="" id="" cols="30" rows="10">
+이런 양식으로 적어주세요
+이름:
+나이:
+직업:
+        </textarea>
+      
+
+    </form>
+
+</body>
+</html>

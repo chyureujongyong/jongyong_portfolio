@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.yellowbox{
+    position: relative;
+    background-color: yellow;
+    width: 500px;
+    height: 300px;
+    font-size: 60px;
+}
+.yellowbox div{
+    color: black;
+}
+.blackbox{
+    background-color: black;
+    width: 200px;
+    height: 100px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+}
+.greenbox{
+    background-color:green;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+
+
+.redbox{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 0 auto;
+
+    animation: sizechange 5s linear 3s infinite alternate;
+    /*         이름  변화시간 진행 딜레이 변환횟수 어떻게변화할건지 */
+    /* 순서가 정해져있음 지켜야됨 */
+
+    /* animation-name: colorchange;
+    animation-duration: 3s; */
+    /* 위에꺼랑 아래꺼 똑같음 */
+   
+    /* animation-name: sizechange; */
+
+    /* 5초동안 변화된다 */
+    /* animation-duration: 5s; */
+
+    /* *2초후*에 시작된다 */
+    /* animation-delay: 2s; */
+
+    /* 재생횟수 숫자 or infinite(계속) */
+    /* animation-iteration-count: infinite; */
+
+    /* 한번은정방향 한번은반대방향 이런거임 */
+    /* animation-direction: alternate; */
+
+    /* 처음부터같은속도로진행 */
+    /* animation-timing-function: linear; */
+    
+    /* 마지막 모습으로유지된다(forwards)  기본은(none) */
+    /* animation-fill-mode: forwards; */
+
+
+}
+
+@keyframes colorchange {
+    /* from(~로부터) to(~까지) */
+    /* from{ background-color: red;}
+    to{ background-color: yellow;} */
+
+    /* %로 표현가능 */
+    0%{ background-color: red;}
+    50%{ background-color: blue;}
+    100%{ background-color: yellow;}
+
+}
+@keyframes sizechange{
+    from{
+        transform: scale(0.2)
+    }
+    50%{
+        /* width: 500px;
+        height: 500px; */
+        transform: scale(5);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+
+.loader{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+    border: 10px solid gray;
+    border-top: 10px solid red;
+
+    animation-name: circlechange;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes circlechange{
+    to{
+        transform: translate(-50%,-50%) rotate(360deg)
+    }
+}
+
+.ex1{
+    width: 500px;
+    margin: 100px auto;
+    overflow: hidden;
+}
+.ex1 p{
+    font-size: 30px;
+    margin-top:50px;
+}
+.ex1 div{
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    border: 5px solid black;
+
+    
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.ex1>div>div{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    height: 40px;
+}
+.bar1{
+    animation-name: y-bar;
+}
+@keyframes y-bar{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 80%;
+        background-color: yellow;
+    }
+}
+.bar2{
+    animation-name: g-bar;
+}
+@keyframes g-bar{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 60%;
+        background-color: green;
+    }
+}

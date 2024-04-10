@@ -1,0 +1,411 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color: gray;
+}
+/* ----------------메뉴바------------------------- */
+header{
+    background-color: white;
+}
+header .inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 0;
+}
+.header-right{
+    display: flex;
+    align-items: center;
+}
+.header-right p{
+    margin-right: 30px;
+}
+.header-right i{
+    color: #4aa9cb;
+}
+.header-right .btn{
+    margin-top: 0;
+}
+@media(max-width:800px){
+    .header-right{
+        display: none;
+    }
+}
+
+nav{
+    background-color: #32659c;
+}
+nav .inner{
+    padding: 0;
+}
+.gnb{
+    display: flex;
+}
+.gnb>li{
+    position: relative;
+}
+.gnb li.home a{
+    background-color: darkblue;
+    border-top: 5px solid #7ad7ff;
+}
+.gnb a{
+    /* a테그한테 패딩줄라면 인라인블럭 */
+    display: inline-block;
+    color: white;  
+    padding: 20px 20px 25px 20px;
+    /* 정렬이 무너지지않도록 배경과 같은색 */
+    border-top: 5px solid #32659c;
+}
+.gnb>li:hover a{
+    background-color: darkblue;
+    border-top: 5px solid #7ad7ff;
+}
+.snslist{
+    display: flex;
+}
+.snslist li{
+    margin-left: 20px;
+}
+.snslist i{
+    color: white;
+    font-size: 1.5rem;
+}
+.snslist:hover{
+    color: #4aa9cb;
+}
+@media(max-width:800px){
+    nav{
+        display: none;
+    }
+}
+.submenu{
+    position: absolute;
+    background-color: white;
+    z-index: 100;
+    width: 100%;
+    display: none;
+}
+.submenu>li{
+    /* 마진보다페딩이좋음 = 백그라운드컬러줄떄 크기를 다 줄수이음 */
+    padding: 10px;
+}
+.submenu>li:hover{
+    background-color: yellow;
+}
+/* 제이쿼리로하면 */
+/* .gnb>li:hover .submenu{
+    display: block;
+} */
+
+/* ----------------slide--------------------------*/
+    .swiper{
+        height: 650px;
+    }
+    .swiper-slide{
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+    }
+    .slide1{
+        background-image: url('../img/seaimg1.jpg');
+    }
+    .slide2{
+        background-image: url('../img/seaimg2.jpg');
+    }
+    .slide3{
+        background-image: url('../img/seaimg3.jpg');
+    }
+    .swiper h3{
+        font-size: 4rem;
+        color: white;
+        font-weight: 700;
+    }
+    .swiper-slide-active h3{
+        animation: txtup 1s;
+    }
+    @keyframes txtup{
+        0%{opacity:0;transform: translateY(100%);}
+    }
+    .swiper h4{
+        font-size: 2rem;
+        color: white;
+        font-weight: 400;
+    }
+    .swiper-slide-active h4{
+        animation: txtdown 1s;
+    }
+    @keyframes txtdown{
+        0%{opacity:0;transform: translateY(-100%);}
+    }
+    .btn3{
+        display: inline-block;
+        padding: 10px 25px;
+        border: 2px solid white;
+        color: white;
+        background-color: transparent;
+        margin-top: 30px;
+        text-decoration: none;
+    }
+
+    @media(max-width:800px){
+        .swiper{
+            text-align: center;
+        }
+    }
+
+
+/* ------------For our children!-------------------- */
+.tab-section{
+    background-color: white;
+}
+.tab-section .inner{
+    display: flex;
+    align-items: center;
+}
+.tab-left,.tab-right{
+    flex: 1;
+}
+.tab-left img{
+    max-width: 100%;
+}
+.tab-right{
+    padding-left: 40px;
+}
+.tab-right h2{
+    text-align: left;
+}
+
+.tab-menu{
+    display: flex;
+    font-size: 1.5rem;
+}
+.tab-menu>div{
+    position: relative;
+    border-bottom: 5px solid #ccc;
+    padding-right: 30px;
+    padding-bottom: 7px;
+    font-weight: 500;
+}
+.tab-menu>div::after{
+    position: absolute;
+    content: '';
+    bottom: -5px;
+    left: 0;
+    display: inline-block;
+    width: 0%;
+    height:5px;
+    background-color: #4aa9cb;
+}
+.tab-menu>div.select{
+    color: #4aa9cb ;
+}
+.tab-menu>div.select::after{
+    width: 100%;
+    transition: 1s;
+}
+.tab-contents>div{
+    display: none;
+    font-size: 1.3rem;
+    color: #555;
+    padding-top: 20px;
+}
+
+.tab-contents>div.show{
+    display: block;
+}
+@media(max-width:800px){
+    .tab-section .inner{
+        display: block;
+    }
+    .tab-right{
+        padding-left: 0;
+        padding-top: 40px;
+    }
+}
+
+
+/* ---------------big-bg--------------------------- */
+.big-bg{
+    background-image: url(../img/thum1.jpg);
+    background-position: center;
+    background-size: cover;
+    /* 바닥에 꽝 붙어지는것처럼(스크롤내릴떄마다 변화하도록) */
+    background-attachment: fixed;
+    padding: 100px 0;
+    text-align: center;
+}
+.big-bg *{
+    color: white;
+}
+.big-bg h2, .big-bg p{
+    text-shadow: 0 0 30px #1c5a73;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid black;
+    color: #1c5a73;
+    background-color: transparent;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+/* ------------Our service-------------------------- */
+.service{
+    background-color: white;
+}
+.inner{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 70px 0;
+    max-width: 100%;
+}
+h2{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.service ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+@media(max-width:800px){
+    html,body{
+        font-size: 13px;
+    }
+    .service ul{
+        grid-template-columns: 1fr;
+    }
+}
+.iconbox{
+    display: flex;
+    border: 7px solid #eee;;
+    padding: 25px;
+    transition: box-shadow 0.4s;
+}
+.iconbox:hover{
+    /* 보더의 색상이 변하도록 설정해주면 자연스러움 */
+    border: 7px solid white;
+
+    box-shadow: 0 0 15px #4aa9cb;
+}
+.icon{
+    margin-right: 20px;
+}
+.icon i{
+    font-size: 2.5rem;
+    color: #4aa9cb;
+}
+h4{
+    font-size: 1.3rem;
+}
+.text p{
+    color: #aaa;
+}
+
+/* ---------footer(하단부분)---------------------------------- */
+
+.footer-blue{
+    background-color: #32659c;
+    color: white;
+}
+.footer-blue .inner{
+    display: flex;
+}
+.footer-blue .inner>div{
+    flex: 1;
+}
+.footer-blue h4{
+    margin-bottom: 20px;
+}
+.footer-blue i{
+    color: cyan;
+    margin-right: 10px;
+}
+.footer-blue li{
+    margin-bottom: 10px;
+}
+
+
+
+.footer-blue dl{
+    margin-bottom: 20px;
+}
+.footer-blue dt{
+    color: #b6e9ff;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.footer-blue dd{
+    opacity: 0.6;
+}
+.quicklist{
+    display: flex;
+    flex-wrap: wrap;
+}
+.quicklist li{
+    width: 50%;
+}
+.quicklist li::before{
+    display: inline-block;
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #b7e9ff;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 3px;
+}
+
+
+
+
+.footer-black{
+    background-color: black;
+    color: white;
+}
+.footer-black .inner{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.footer-black a{
+    color: white;
+}
+@media(max-width:800px){
+    .footer-black .sns{
+        display: none;
+    }
+
+    .footer-blue .inner{
+        display: block;
+        text-align: center;
+    }
+    .footer-blue .inner>div{
+        border-bottom:  1px dashed white;
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+    .footer-blue .inner>div:last-child{
+        border: none;
+        padding-bottom: 0;
+    }
+    .footer-blue .inner>div:first-child{
+        padding-top: 0;
+    }
+}
+    

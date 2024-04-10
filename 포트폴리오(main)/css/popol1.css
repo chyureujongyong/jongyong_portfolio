@@ -1,0 +1,419 @@
+*{
+    padding:0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+header{
+    background-color: #f6f5ef;
+    position: relative;
+    height: 90px
+}
+.menu_list{
+    background-color: transparent;
+    position: absolute;
+    left: 47%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    width: 1200px;
+    height: 90px;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu_list>div>a{
+    color: black;
+    text-decoration: none;
+    padding: 4px 0;
+}
+.header_logo{
+    padding: 0;
+    width: 75px;
+    height: 75px;
+    background-image: url(../img/스타벅스로고.png);
+}
+.header_menubars{
+    display: none;
+}
+
+
+.sub_list{
+    background-color: #2C2A29;
+    position: absolute;
+    top: 100%;
+    left: 47%;
+    transform: translateX(-50%);
+    max-width: 99%;
+    width: 1200px;
+    height: 230px;
+ 
+    display: flex;
+    justify-content: space-between;
+
+    z-index: 100;
+}
+.sub_list ul{
+    width: 14%;
+    margin-left: 3px;
+}
+
+.sub_list a{
+    color: white;
+    text-decoration: none;
+}
+
+
+:root {
+    --sublist-hover-color: #4d4b4a;
+    --background-color-sublist: #2C2A29;
+}
+.sub_list {
+    background-color: var(--background-color-sublist);
+}
+.sub_list>ul li {
+    text-align: left;
+    padding: 10px 10px;
+    margin-left: 30px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+.sub_list>ul li:hover {
+    background-color: var(--sublist-hover-color);
+}
+
+.check{
+    display: none;
+}
+
+/* -------------------------------------- */
+.main_img{
+    position: relative;
+    width: 100%;
+    height: 35vw;
+    background-image: url(../img/summer.jpg);
+    background-size: cover;
+}
+.main_img>*{
+    position: absolute;
+}
+.main_img>img{
+    background-position: center;
+    background-size: cover;
+}
+.main_logo{
+    color: #FDB0A2;
+    text-align: center;
+    width: 19%;
+    top: 22%;
+    left: 47.5%;
+    font-size: 80px;
+    transform: translate(-50%,-50%);
+}
+.main-1{
+    top: 32%;
+    left: 15%;
+    width: 24.5%;
+}
+.main-2{
+    top: 13.9%;
+    left:17.2%;
+    width: 17.55%;
+}
+.main-3{
+    top: 13.4%;
+    right: 14.2%;
+    width: 21.05%;
+}
+.main-4{
+    top: 32%;
+    left: 57.6%;
+    width: 24%;
+}
+.main_btn{
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50px;
+    font-weight: bold;
+    padding: 10px 20px;
+    top: 50%;
+    left: 47%;
+    transform: translateX(-50%);
+
+    text-decoration: none;
+    color: black;
+    
+}
+/* -------------------------------------- */
+.section2{
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.section2_left{
+    height: 62px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    width: 50%;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.news_box{
+    margin-left: 30px;
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+}
+.news_box li{
+    padding: 5px 7px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.news_box a{
+    color: white;
+    text-decoration: none;
+}
+.section2_left>dt{
+    font-size: 1.7vw;
+    font-weight: bold;
+    line-height: 62px;
+    margin-left: 50px;
+}
+.section2_right{
+    height: 62px;
+    background-color: white;
+    position: absolute;
+    width: 50%;
+    right: 0;
+}
+.section2_right>div{
+    font-size: 1.7vw;
+    font-weight: bold;
+    line-height: 62px;
+    margin-left: 50px;
+}
+/* ------------------------------- */
+.section3{
+    width: 100%;
+    margin: 60px auto 0;
+    display: flex;
+}
+.section3_left{
+    width: 50%;
+    height: 32vw;
+    background-image: url('../img/스타벅스\ 내부사진.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.section3_right{
+    width: 50%;
+    height: 32vw;
+    background-image: url('../img/빵사진.jpg');
+    background-position: center;
+    background-size: cover;
+}
+/* ------------------------------------------ */
+.section4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section4>h2{
+    padding: 20px;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.section4_imgbox{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.section4_imgbox>div{
+    width: 25%;
+    padding: 20px;
+}
+.section4_imgbox>div:hover{
+    transform: scale(1.1);
+}
+.sec4{
+    width: 98%;
+    height: 240px;
+    background-position: center;
+    background-size: cover;
+}
+.section4_img1{
+    background-image: url('../img/자바칩프라푸치노.jpg');
+}
+.section4_img2{
+    background-image: url('../img/자몽\ 허니\ 블랙티.jpg');
+}
+.section4_img3{
+    background-image: url('../img/돌체\ 콜드\ 브루.jpg');
+}
+.section4_img4{
+    background-image: url('../img/스타벅스\ 돌체라뗴.jpg');
+}
+.section4_img5{
+    background-image: url('../img/바닐라\ 크림\ 콜드\ 브루.jpg');
+}
+.section4_img6{
+    background-image: url('../img/나이트로\ 바닐라\ 크림.jpg');
+}
+.section4_img7{
+    background-image: url('../img/히비스커스\ 블렌드\ 티.jpg');
+}
+.section4_img8{
+    background-image: url('../img/딸기\ 딜라이트\ 요거트\ 블렌디드.jpg');
+}
+.section4_name{
+    font-weight: bold;
+    padding: 3px 5px;
+    font-size: 1.1rem;
+}
+/* ----------------------------------------------------- */
+footer{
+    background-color: #2C2A29;
+    width: 100%;
+    padding: 32px 0 35px 0;
+    color: #999;
+}
+.footer_top{
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+}
+.footer_top>div{
+    margin: 2px 10px;
+    padding: 0 15px;
+
+}
+.footer_top>div>a{
+    color: #999; 
+    text-decoration: none;
+}
+
+.footer_mid{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.footer_mid>a{
+    display: inline-block;
+    color: #999;
+    text-decoration: none;
+    
+    background-color: none;
+    border: 2px solid white;
+    border-radius: 3px;
+    font-weight: bold;
+    margin:10px 10px 0 3px;
+    padding: 10px 13px;
+    font-size: 12px;
+}
+
+.footer_second_mid{
+    display: flex;
+    margin: 30px auto 0;
+    justify-content: center;
+}
+.footer_second_mid>li{
+    padding: 5px 10px;
+    margin: 2px 3px;
+    font-size: 15px;
+}
+
+.footer_bottom{
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width:768px){
+    .menu_list{
+        justify-content: space-between;
+    }
+    .menu_list>div:not(.header_logo){
+        display: none;
+    }
+    .header_logo{
+        margin-left:50px ;
+    }
+    .header_menubars{
+        padding: 10px 10px;
+        display: block;
+        font-size: 2rem;
+    }
+    .sub_box li{
+        width: 95%;
+    }
+    .sub_box a{
+        font-size: 2rem;
+    }
+
+    .check{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color:#2C2A29; 
+        z-index: 500;
+    }
+    .check>div{
+        padding: 15px 20px;
+    }
+    .check a{
+        color: #FDB0A2;
+        font-size: 2rem;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .fa-xmark{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: #FDB0A2;
+        font-size: 3rem;
+    }
+    
+    .sub_box{
+        display: none;
+    }
+    .sub_box ul{
+        margin-left: 50px;
+    }
+    
+    .section2{
+        display: none;
+    }
+    .section3{
+        margin: 0;
+    }
+
+    .section4_imgbox>div{
+        width: 49%;
+    }
+}
+@media(max-width:650px){
+    .main_btn{
+        padding: 5px 10px;
+        font-size: 10px;
+        font-weight: bold;
+    }
+}

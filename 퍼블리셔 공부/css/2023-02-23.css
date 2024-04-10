@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'TTTtangsbudaejjigaeB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/TTTtangsbudaejjigaeB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* body{background-color: cyan;} */
+
+/* ex1안에있는div */
+.ex1{width:300px;}
+.ex1>div{background-color:red;
+          font-size: 50px;}
+.ex1>div:nth-child(3n-1){background-color: orange;}
+.ex1>div:nth-child(3n){background-color:white;}
+
+/* lt1,2한테 동시에하고싶을떄 */
+.lt1{color: pink;}
+.li2{color: blue;}
+/*   ,쉼표를쓴다 콤마앞뒤는 다른얘다  */
+.lt1,.lt2{text-decoration: line-through;}
+
+.p1>span,.p3>span{color: red;
+             background-color: yellow;}
+
+/* busan만뺴고 다잡을떄 */
+li:not(.busan)
+{font-size: 30px;
+ background-color:red;}
+
+/* section에 자식요소를 따졌을땐 3번째라 */
+section p:nth-child(3){color:green;}
+/* p테그일떄 2번째고르고싶으면 */
+section p:nth-of-type(2){text-decoration: underline;}
+
+section p:first-of-type{color:purple;}
+section p:last-of-type{color:red;}
+
+/* 모든테크불러올때는 *(별)쓴다 */
+*{
+font-family: 'TTTtangsbudaejjigaeB';}
+
+/* section안에있는 모든 테그 */
+section *{border:3px solid black;}
+
+input{background-color: pink;}
+
+/* 속성값을 이용하는거다 */
+input[type="text"]{background-color: red;}
+
+input[value="완료"]{background-color:green;}
+
+/* 타입에 pass를 포함하는 타입들잡을떄 */
+input[type*="pass"]{
+    border: 3px solid orange;
+}
+
+/* lt가 적힌 모든 class */
+[class*="lt"]{
+    border:10px solid black;
+}
+
+a[href*="naver"]{color:green;}
+
+a[title]{background-color: yellow;}
+
+/* 이거로시작  ^ */
+a[title^="happy"]{font-size: 100px;}
+
+/* 이거로끝나면 $ */
+a[title$="py"]{font-size:10px;}
+
+.circle{width:150px;
+        height:150px;
+        background-color:blue;
+        border-radius:50%;}
+/* 마우스커서올렸을때 변하는거 */
+.circle:hover{background-color:orangered;}
+/* 마우스로눌렀을때 변하는거 */
+.circle:active{background-color: cyan;}
+
+
+
+.hweb{font-size: 60px;}
+.hweb:hover{border-bottom:10px solid red;}

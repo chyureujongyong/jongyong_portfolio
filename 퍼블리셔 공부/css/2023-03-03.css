@@ -1,0 +1,105 @@
+.box{
+    width:1400px;
+    height: 300px;
+    background-color: lightgray;
+    margin: 0 auto;
+    display: flex;
+    /* flex는 엄마요소에 넣는거다 */
+    /* 방향 rowㅡ> , row-reverse <ㅡ 
+    column 아래로 , columm-reverse 아래에서 위로  */
+   /* flex-direction: column; */
+   /* flex는 어떻게는한줄에 나열할려고한다 */
+   /* 줄넘김처리할라면 wrap */
+   /* flex-wrap: wrap; */
+   /* 같이 쓸수도있다
+   flex-flow:row wrap; */
+   /* flex를 가운데축 정렬하는법
+    justify-content: center; */
+   /* item들 사이 간격이 동일하다!! 양쪽으로 딱 붙게
+    justify-content: space-between; */
+   /* 양쪽간격이 동일하다
+    justify-content: space-around; */
+    /* 밑으로쭉 눌리는거
+    align-items: stretch; */
+    /* 위쪽에 붙어있음
+    align-items:flex-start; */
+    /* 아래쪽에 붙어잇음
+    align-items: flex-end; */
+    align-items: center;
+}
+
+.item1,.item2,.item3{
+    font-size: 50px;
+    /* width:280px; */
+}
+
+.item1{
+    background-color: yellow;
+}
+.item2{
+    background-color: violet;
+    font-size: 100px;
+}
+.item3{
+    background-color: cyan;
+    font-size:20px;
+}
+
+.greenbox{
+    background-color: lightgreen;
+    width: 700px;
+    height: 650px;
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.ball{
+    background-color: white;
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+
+.box2{
+    display: flex;
+    border: 5px solid black;
+    font-size: 30px;
+}
+.box2>div{
+     /* 최소한의 가로값설정  */
+    flex-basis: 100px; 
+    /* 균등비율세팅
+    flex:1; */
+}
+.item4{background-color: cyan;}
+.item5{background-color: yellow;}
+.item6{background-color: violet;}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1{
+    background-color: darkblue;
+    color: white;
+    padding: 10px 30px;
+}
+header ul{
+    display: flex;
+    background-color:orange;
+    list-style: none;
+    padding-left: 0;
+}
+header li{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+header li.내용1{
+    background-color: hotpink;
+}

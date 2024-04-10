@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.clickbox{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    height: 50px;
+}
+#box1,#box2,#box3{
+    width: 200px;
+    height: 100%;
+    color: white;
+    font-size: 25px;
+
+    display: flex;
+    align-items: center;
+
+
+}
+#box1{
+    background-color: red;
+}
+#box2{
+    background-color: blue;
+}
+#box3{
+    background-color: green;
+}
+#tabbox{
+    width: 600px;
+    height: 250px;
+    font-size: 50px;
+    color: white;
+    
+}
+
+
+.tabmenu{
+    display: flex;
+    font-size: 2rem;
+    color: white;
+}
+.tabmenu li{
+    width: 200px;
+    padding: 10px 20px;
+}
+.tabmenu li:nth-child(1){
+    background-color: red;
+}
+.tabmenu li:nth-child(2){
+    background-color: blue;
+}
+.tabmenu li:nth-child(3){
+    background-color: green;
+}
+
+[class^='tabcontent']{
+    width: 600px;
+    height: 400px;
+    font-size: 4rem;
+    color: white;
+    padding: 20px;
+}
+.tabcontent1{
+    background-color: red;
+}
+.tabcontent2{
+    background-color: blue;
+    display:none;
+}
+.tabcontent3{
+    background-color: green;
+    display:none;
+}

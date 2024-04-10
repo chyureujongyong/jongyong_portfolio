@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+
+    <style>
+        .box{
+        display: inline-block;
+        text-align: center;
+        background-color:red;
+        width:60px;
+        color:white;
+        font-size: 2rem;
+        padding: 10px 0;
+        margin: 10px;
+        }
+        body{font-size: 2rem;
+            color: white;
+            background-color: black;
+        }
+        section{
+            color: yellow;
+        }
+    </style>
+
+</head>
+<body>
+    <script>
+        var place = ['부산','목포','남해','제주도','인천','강릉','여수'];
+        // console.log('나는 '+place[0]+'에 가고싶습니다.');
+        // console.log('나는 '+place[1]+'에 가고싶습니다.');
+        // console.log('나는 '+place[2]+'에 가고싶습니다.');
+        // console.log('나는 '+place[3]+'에 가고싶습니다.');
+        // console.log('나는 '+place[4]+'에 가고싶습니다.');
+        // console.log('나는 '+place[5]+'에 가고싶습니다.');
+
+        for(var i=0;i<place.length;i++){
+            console.log('나는 '+place[i]+'에 가고싶습니다');
+        }
+
+    </script>
+
+    <h1>자바스크립트 반복문</h1>
+    <script>
+        // for(반복횟수){실행코드};
+
+        // for(i=0;i<10;i++){
+        //     document.write('a');
+        // };
+
+        for(var i=0;i<10;i++){
+            document.write(i);
+        };
+
+        // 3+'x'+1+"="+(3*1)
+
+        // document.write('<h3>3단</h3>');
+        // for(var i=1;i<10;i++){
+        //     document.write(3+'x'+i+"="+(3*i)+'<br>');
+        // };
+
+        // document.write('<h3>4단</h3>');
+        // for(var i=1;i<10;i++){
+        //     document.write(4+'x'+i+"="+(4*i)+'<br>');
+        // };
+
+        // document.write('<h3>5단</h3>');
+        // for(var i=1;i<10;i++){
+        //     document.write(5+'x'+i+"="+(5*i)+'<br>');
+        // };
+
+
+        for(var j=3;j<10;j++){
+            document.write('<h3>'+j+'단</h3>');
+
+            for(var i=1;i<10;i++){
+                document.write(j+'x'+i+'='+(j*i)+'<br>');
+            }
+        }
+
+    </script>
+
+    <script>
+        // 겉에한거랑은 class or id줄떄 다른따움표로 써주면된다 
+        //    '' 이거쓰면 ""이거로,
+        //     "" 이거쓰면 ''이거로
+        for(var i=1;i<=10;i++){
+            document.write('<div class="box">'+i+'</div>');
+        };
+
+    </script>
+
+    <!-- <section>
+        <script>
+        var star = prompt('별을 몇개나 만들까요?');
+        for(var i=0;i<star;i++){
+            document.write('★');
+        }
+        </script>
+    </section> -->
+
+
+    <script>
+        var star = prompt('별의갯수');
+        if(star>10){
+            for(var i=0;i<star;i++){
+            document.write('★');
+        }
+            
+        }
+        else{
+            alert('너무 적게입력했습니다');
+        }
+    </script>
+
+
+
+
+
+</body>
+</html>

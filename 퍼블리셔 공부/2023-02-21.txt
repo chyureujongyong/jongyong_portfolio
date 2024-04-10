@@ -1,0 +1,8 @@
+body안에있는
+ 테그에 직접 style적용하면 head에 적을필요없다 (이방법은 비추천)
+
+헤드에다가
+**<link rel="stylesheet" href="">                    html에다가css파일을 링크해줘!
+                                         ㄴ여따가적용      (이방법으로 css해야됨)
+
+id불러올때는 #붙여야됨!!

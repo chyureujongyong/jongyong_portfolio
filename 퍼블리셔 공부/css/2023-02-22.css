@@ -1,0 +1,61 @@
+body{background-color:skyblue;}
+h1{color:blue;
+    font-size:30px;}  
+/* span{color:red;
+    font-weight: bold;} */
+.list2{color:blueviolet;
+      font-weight:bold;} 
+
+/* list2라는 class를 가지고있는
+   li에한테만주고싶을때.
+     (id)도 똑같다 
+     붙여쓰면 이거이면서이거*/
+li.list2{text-decoration: line-through;} 
+
+li.list2#css{background-color:yellow;}
+
+/* li{font-size:50px;} */
+
+/* .fruit한칸띄고* li 
+   띄어쓰면 이거중에 이거*/
+.fruit li{font-size: 100px;}
+.kiwi{background-color:greenyellow;}
+/* .kiwi그다음에오는li만 잡을때 " + " */
+.kiwi+li{background-color: yellow;}
+/* .kiwi다음에오는 li들을 잡을떄 " ~ " */
+.kiwi~li{color:white;}
+
+
+
+dl span{background-color:yellow;
+    font-weight:bold;
+    font-size:30px;}
+
+.box span{text-decoration:line-through ;}
+
+/* 1대자손중에 span */
+.fox>span{background-color:violet;}
+
+
+ol li{border-bottom: 2px solid violet;}
+/* li중에 본인이 첫번째 자식인거 */
+li:first-child{font-size: 50px;}
+/* li중에 마지막자식인거 */
+li:last-child{font-size: 30px;
+            border-bottom:0;}
+/* li중에 3번쨰 */
+li:nth-child(3){color:orange;}
+/* li중에 짝수번쨰 수열 */
+li:nth-child(2n){color:red;}
+
+.exbox{width: 50px;}
+div:nth-child(3n-2){background-color:red;
+                 font-weight: bold;}
+div:nth-child(3n-1){background-color:orange;
+                   font-weight: bold;}
+div:nth-child(3n){background-color:white;
+                font-weight: bold;}
+
+
+
+      

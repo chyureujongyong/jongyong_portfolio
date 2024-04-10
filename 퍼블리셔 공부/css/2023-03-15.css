@@ -1,0 +1,77 @@
+a{
+    color: red;
+}.today h2{
+    color: pink;
+}
+h2{color: gold;
+    border: 3px solid black;
+}
+.today{
+    color: red;
+    font-size: 40px;
+}
+
+
+.txt{
+    margin: 0;
+}
+/* 없는데있는거처럼보임(선택,드래그 안됨) */
+.txt::after{
+    display: inline-block;
+    border-radius: 20px;
+    text-align: center;
+    content: '친구';
+    width: 60px;
+    background:greenyellow;
+}
+.txt:last-of-type::after{
+    display: none;
+}
+.txt::before{
+    content: '★';
+}
+
+.menu{
+    display: flex;
+    background-image: linear-gradient(to right,red,green);
+    color: white;
+    list-style:none;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 30px;
+    font-weight:bold;
+}
+.menu li:last-child{
+    color: yellow;
+}
+.menu li+li::before{
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 25px;
+    background-color: white;
+    margin: 0 20px;
+    /* 수직정렬할떄 조절할떄 */
+    vertical-align: -2px;
+}
+
+/* .ex1>.t1{
+    display: inline-block;
+    content: '';
+}
+.ex1>.t1::after{
+    display: inline-block;
+    background-color: white;
+    content: '';
+    width: 1px;
+    height:11px;
+    margin: 0 8px;
+    vertical-align: -1px;
+}
+.ex1 .t1:last-of-type{
+    color: yellow;
+}
+.ex1 .t1:last-of-type::after{
+    display: none;
+} */

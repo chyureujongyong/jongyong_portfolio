@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/2023-04-07.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = 100;
+        var txt = '100';  //문자
+
+        console.log(num);
+        console.log(txt);
+
+        // 무슨타입인지
+        console.log(typeof num);
+        console.log(typeof txt);
+
+        // var age = prompt('당신의 나이를 입려해주세요?');
+        console.log(age);
+        console.log('입력받은값 :'+typeof age);
+
+        age = Number(age);
+        console.log('변환 후:'+typeof age);
+
+        var txt2 = Number(txt);  //숫자
+
+        console.log(typeof Number(txt));
+
+        
+    </script>
+    <div class="box">
+       <div>수학
+            <p id="pointmath">100</p>
+        </div>
+        <div>영어
+          <p id="pointeng">60</p>
+        </div>
+         <div>
+            평균: <span id="avg">80</span>
+            총점: <span class="total">160</span>
+         </div>
+    </div>
+    <script>
+        //  var point1 = Number(prompt('수학 점수를 입력하세요')); 
+        //  var point2 = Number(prompt('영어 점수를 입력하세요')); 
+
+        //  document.getElementById('pointmath').innerHTML= point1;
+        //  document.querySelector('#pointeng').innerHTML= point2;
+
+        //  var pointtotal = point1 + point2 ;
+
+        //  document.querySelector('#avg').innerHTML=(point1+point2)/2;
+        //  document.querySelector('.total').innerHTML= pointtotal;
+
+    </script>
+
+    <h1>자바스크립트 조건문</h1>
+    <script>
+        // if(조건){행위}
+
+        var mynum = 100;
+        if(100>2){
+            console.log('불금');
+        };
+    </script>
+
+
+    <script>
+         var myid = prompt('아이디를 입력해주세요.');
+         if(myid=='admin'){
+           alert('관리자 로그인 되었습니다');
+         }
+         else if(myid=='nice'){
+            alert('나의 친구 환영합니다');
+         }
+         else if(myid=='black'){
+            alert('당신의 절대 들어올 수 없어요!');
+         }
+
+         else{
+            alert('틀렸습니다');
+         }
+        // 구조 :  if(){}else if(){}else{};
+    </script>
+
+
+
+</body>
+</html>

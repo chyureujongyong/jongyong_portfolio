@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/2023-05-08.css">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <h1 id="menu">오늘의 점심메뉴</h1>
+    <!-- <ul>
+        <li>감자탕</li>
+        <li>부대찌개</li>
+        <li>불고기</li>
+        <li>셀러드</li>
+        <li>햄버거</li>
+    </ul>
+    <button id="menu_btn">멈춤!</button> -->
+    <script>
+        // $('li').hide();
+        // $('li:nth-child(1)').show();    //$('li').eq(0).show();
+        // var num =1;
+
+        // var mymenu = setInterval(function(){
+        //     if(num==5){
+        //         num=0;
+        //     }
+
+        //     //한가지 메뉴씩 돌아가면서 보이도록
+        //     $('li').hide();
+        //     $('li').eq(num).show();
+        //     num++;
+            
+        // },1000);
+
+        // $('#menu_btn').click(function(){
+        //     clearInterval(mymenu);
+        // })
+    </script>
+
+    <hr>
+
+    <h1>fade in-out slide</h1>
+    <button id="slidebtn">다음슬라이드</button> 
+    <ul class="slidebox">   <!-- 겹치도록설정은 포지션요소를준다 -->
+        <li class="slide1">slide1</li>
+        <li class="slide2">slide2</li>
+        <li class="slide3">slide3</li>
+    </ul>
+    <script>
+//        $('#slidebtn').click(function(){
+//            $('li:first-child').fadeOut('slow');       //첫번쨰를 안보이게
+//            $('li:nth-child(2)').fadeIn('slow');       //두번쨰를 보이게(fadeIn을 쓰게되면 display none되있는상태를
+                                                         //               '원래상태'로 돌리게해준다)
+//            $('li:first-child').appendTo('.slidebox'); //첫번쨰거를 맨뒤로 옮긴다
+//        })
+
+        //위에코드랑 똑같음------
+//        $('#slidebtn').click(function(){
+//            $('li').eq(0).fadeOut();   //li중에 인덱스번호가 0번인 친구
+//            $('li').eq(1).fadeIn();
+//            $('li').eq(0).appendTo('.slidebox');
+//        });
+
+        //위에코드랑 똑같음------
+//        $('#slidebtn').click(function(){
+//            $('li').eq(0).fadeOut().next().fadeIn();
+//            $('li').eq(0).appendTo('.slidebox');
+//        });
+
+        //위에코드랑 똑같음------
+//        $('#slidebtn').click(function(){
+//            $('li').eq(0).fadeOut().next().fadeIn().end().appendTo('.slidebox');
+//        });
+
+
+        setInterval(function(){
+            $('li').eq(0).fadeOut().next().fadeIn();
+            $('li').eq(0).appendTo('.slidebox');
+        },2000);
+
+
+        $('#slidebtn').click(slideplay);
+        setInterval(slideplay,3000);
+        function slideplay(){
+            $('li').eq(0).fadeOut().next().fadeIn().end().appendTo('.slidebox');
+        }
+    </script>
+
+    
+</body>
+</html>

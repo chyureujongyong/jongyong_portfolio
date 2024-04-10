@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/2023-05-11.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <div class="newsbox">
+        <div class="newsbox_left">
+            <a href="https://news.naver.com/main/list.naver?mode=LPOD&mid=sec&sid1=001&sid2=140&oid=001&isYeonhapFlash=Y">연합뉴스</a>
+        </div>
+        <div class="newsbox_middle">
+            <ul>
+                <li class="news_slide1">尹대통령, '코로나19 엔데믹' 선언…"위기경보 심각→경계"</li>
+                <li class="news_slide2">
+                    <a href="https://n.news.naver.com/mnews/article/001/0013934402?rc=N&ntype=RANKING">"한일·한미일 정상회담, 21일 히로시마서 개최 조율"</a>
+                </li>
+                <li class="news_slide3">與 최고위, 징계 마치고 열흘만에 재개…김기현 "국민께 송구"</li>
+            </ul>
+        </div>
+        <div class="newsbox_right">
+            <ul>
+                <li class="home">뉴스홈</li>
+                <li>연예</li>
+                <li>스포츠</li>
+                <li>경제</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        setInterval(newsPlay,3000);
+        function newsPlay(){
+            $('.newsbox_middle ul').animate({marginTop:'-50px'},function(){
+                $('.newsbox_middle li').first().appendTo('.newsbox_middle');
+                $('.newsbox_middle ul').css('margin-top','0px');
+            });
+        };
+
+    </script>
+
+    
+
+
+</body>
+</html>

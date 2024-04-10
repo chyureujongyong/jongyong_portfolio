@@ -1,0 +1,38 @@
+<form>  안에있는 양식을 묶어준다
+<input> 에다가 제목달아주는것은 <label>, text는 있는그대로보여줌
+			                 password는 ***로 보여줌
+  ㄴ연결은 "id"
+  ㄴ흐릿하게 입력칸안에설명 "placeholder"
+  ㄴname은 표시는안나지만 목록묶을때(같은 속성)
+
+<fieldset> label과 input 묶는거
+<legend> fieldset에 제목 달아주기
+데이터넘길때 url,email 맞는지 확인해주는거
+
+<button>더더더더보기</button>        form 아닐떄
+input에는                   value="이름정해"
+<input type="button" value="더보기"> form일때  value는 이름넣는거
+                  "checkbox"  여려개중 여러개 체크할떄 체크박스임
+                  "radio"        여려개중 한개만 체크할떄 체크박스임
+	    "color"        색깔 받아오는거
+	    "date"         날짜 넘길대
+	    "file"           파일 넘길떄
+                  "month"       몇달 선택
+                 "time"           시간 선택
+                "number"       숫자만입력가능 (숫자올리고내리고)
+                    ㄴ min"최솟값" max"최댓값" step"몇씩증가감소"
+	   "range"        범위지정	
+	   "tel"            전화번호 입력
+	   "reset"	       초기화(이페이지에있는거 다 초기화됨,*다시작성*)
+	   "submit"       form을 제출할때
+
+<form method="post">   method는 form을 어떤방식으로 전달할거냐
+<select name="" id="">
+    ㄴ<option value="수원사람">수원시</option>   수원시를눌렀지만 
+                                                                      suwon으로 넘어가짐
+<optgrup> option묶을떄
+<textarea name="" id="" cols="30" rows="10"> 글자박스
+	                     ㄴ가로      ㄴ세로
+ 
+	
+                   

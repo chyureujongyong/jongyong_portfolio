@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+/* 완전큰태그로 한번에묶는다 */
+.bigbox{
+    width: 1200px;
+    margin: 50px auto 0;
+    max-width: 100%;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    /* width: 1200px;
+    margin: 0 auto; */
+    /* 맥스위스 100% 중요함!! 가로값1200이하될때 가로값유지
+    스크롤바 없어짐 */
+    /* max-width: 100%;
+    margin-top: 50px; */
+}
+nav>ul:not(.submenu){
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 100%;
+}
+.header>i.xi-bars{
+    font-size: 40px;
+    display: none;
+}
+@media screen and (max-width: 640px){
+    header>i.xi-bars{
+        display: block;
+    }
+}
+.bigmenu{
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+    display: inline-block;
+}
+nav li:nth-child(1)>.bigmenu{
+    background-color: blue;
+}
+nav li:nth-child(2)>.bigmenu{
+    background-color: brown;
+}
+nav li:nth-child(3)>.bigmenu{
+    background-color: green;
+}
+nav li:nth-child(4)>.bigmenu{
+    background-color: yellow;
+}
+
+.main_image{
+    background-image: url('../img/grid2.jpg');
+    /* width: 1200px; */
+    height: 500px;
+    /* margin: 0 auto; */
+    background-size: cover;
+    background-position: center;
+}
+header>i.xi-bars{
+    display: none;
+    font-size: 40px;
+}
+
+nav>i.xi-close{
+    display: none;
+}
+
+
+@media screen and (max-width: 640px){
+    header{  
+        /* flex-direction: column; */
+        /* 위에꺼 또는 아래꺼로 */
+         display: block;  
+    }
+    h1{
+        text-align: center;
+    }
+    header>i.xi-bars{
+        display: block;
+    }
+    nav li{
+        flex: 1;  
+    }
+    .bigmenu{
+        padding: 10px;
+        width: 100%;
+    }
+    nav{
+        /* display:none ; */
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        z-index: 5000;
+        padding-top: 150px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    nav ul:not(.sub){
+        display:block;
+    }
+    .sub{
+        position: static;
+        display: block;
+    }
+    nav>i.xi-close{
+        display: block;
+        position:absolute;
+        top: 10px;
+        right: 10px;
+        font-size:40px;
+        color: white;
+    }
+}
+
+
+.mainmenu>li{
+    position: relative;
+}
+.submenu{
+    display: none;
+    position: absolute;
+    background-color: gray;
+    color: black;
+    top: 100%;
+    width: 100%;
+    font-size: 20px;
+    /* 가려질때 제트인덱스준다 */
+    /* 제트인덱스는 큰게 가장힘이쌤(앞에보이게) */
+    z-index: 100;
+}
+.submenu li{
+    padding: 10px;
+}
+.mainmenu li:hover .submenu{   
+    display: block;
+}
+.mainmenu>li:hover a{
+    background-color: orange;
+}
+.submenu>li:hover{
+    background-color: red;
+}
+
+.main_image{
+    position: relative;
+    z-index:50;
+}
+.main_image .ex1{
+    position: absolute;
+    left: 20px;
+    top: 120px;
+    background-color: red;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.main_image .ex2{
+    position: absolute;
+    bottom: 10px; right: 10px;
+    background-color: black;
+    color: white;
+    padding: 10px 30px;
+    font-size: 50px;
+}
+
+/* [class^="box"]{
+    position: fixed;
+    width: 400px;
+    height: 350px;
+    z-index: 1000;
+}
+.box1{
+    background-color: orange;
+    left: 150px;
+    top: 100px;
+}
+.box2{
+    background-color: green;
+    left: 300px;
+    top: 200px;
+    z-index: 1500;
+}
+.box3{
+    background-color: blue;
+    left: 100px;
+    top: 300px;
+}
+
+[class^="box"]:hover {
+    z-index:2000;
+} */
+
+.box1{
+    width: 400px;
+    height: 400px;
+    background-color: orange;
+    border: 20px solid black;
+    /* 테두리가 안쪽으로먹는다!! -> 사이즈가변하지않는다
+    (크기에 변함(방해)이없다) */
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.icon{
+    font-size: 50px;
+}

@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/* --이걸치고시작해야함!!!!--- */
+html, body{
+    height: 100%;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 200px 400px 1fr;
+    grid-template-rows: 1fr 150px;
+    
+
+}
+
+
+/* --header-- */
+
+header>h1{
+    border-bottom: 1px solid black;
+    padding: 20px 0;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.menu{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #70582e;
+}
+.menu>li{
+    /* 클래스메뉴 바로아래 li가 엄마다 */
+    position: relative;
+}
+.submenu{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 180px;
+
+    display: none;
+    background-color: rgba(0,0,0,0.5);
+}
+.submenu a{
+    color: #fff;
+}
+.submenu>li{
+    padding: 10px;
+}
+.submenu>li:hover{
+    background-color: black;
+}
+
+.bigmenu{
+    /* --블럭처리하면 a테그가 전체로먹음-- */
+    display: block;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    
+}
+.menu>li:hover .bigmenu{
+    background-color: orange;
+}
+
+/* --------box-------- */
+.box{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    background-color: green;
+}
+/* -배너부분-- */
+.banner{
+    background-image: url('../img/banner.jpg');
+    /* x축 y축 바꿀수있음 */
+    background-position: 50% 70%;
+    background-size: cover;
+
+    text-align: center;
+    padding-top: 30px;
+}
+.banner>h2{
+    color: #fff;
+    text-shadow: 0 0 20px black;
+}
+.banner>a{
+    display: inline-block;
+    background-color: #fff;
+    color: black;
+    padding: 5px 10px;
+    margin-top: 10px;
+
+}
+/* -노티스부분-- */
+.notice{
+    background-color: #ddd
+}
+.title{
+    background-color: black;
+    padding: 15px;
+}
+.title a{
+    color: white;
+}
+
+.notice ul a{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    color: black;
+}
+.notice ul a:hover{
+    background-color: #70582e;
+    color: #fff;
+}
+/* -갤러리부분-- */
+.gallery{
+    background-color: beige;
+}
+.gallerybox{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+.gallerybox img{
+    width: 170px;
+}
+.gallerybox a{
+    color: black;
+}
+/* -링크부분-- */
+.links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: yellow;
+}
+
+.links img{
+    width: 60px;
+}
+
+/* -----슬라이드부분-------------- */
+
+/* !!!!!!!!!! */
+.swindow{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.swrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 300%;
+    height: 100%;
+}
+.swrap>li{
+    background-position: center;
+    background-size: cover;
+    padding: 90px;
+    text-align: center;
+    text-shadow: 0 0 30px black;
+}
+.s1{
+    background-image: url('../img/slide1.jpg');
+}
+.s2{
+    background-image: url('../img/slide2.jpg');
+}
+.s3{
+    background-image: url('../img/slide3.jpg');
+}
+
+.swrap>li h3{
+    font-size: 50px;
+    color: #fff;
+}
+.swrap>li p{
+    font-size: 25px;
+    color: #fff;
+}
+
+
+/* --푸터부분----------- */
+footer{
+    grid-column:  1/4;
+
+    display: grid;
+    grid-template-columns: 200px 4fr 1fr;
+    background-color: aqua;
+}
+.bottomlogobox{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+/* 
+모든이미지를 흑백으로만들어준다
+.bottomlogobox img{
+    filter: grayscale(100%);
+} 
+*/
+
+.bottom-menu{
+    display: grid;
+    background-color: black;
+}
+.bottom-menu ul{
+    display: flex;
+    padding: 15px;
+}
+.bottom-menu li::after{
+    display: inline-block;
+    content: '';
+    width: 2px;
+    height: 10px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+.bottom-menu li:last-child:after{
+    display: none;
+}
+.bottom-menu a{
+    color: #fff;
+}
+.bottom-menu p{
+    padding: 15px;
+    color: #fff;
+}
+
+
+
+
+.familybox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+.familybox select{
+    font-size: 23px;
+}
+
+
+
+
+
+
+
+
+
+/* ---팝업창--------------------- */
+/* --bg는 무조건 이렇게써라!! */
+.popupbg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color:black;
+    opacity: 0.8;
+
+    display: none;
+}
+.popup{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    width: 400px;
+    height: 250px;
+    background-color: white;
+    border: 10px solid red;
+    padding: 30px;
+
+    display: none;
+}
+.popup h2{
+    margin-bottom: 20px;
+}
+.popup a{
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    background-color: #70582e;
+    color: #fff;
+    padding: 5px 10px;
+}

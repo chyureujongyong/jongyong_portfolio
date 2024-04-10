@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/2023-05-04.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./js/jquery-3.6.4.js"></script>
+
+    
+    <div class="circle"></div>
+    <button id="btn">멈춤</button>
+    <button id="btn2">다시실행</button>
+    <script>
+        // setInterval(function(){
+        //     // $('body').append('<div class="circle"></div>');
+        //     document.querySelector('body').innerHTML += '<div class="circle"></div>';
+        // },1000);
+
+                  
+        function printcircle(){
+                // ㄴ임의로 이름을 줌.
+            $('body').append('<div class="circle"></div>');
+        }
+
+        var c_action = setInterval(printcircle,1000);
+
+        btn.onclick = function(){
+            clearInterval(c_action);
+        }
+        btn2.onclick = function(){
+            c_action = setInterval(printcircle,1000);
+        }
+
+        // printcircle();
+        // printcircle();
+        // printcircle();
+        // for(var i=0;i<240,i++){
+        //     printcircle();
+        // }
+    </script>
+
+
+
+    <div id="clock">
+        <span id="minute">00</span> : <span id="second">00</span>
+    </div>
+    <button id="startbtn">start</button>
+    <button id="stopbtn">stop</button>
+    <div id="stamp"></div>
+    <script>
+        var myclock = setInterval(startTime,1000);
+        
+        var minute_num= 0;
+        var second_num= 0;
+        function startTime(){
+            if(second_num == 59){
+                second_num = 0;
+                minute_num++
+            }
+            else{
+                second_num++;
+            }
+
+            if(minute_num<10){
+                minute.innerHTML ='0'+ minute_num;
+            }
+            else{
+                minute.innerHTML = minute_num;
+            }
+           
+
+            if(second_num<10){
+                second.innerHTML ='0'+second_num;
+            }
+            else{
+                second.innerHTML = second_num;
+            }
+    
+        }
+
+        stopbtn.onclick = function(){
+            clearInterval(myclock);
+
+            $('#stamp').append( $('#clock').text()+'<br>');
+            // $('$stamp').append(minute_num+' : '+second_num);
+        }
+
+        $('#startbtn').click(function(){
+            myclock = setInterval(startTime,1000);
+        })
+        
+
+    </script>
+
+</body>
+</html>

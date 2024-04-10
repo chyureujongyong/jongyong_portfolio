@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+html,body{
+    font-size: 30px;
+}
+h1, h2, .inputbox{
+    text-align: center;
+    margin-top: 20px;
+}
+input,button{
+    font-size: 30px;
+    padding: 10px;
+}
+dl{
+    display: flex;
+    width: 800px;
+    margin: 10px auto;
+}
+dd{
+    font-weight: bold;
+    margin-left: 20px;
+}
+p{
+    color: blue;
+    text-align: center;
+}
+dl.blue{
+    color: blue;
+    background-color: skyblue;
+    font-size: 40px;
+}
+#noname{
+    color: red;
+    text-align: center;
+}

@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+header h1{
+    font-size: 50px;
+}
+/* 안보이게만들기 */
+.gnb .mobile-title{
+    display: none;
+}
+.xi-bars{
+    display: none;
+}
+.xi-close{
+    display: none;
+}
+.gnb li{
+    display: inline-block;
+}
+.gnb a{
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: 1px solid red;
+    color: purple;
+    text-decoration: none;
+    font-size: 20px;
+}
+.gnb a:hover{
+    background-color: salmon;
+    color: white;
+}
+/* ----------------------------- */
+.slide-window{
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+.slidebox{
+    width: 400vw;
+    display: flex;
+}
+.slidebox>div{
+/* 엄마요소가 flex면 가로세로값 설정해야한다 */
+    width: 100vw;
+    height: 600px;
+}
+.slide1{
+    position: relative;
+    background-color: red;
+}
+.slide1 span{
+    position: absolute;
+    font-size: 100px;
+    bottom: 20px;
+    left: 100px;
+    color: white;
+}
+.slide2{
+    background-color: blue;
+}
+.slide3{
+    background-color: green;
+}
+.slide4{
+    background-color: violet;
+}
+.slide-window p{
+    position: absolute;
+    right: 100px;
+    top: 30px;
+    font-size: 80px;
+    font-weight: bold;
+    color:white;
+}
+.xi-angle-right{
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 100px;
+    color: white;
+}
+.xi-angle-left{
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 100px;
+    color: white;
+}
+.circlelist{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.circlelist span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+}
+.circlelist span:first-child{
+    background-color: pink;
+}
+@media(max-width: 600px){
+    .xi-bars{
+        display: block;
+        font-size: 40px;
+    }
+    .xi-close{
+        display: block;
+        font-size: 30px;
+        color: white;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .gnb .mobile-title{
+        display: block;
+        font-size: 60px;
+        color: white;
+    }
+    .gnb{
+        position: fixed;
+        background-color: purple;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+
+        display: none;
+    }
+    .gnb li{
+        display: block;
+        text-align: center;
+    }
+    .gnb a{
+        border: 0;
+        font-size: 50px;
+        color: white;
+    }
+    .gnb a:hover{
+        background-color: transparent;
+        color: white;
+    }
+    .slide-window p{
+        font-size: 30px;
+        right: 30px;
+    }
+    .slide-window{
+        height: 350px;
+    }
+    .slide-box{
+        height: 350px;
+    }
+}
+@media(min-width:601px){
+    p br{
+        display: none;
+    }
+}

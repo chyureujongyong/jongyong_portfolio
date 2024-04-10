@@ -1,0 +1,26 @@
+.ex1{background-color:red;
+ color:white;
+border:5px Dotted green;
+width:400px;
+font-size:40px;
+}
+.ex1:hover{width:500px;
+      font-size:20px;
+    border:5px solid blue;}
+
+ul{list-style: none;
+   padding-left:0px;
+    width:400px;}    
+li{background-color:lightgray;
+    font-size: 30px;
+    border-bottom: 2px solid darkblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:20px;
+}
+
+li:nth-child(2n){background-color:white;}
+li:first-child{border-top:7px solid darkblue;}
+li:last-child{border-bottom: 0px;}
+
+/* p:only-child */

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #star{
+            width: 150px;
+            text-align: center;
+            font-size: 2rem;
+            margin: 40px auto;
+            background-color: red;
+            color: white;
+        }
+        #starbox{
+            padding: 30px;
+            font-size: 3rem;
+            background-color: black;
+            color: yellow;
+        }
+
+        #list{
+            width: 300px;
+            text-align: center;
+            font-size: 2rem;
+            margin: 40px auto;
+            background-color: blue;
+            color: white;
+        }
+        #todaylist{
+            padding: 20px;
+            margin-bottom : 5px;
+            font-size: 2rem;
+            background-color: orange;
+            color: black;
+        }
+        #todaylist:nth-child(2n){
+            padding: 20px;
+            margin-bottom : 5px;
+            font-size: 2rem;
+            background-color: red;
+            color: black;
+        }
+        #addtodo{
+            font-size: 4rem;
+            color: red;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <button id="gugu3">3단</button>
+    <button id="gugu4">4단</button>
+    <button id="gugu5">5단</button>
+    <button id="gugu6">6단</button>
+    <div id="contents"></div>
+    <script>
+        document.querySelector('#gugu3').onclick = function(){
+
+            var g3 = '3x1=3';            //g3 = '3x1=3<br>'
+                g3 = g3 + '3x2=6';       //g3 = '3x1=3<br>3x2=6<br>'
+                g3 = g3 + '3x3=9';       //g3 = '3x1=3<br>3x2=6<br>3x3=9<br>'
+                g3 = g3 + '3x4=12';      //g3 = '3x1=3<br>3x2=6<br>3x3=9<br>3x4=12'
+
+            document.querySelector('#contents').innerHTML = g3;
+                
+
+            document.querySelector('#contents').innerHTML='3단';
+            for(var i=1;i<10;i++){
+                document.querySelector("#contents").innerHTML += 3+'x'+i+'='+(3*i)+'<br>';
+            }
+        };
+        document.querySelector('#gugu4').onclick = function(){
+            document.querySelector('#contents').innerHTML = '4x1=4<br>';
+            document.querySelector('#contents').innerHTML += '4x2=8<br>';
+            document.querySelector('#contents').innerHTML += '4x3=12<br>';
+            document.querySelector('#contents').innerHTML += '4x4=16<br>';
+            document.querySelector('#contents').innerHTML += '4x5=20<br>';
+            document.querySelector('#contents').innerHTML += '4x6=24<br>';
+            document.querySelector('#contents').innerHTML += '4x7=28<br>';
+            document.querySelector('#contents').innerHTML += '4x8=32<br>';
+            document.querySelector('#contents').innerHTML += '4x9=36<br>';
+
+        
+        };
+        document.querySelector('#gugu5').onclick = function(){
+            document.querySelector('#contents').innerHTML='';
+            for(var i=1;i<10;i++){
+                document.querySelector('#contents').innerHTML += 5+'x'+i+'='+(5*i)+'<br>';
+            };
+        };
+
+        document.querySelector('#gugu6').onclick = function(){
+            document.querySelector('#contents').innerHTML='지금부터 6단을 시작합니다<br>';
+            for(var i=1;i<10;i++){
+                document.querySelector("#contents").innerHTML += 6+'x'+i+'='+(6*i)+'<br>'; 
+            };
+        };
+
+        var num = 0;
+        console.log(num); //0
+        num = num + 1;
+        console.log(num); //1
+        num = num + 1;
+        console.log(num); //2
+
+        num += 1;  //더하기할당(위랑동일)
+        console.log(num); //3
+
+
+    </script>
+
+    <button id="star">별</button>
+    <div id="starbox">★</div>
+    <script>
+        //  id일 경우에 document.querySelector('#star') 생략가능
+        star.onclick = function(){
+            // starbox.innerHTML = starbox.innerHTML + '★';
+            starbox.innerHTML += '★';
+
+        }
+    </script>
+
+    <button id="list">오늘의 할일</button>
+    <div id="todaylist"></div>
+    <script>
+        document.querySelector('#list').onclick = function(){
+            var today = prompt('오늘할일');
+            document.querySelector('#todaylist').innerHTML += today+'<br>';
+
+        };
+
+    </script>
+
+    <span id="addtodo">+</span>
+    <ul id="todolist">
+        <li>친구만나기</li>
+        <li>목욕가기</li>
+        <li>네일아트받기</li>
+        <li>시험공부하기</li>
+        <li>책읽기</li>
+    </ul>
+    <script>
+        addtodo.onclick = function(){
+            var mytodo = prompt('오늘 할일을 적어주세요.');
+            todolist.innerHTML += '<li>'+mytodo+'</li>';
+        }
+    </script>
+
+
+</body>
+</html>

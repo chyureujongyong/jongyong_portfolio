@@ -1,0 +1,747 @@
+@font-face {
+    font-family: 'GoryeongStrawberry';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/GoryeongStrawberry.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PuradakGentleGothicR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.1/PuradakGentleGothicR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding:0;
+    list-style: none;
+    box-sizing: border-box;
+}
+.top_box{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top_left{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.top_left>a{
+    height: 100%;
+    text-decoration: none;
+}
+.burgerking_logo{
+    background-image: url('../img/버거킹\ 메인로고.gif');
+    background-position: center;
+    background-size: cover;
+    margin-left: 25px;
+    width: 50px;
+    height: 100%;
+    padding: 5px 10px;
+}
+.top_left>a>p{
+    font-family: 'GoryeongStrawberry';
+    margin-left: 20px;
+    font-size: 1.5rem;
+    line-height: 60px;
+    color: black;
+}
+
+.top_right{
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+}
+.top_right>i{
+    margin-right: 15px;
+}
+.top_right>i:hover{
+    cursor: pointer;
+}
+.top_right>a{
+    margin-right: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.login_box{
+    display: none;
+    background-color: white;
+    padding: 10px;
+    border: 0.5px solid gray;
+    border-radius: 10px;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    z-index: 100;
+}
+.login_box>input{
+    height: 25px;
+}
+.login_box>button{
+    cursor: pointer;
+    background-color: darkslateblue;
+    padding: 5px 8px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    color: white;
+}
+.login_close{
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
+
+/* ------menu_box--------------------------------- */
+
+.main_background_color{
+    width: 100%;
+    height: 750px;
+    background-image: url('../img/버거킹-화면색상.png');
+    background-position: center;
+    background-size: cover;
+}
+.menu_box{
+    font-family: 'GoryeongStrawberry';
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 10px; */
+    font-size: 25px;
+    position: relative;
+    cursor: pointer;
+    border-bottom: 1px solid gray;
+    
+}
+.menu_box>div{
+    padding: 17px 10px;
+    
+}
+/* .menu_box::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    background-image: url(../img/메인메뉴바\ 그림자.png);
+    height: 5px;
+    width: 100%;
+    
+} */
+.menu_box>a{
+    padding: 7px 10px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+}
+.menu_box>.menu_1{
+    background-color: #502416;
+}
+.menu_box>.menu_2{
+    background-color: #d72300;
+}
+.menu_box>div{
+    position: relative;
+}
+.menu_sub_menu{
+    background-color: white;
+    font-size: 17px;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    padding: 7px 10px;
+    z-index: 100;
+    cursor: pointer;
+}
+.menu_sub_menu>p{
+    margin-top: 7px;
+}
+.menu_sub_menu>p:hover{
+    color: skyblue;
+}
+
+.menu_sub_menu{
+    display: none;
+}
+
+.menu_bar_2{
+    display: none;
+}
+
+
+.check{
+    display: none;
+}
+.check_sub{
+    display: none;
+}
+.check_sub>li{
+    font-family: 'PuradakGentleGothicR';
+    height: 50px;
+    font-size: 1.1rem;
+    padding: 10px 5px;
+    cursor: pointer;
+}
+@media(max-width:768px){
+    .main_background_color{
+        height: 500px;
+    }
+    .menu_bar_1{
+        display: none;
+    }
+    .menu_bar_2{
+        display: block;
+        padding: 5px 20px;
+    }
+       
+    .menu_box>div{
+        display: none;
+    }
+    .menu_1{
+        height: 35px;
+        font-size: 17px;
+    }
+    .menu_2{
+        margin: 7px;
+        height: 35px;
+        font-size: 17px;
+    }
+    .menu_box{
+        display: flex;
+        justify-content: space-between;
+    }
+    .check{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color:#F6E3CE; 
+        z-index: 500;
+    }
+    .close_btn{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 3rem;
+    }
+
+    /* --모바일화면 메뉴바체크될떄 */
+    .check>div{
+        padding: 15px 20px;
+    }
+    .check a{
+        color: #FDB0A2;
+        font-size: 2rem;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .check_sub>li:hover{
+        color: skyblue;
+    }
+
+}
+
+
+/* -----슬라이드,뉴스바------------- */
+
+.menu_img_box{
+    text-align: center;
+    max-width: 100%;
+    margin-top: 30px;
+    width: 70%;
+}
+.menu_img_box img{
+    max-width: 100%;
+}
+.swiper-button-next,.swiper-button-prev{
+    color: white;
+    font-weight: bold;
+}
+
+.notice_bar{
+    background-image: url('../img/search_bar.jpg');
+    width: 70%;
+    height: 78px;
+    margin: 40px auto;
+    display: flex;
+ 
+    align-items: center;
+    color: white;
+}
+.notice_bar_left{
+    width: 53%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.notice_bar_left>h2{
+    padding-left: 15px;
+}
+.news_box{
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.news_box>li{
+    padding: 5px 10px;
+    margin-left: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.notice_bar_right{
+    position: relative;
+    width: 47%;
+    display: flex;
+   
+    align-items: center;
+}
+.notice_bar_right>input{
+    display: inline-block;
+    width: 60%;
+    height: 49px;
+    margin-left: 20px;
+    padding: 0 10px;
+    border: 1px solid #16181e;
+    background-color: #1c1e26;
+    font-size: 16px;
+    color: #fff;
+}
+.notice_bar_right>button{
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 3%;
+}
+.fa-magnifying-glass{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+}
+
+@media(max-width:768px){
+    .menu_img_box{
+         width: 90%;
+    }
+    .notice_bar{
+     width: 90%;
+     height: 150px;
+     display: flex;
+     flex-direction: column;
+    }
+    .notice_bar_left{
+     padding: 5px;
+     width: 100%;
+     height: 49%;
+     font-size: 16px;
+     font-weight: bold;
+    }
+    .notice_bar_right{
+     padding: 5px 10px;
+     width: 100%;
+     height: 49%;
+     font-size: 16px;
+     font-weight: bold;
+    }
+    .notice_bar_right>h2{
+        padding-left: 15px;
+    }
+    .notice_bar_right>input{
+        width: 70%;
+    }
+ }
+
+/* ----section3------- */
+.section3{
+    background-image: url(../img/버거킹-화면색상.png);
+}
+.section3_new_menu{
+    width: 1300px;
+    padding: 50px 50px 0 50px;
+    margin: 0 auto;
+    background-color: white;
+}
+.new_menu_top{
+    position: relative;
+    width: 100%;
+}
+.new_menu_top>h2{
+    font-weight: bold;
+    padding: 10px;
+    font-size: 30px;
+}
+.new_menu_top>p{
+    padding: 10px;
+    font-size: 17px;
+}
+.new_btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 0.5px solid gray;
+    padding: 4px 7px 5px ;
+    cursor: pointer;
+}
+
+
+.new_menu_bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.new_left{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 25%;
+    max-width: 100%;
+}
+.new_middle{
+    padding: 5px;
+    width: 47%;
+}
+.new_right{
+    padding: 5px;
+    width: 25%;
+}
+
+.new_menu_bottom>div>div{
+  
+    background-position: center;
+    background-size: cover;
+}
+.new1{
+    background-image: url('../img/new1.png');
+    width: 100%;
+    height: 230px;
+}
+.new2{
+    background-image: url('../img/new2.png');
+    width: 100%;
+    height: 230px;
+}
+.new3{
+    background-image: url('../img/new3.png');
+    width: 100%;
+    height: 345px;
+}
+.new3_sub{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 249px;
+    margin-top: 20px;
+    background-color: rgba(211,211,211,0.25) ;
+}
+.new3_sub>div{
+    width: 80%;
+    height: 80%;
+    background-color: white;
+}
+.new3_sub h3{
+    padding: 7px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.new4{
+    background-image: url('../img/new4.png');
+    width: 100%;
+    height: 230px;
+}
+.new5{
+    background-image: url('../img/new5.png');
+    width: 100%;
+    height: 230px;
+}
+.new_menu_bottom h3:not(.new3_sub h3){
+    margin-top: 20px;
+    background-color: rgba(211,211,211,0.25);
+    padding: 10px 7px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.new_middle p{
+    padding: 7px;
+    font-size: 17px;
+}
+
+.new_middle span{
+    color: red;
+}
+.new3_sub .new3_spicy{
+    margin-top: 50px;
+    margin-right: 15px;
+    text-align: right;
+}
+@media(max-width:768px){
+    .section3_new_menu{
+        width:640px;
+        padding: 10px;
+    }
+    .new1,.new2,.new4,.new5{
+    height: 120px;
+    }
+    .new3{
+        height: 230px;
+    }
+    .new3_sub{
+        height: 230px;
+    }
+    .new3_sub .new3_spicy{
+        margin-top: 0;
+    }
+    .new_menu_bottom h3:not(.new3_sub h3){
+        font-size: 1.3rem;
+    }
+}
+/* -------경계선------- */
+.boundary{
+    width: 100%;
+    height: 50px;
+    background-image: url(../img/버거킹-화면색상.png);
+}
+.big_screen{
+    display: none;
+}
+@media(max-width:768px){
+    .boundary{
+        width: 100%;
+        height: 50px;
+        background-image: url(../img/버거킹-화면색상.png);
+    }
+    .big_screen{
+        display: block;
+    }
+}
+
+
+
+/* --------베스트 메뉴---------- */
+.best_menu_bigbox{
+    background-image: url('../img/버거킹-화면색상.png');
+}
+.best_menu_box{
+    background-color: white;
+    width: 1300px;
+    padding:50px 50px 20px 50px;
+    margin: 0 auto;
+}
+
+.best_menu_title{
+    width: 100%;
+}
+.best_menu_title>h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+.best_menu_title>p{
+    font-size: 17px;
+}
+
+.best_menu_imgbox{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.bestimg{
+   background-position: center;
+   background-size: cover;
+   width: 290px;
+   height: 290px;
+}
+.best_menu_img1{
+    background-image: url('../img/burgerking_best1.jpg');
+}
+.best_menu_img2{
+    background-image: url('../img/burgerking_best2.jpg');
+}
+.best_menu_img3{
+    background-image: url('../img/burgerking_best3.jpg');
+}
+.best_menu_img4{
+    background-image: url('../img/burgerking_best4.jpg');
+}
+
+.best_menu_name{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.best_menu_btn{
+    display: block;
+    width: 25%;
+    height: 50px;
+    text-align: center;
+    line-height: 48px;
+    
+    margin: 40px auto;
+    background-color: white;
+    border: 0.5px solid black;
+    text-decoration: none;
+    color: black;
+}
+.best_menu_imgbox>li:hover {
+    transform: scale(1.03); 
+}
+
+@media(max-width:768px){
+    .best_menu_box{
+        width: 640px;
+        padding: 10px;
+    }
+    .best_menu_imgbox{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .best_menu_imgbox>li{
+        width: 50%;
+    }
+}
+
+/* -----------하단footer---------- */
+
+/* --하단top---*/
+.footer_topbox{
+    width: 1300px;
+    padding: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* --하단top 첫번쨰---*/
+.footer_top_sec1{
+    margin-top: 5px;
+}
+.f_top_title{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.f_top-num{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+/* --하단top 두번쨰---*/
+.footer_top_icon{
+    display: flex;
+    justify-content: center;
+}
+.footer_top_icon>i{
+    padding: 10px;
+    margin: 20px;
+    font-size: 2rem;
+    color: gray;
+    border: 1px solid black;
+}
+
+/* --하단top 세번쨰---*/
+.f_top_btn{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.f_top_btn>a{
+    border: 1px solid black;
+    text-align: center;
+    margin: 5px;
+    padding: 10px 0;
+    width: 45%;
+    text-decoration: none;
+    color: black;
+}
+
+@media(max-width:768px){
+    .footer_topbox{
+        width:640px;
+        padding: 20px 0;
+    }
+    .footer_top{
+        width: 33%;
+    }
+    .footer_top_icon>i{
+        padding: 3px;
+        margin: 10px;
+        margin-top: 20px;
+    }
+}
+
+
+
+
+/* --하단mid---*/
+.footer_midbox{
+    background-color: gray;
+}
+.footer_mid{
+    width: 1300px;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+}
+.footer_mid>li{
+    padding: 5px;
+    color: white;
+}
+.footer_mid>li+li::before{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 80%;
+    margin: 0 20px 0 10px;
+    margin-top: -2px;
+    vertical-align: middle;
+    background-color: black;
+}
+
+/* --하단bottom-- */
+.footer_bot{
+    border-top: 2px solid #bba391;
+    background-color: #2b0200;
+}
+.footer_bottombox{
+    width: 1300px;
+    padding: 30px 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    color: #bba391;
+}
+.footer_bottombox>ul{
+    display: flex;
+    margin-bottom: 20px;
+}
+.footer_bottom>li+li::before{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 80%;
+    margin: 0 20px 0 10px;
+    margin-top: -2px;
+    vertical-align: middle;
+    background-color: white;
+}

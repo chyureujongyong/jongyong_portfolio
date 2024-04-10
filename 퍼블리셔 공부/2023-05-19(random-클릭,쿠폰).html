@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <title>Document</title>
+    <style>
+        .circlebox div{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: #aaa;
+            border: 1px solid black;
+            border-radius: 50%;
+
+        }
+        button{
+            font-size: 50px;
+            display: block;
+            margin: 0 auto;
+        }
+        p{
+            font-size: 35px;
+        }
+        .coupon{
+            position: fixed;
+            left: 1700px;
+            top: 800px;
+            width: 100px;
+            height: 100px;
+            color: white;
+            background-color: orangered;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 20px;
+            padding-top: 15px;
+            box-sizing: border-box;
+        }
+        .coupon2{
+            position: absolute;
+            left: 1700px;
+            top: 800px;
+            width: 100px;
+            height: 100px;
+            color: white;
+            background-color: blue;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 20px;
+            padding-top: 15px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <div class=circlebox>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>   
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>    
+    </div>
+    <button id="btn">불켜기</button>
+
+    <!-- 예1 -->
+    <script>
+//        // num이라는 변수는 화면이 출력될 떄, 랜덤하게 0~9중에 하나를 선택한다
+        var circle = Math.random()*10;
+        var num = Math.floor(circle);
+        $('.circlebox div').eq(num).css('background-color','orange');
+
+        //-------여기서부터는 btn을 눌렀으때
+        $('#btn').click(function(){
+            //누를떄마다 모든 circle을 aaa색상으로 바꾸고
+            $('.circle').css('background-color','#aaa');
+
+            //버튼을 누를 때마다, 랜덤하게 0~9중에 하나를 선택한다
+            var num2 = Math.floor(Math.random()*10);
+            $('.circle').eq(num2).css('background-color','blue');
+        })
+    </script>
+    <p>
+        12일 공개됐던 테스트 서버의 밸런스 업데이트 내역이 라이브 서버에 적용됐다. 테스트 서버 공개 후 일주일만이다.
+        테스트 서버와 다르게 변경된 사항도 있다. 기공사, 창술사, 데빌헌터 3개 클래스의 5개 스킬이 변경되었으며, 창술사의 아이덴티티 변경 시 얻는 버프 효과가 5%p씩 하향 조정됐다.
+        기공사와 데빌헌터는 개선/추가된 스킬의 좋지 못한 사용성을 개선하는 수정 패치이며, 테스트 서버에서 주목을 모았던 창술사는 주력 스킬의 트라이포드의 수치가 대거 조정되고 아이덴티티 효과가 하향됐다. 이외에도 블래스터의 버그 수정 등이 추가됐다.
+        추가된 개발자 노트에 따르면 "(창술사는)테스트 서버에서 해당 개선사항들이 시너지를 일으키며 특정 세팅에서의 전투 운용 난이도가 크게 완화되고 특정 조건에서 의도했던 수준보다 높은 성능이 발휘되거나 세팅 방식도 고착화될 가능성이 있다고 판단하였습니다. 이에 아이덴티티 효과와 일부 집중 스킬의 트라이포드 효과를 추가 조정하였습니다"라고 조정의 이유를 밝혔다.
+        한편, 이번 벨런스 업데이트에서는 15개의 클래스가 밸런스 조정 대상이 됐다. 소소한 수치 상향이나 하향이 있는 클래스도 있지만, '데빌헌터'나 '기공사' 등은 리메이크급 변화를 겪은 클래스도 있다. 신규 시너지를 얻으며 크게 변경된 창술사가 대표적이다. 이번 테스트 서버는 업데이트 이후에도 5월 31일까지 운영될 예정이다.
+        5월 10일, 2023년 로스트아크 아트 공모전의 본선 진출작이 확정됐다. 본선에 진출한 작품은 약 2주간의 응모 기간 및 좋아요 의견 취합을 거친 뒤 내부 심사 기준에 의해 선정된 작품들이다.
+        작년에 진행된 2022 아트 공모전과 마찬가지로 젠더락 클래스의 아바타 역시 별개의 투표로 구성된다. 2023년에 출시된 신규 캐릭터인 슬레이어 역시 아바타 분야에서 별개의 클래스로 구성되어 있다.
+        부정 투표 방지를 위해 투표에 참여할 수 있는 조건은 원정대 레벨 30 이상의 원정대를 보유한 모험로 제한된다. 아바타와 탈 것/펫 분야별로 각 1회씩 투표가 가능하다. 단, 아바타의 경우 해당 클래스의 전투 레벨 50 이상 캐릭터를 보유하고 있어야 하며, 여러 캐릭터를 보유하고 있더라도 단 1개의 뿌리 클래스에만 투표가 가능하다는 점은 유의해야 한다. 아바타 이외에 탈 것과 펫 분야에서도 총 10개의 출품작이 당선됐다. 해당 분야는 아바타와 별개로 1회의 투표를 진행할 수 있다.
+        이번 본선 투표 기간은 5월 10일(수)부터 5월 17일(수)까지 1주일 동안 진행되며, 최종 수상작의 발표는 5월 31일(수)로 예정되어 있다. 각 뿌리 클래스별 최종 수상작 및 탈 것, 펫은 추후 인게임에 구현될 예정이다. 아트 공모전 본선 투표는 공식홈페이지에서 진행할 수 있다.
+    </p>
+    <div class="coupon">
+        <i class="xi-heart"></i>
+        <div>축 당첨!</div>
+    </div>
+    <div class="coupon2">
+        <i class="xi-heart"></i>
+        <div>축 당첨!</div>
+    </div>
+
+    <script>
+// fixed
+        //coupon은 화면이 출력되었을 떄, 0~1800px사의 값 중 하나를 랜덤으로 left값으로한다
+        var myleft = Math.floor(Math.random()*1800)+'px';
+        $('.coupon').css('left',myleft);
+ 
+        // 0~880사이의 값 중에 하나를 랜덤하게 coupon의 top값을 넣는다
+        var mytop = Math.floor(Math.random()*880)+'px';
+        $('.coupon').css('top',mytop);
+
+// absolute
+        var myleft2 = Math.floor(Math.random()*1800)+'px';
+        $('.coupon2').css('left',myleft2);
+
+        var mytop2 = Math.floor(Math.random()*1500)+'px';
+        $('.coupon2').css('top',mytop2)
+    </script>
+
+
+
+</body>
+</html>

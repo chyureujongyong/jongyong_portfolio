@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/2023-05-03.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./js/jquery-3.6.4.js"></script>
+
+    <h1>제이쿼리 애니메이션</h1>
+    <button id="btn">애니메이션 실행</button>
+    <div class="box"></div>
+    <script>
+        $('#btn').click(function(){
+           
+            // 동시에실행할떄
+            // $('.box').animate({
+            //     height:'200px',
+            //     marginLeft:'200px',
+            //     width:'400px'
+            // });
+
+            // 맨위실행하고 아래꺼 아래꺼 이런순으로 실행
+            $('.box').animate({height:'200px'});
+            $('.box').animate({marginLeft:'200px'});
+            $('.box').animate({width:'400px'});
+
+        });
+    </script>
+
+
+    <button id="btn2"></button>
+    <div class="circle"></div>
+    <script>
+        $('#btn2').click(function(){
+            $('.circle').animate({
+                // marginLeft:'100px'
+
+                // 포지션 릴레이티브를 주면 이거사용가능
+                // += 사용시 누를때마다 이동함
+                left:'+=100px'
+                // ,
+                // width:'+=50px',
+                // height:'+=50px'
+
+                
+
+            },1000,function(){
+//              ㄴ속도
+                $('body').css('background-color','yellow');
+            });
+             
+        });
+
+        // $('#btn2').click(function(){
+        //     $('.circle').animate({left:'+=100px'},1000,function(){
+        //         $('body').css('background-color','yellow');
+        //     })
+        // }
+    </script>
+
+
+    <!-- <div class="heart">♥</div>
+    <script>
+        
+        $('.heart').animate({left:'90%'});
+        $('.heart').animate({top:'75%'});
+        $('.heart').animate({left:0});
+        $('.heart').animate({top:0});
+        $('.heart').animate({fontSize:'500px'},1000,function(){
+            $('.heart').html('★');
+            $('.heart').css('color','orange');
+        }); 
+    </script> -->
+
+    <hr>
+
+    <div id="starbox"></div>
+    <button id="btn3">stop</button>
+    <script>
+        // 2초에 한번씩(간격:setInterval) 경고창을 띄우겠다.
+        // setInterval(function(){},2000);
+
+
+        //2초에 한번씩 별박스에 별이 하나씩 찍히도록
+        var myaction = setInterval(function(){
+            // 자바스크립
+            document.querySelector('#starbox').innerHTML +='★';
+            
+            //제이쿼리
+            // $('#starbox').append('★');
+            },2000);
+
+
+        // 스탑버튼을 눌렀을떄 멈추게할려고    
+        $('#btn3').click(function(){
+            clearInterval(myaction);
+        });
+    </script>
+
+    <hr>
+
+    <button id="btn4">stop</button>
+    <script>
+        var bgcolor = ['red','orange','yellow','green','blue','darkblue','purple'];
+        var num = 0;
+        var bgchange = setInterval(function(){
+            if(num==7){
+                num=0;
+            }
+            $('body').css('backgroundColor',bgcolor[num]);
+            num++;    //num = num+1;  num+=1;  
+                      //2초마다 바뀌는건데 반복문for를 사용하면(동시에찍는거라) 마지막퍼플만 나온다. 
+        },1000);
+
+       $('#btn4').click(function(){
+        clearInterval(bgchange);
+        
+       });
+
+    </script>
+
+
+
+
+
+</body>
+</html>

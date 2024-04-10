@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            border: 3px solid black;
+            width: 800px;
+            padding: 30px;
+        }
+        .darkmode{
+            background-color: darkblue;
+            color: fff;
+        }
+        .darkmode>h1{
+            color:yellow;
+        }
+        button{
+            font-size: 40px;
+        }
+        .check{
+            text-decoration: line-through;
+        }
+
+        section{
+            border: 10px solid red;
+            width: 1000px;
+            margin: 100px auto;
+        }
+        .imglist{
+            display: flex;
+        }
+        img{
+            width: 100%;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <script src="./js/jquery-3.6.4.js"></script>
+
+    <button id="dark">dark mode</button>
+    <div class="box">
+        <h1>금요일</h1>
+        <p>목요일(木曜日/Thursday)은 월요일 기준으로 주중의 4번쨰 날이다.한 주가 월요일이 시작이라면 정가운데이다.</p>
+    </div>
+    <script>
+        dark.addEventListener('click',function(){
+            document.querySelector('.box').classList.add('darkmode');
+        })
+    </script>
+
+    <hr>
+
+    <h1>오늘의 할일 목록</h1>
+    <ul class="todo">
+        <li id="todo1">낚시가기</li>
+        <li id="todo2">영화보기</li>
+        <li id="todo3">자격증시험공부</li>
+        <li id="todo4">책읽기</li>
+        <li id="todo5">친구만나기</li>
+    </ul>
+    <script>
+
+        // ***제이쿼리식***
+        $('.todo li').click(function(){
+            $(this).toggleClass('check');
+        })
+
+
+        //-----이건 오류가많아 안쓰인다-----------
+        // // ALL을 쓰면 여기있는 li를 모두잡을수있다
+        // var myli = document.querySelectorAll('li');
+        // for(var i=0;i<5;i++){
+        //     myli[i].onclick=function(){
+        //         this.classList.toggle('check');
+        //     }
+        // }
+
+
+         // myli.forEach(function(e){
+        //     e.onclick=function(){
+        //         this.classList.toggle('check');
+        //     }
+        // });
+
+
+        // todo1.onclick=function(){
+        //     // 나(this) 자신의 클레스에 check를 추가하겠다
+        //     this.classList.add('check');
+        // }
+        // todo2.onclick=function(){
+        //     // 나(this) 자신의 클레스에 check를 추가하겠다
+        //     this.classList.add('check');
+        // }
+        // todo3.onclick=function(){
+        //     // 나(this) 자신의 클레스에 check를 추가하겠다
+        //     this.classList.add('check');
+        // }
+
+
+        // todo1.onclick=function(){
+        //     todo1.style.textDecoration='line-through';
+        //     todo1.style.opacity='0.5';
+        // }
+        // todo2.onclick=function(){
+        //     todo2.classList.toggle('check');
+        // }
+        // todo3.onclick=function(){
+        //     todo3.classList.toggle('check');
+        // }
+        // todo4.onclick=function(){
+        //     todo4.classList.toggle('check');
+        // }
+
+
+    </script>
+
+
+    <a href="http://naver.com" target="_blank" id="naverbtn" class="mynaver yournaver">네이버</a>
+    <a href="http://kakao.com" id="kakaobtn" title="카카오로 바로가기">카카오</a>
+
+    <button onclick="naverbtn.setAttribute('href','http://google.com');">구글버튼으로 변경할게요</button>
+
+    <script>
+        console.log(naverbtn.classList);
+        console.log(naverbtn.getAttribute('href'));
+        console.log(naverbtn.getAttribute('target'));
+        console.log(naverbtn.getAttribute('class'));
+
+
+        console.log($('#kakaobtn').attr('title'));
+
+        // naverbtn.setAttribute('href','http://google.com');
+
+        kakaobtn.setAttribute('title','카카오로 갈까말까');
+        // title이 없지만 추가할수도있다
+        $('#naverbtn').attr('title','hello');
+    </script>
+
+    <section>
+        <ul class="imglist">
+            <li>
+                <img src="./img/grid1.jpg" alt="1번">
+            </li>
+            <li>
+                <img src="./img/grid2.jpg" alt="2번">
+            </li>
+            <li>
+                <img src="./img/grid3.jpg" alt="3번">
+            </li>
+            <li>
+                <img src="./img/grid4.jpg" alt="4번">
+            </li>
+        </ul>
+        <div class="bigimg">
+            <img src="" alt="">
+        </div>
+    </section>
+    <script>
+        $('.imglist img').click(function(){
+                                //클릭한놈(this)의 src
+            $('.bigimg img').attr('src',this.src)
+        });
+
+        // alt값 출력-이미지에대한 설명으로 띄우기
+        // 모달팝업으로 띄우기
+    </script>
+
+
+</body>
+</html>

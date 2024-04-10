@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .mySwiper{
+            height: 500px;
+        }
+        .swiper-slide{
+            background-position: center;
+            background-size: cover;
+            padding-left: 150px;
+            /* 수직정렬ㄴ */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .swiper-slide h1{
+            font-size: 100px;
+        }
+        .swiper-slide-active h1{
+            animation: fadedown 1s;
+        }
+        @keyframes fadedown{
+            0%{opacity: 0; transform: translateY(-100px);}
+        }
+        
+        .swiper-slide p{
+            font-size: 40px;
+        }
+        .swiper-slide-active p{
+            animation: fadeup 1s;
+        }
+        @keyframes fadeup{
+            0%{opacity: 0; transform: translateY(100px);}
+            100%{opacity: 1; transform: translateY(0px);}
+        }
+        .s1{
+            background-image: url('./img/grid1.jpg');
+        }
+        .s2{
+            background-image: url('./img/grid2.jpg');
+        }
+        .s3{
+            background-image: url('./img/grid3.jpg');
+        }
+        .swiper-pagination-bullet-active{
+            background-color: red;
+        }
+        .swiper-pagination-bullet{
+            width: 30px;
+            height: 30px;
+        }
+        .swiper-button-next, .swiper-button-prev{
+            color: red;
+        }
+        .swiper-button-next:after, .swiper-button-prev:after{
+            font-size: 70px;
+        }
+
+
+        .changebox{
+            color: red;
+            text-decoration: underline;
+            background-color: pink;
+            font-size: 40px;
+            border: 5px dotted black;
+        }
+        .h200{
+            height: 200px;
+        }
+
+
+        .mybox{
+            color: white;
+            font-size: 60px;
+        }
+        .redbox{
+            background-color: red;
+        }
+        .bluebox{
+            border: 5px solid blue;
+        }
+
+        
+        .darkbox{
+            width: 500px;
+            height: 300px;
+            margin: 10px auto;          
+        }
+        .darkbtn{
+            color: black;
+            background-color: gray;
+            font-weight: bold;
+            padding: 15px 20px;
+        }
+        .whitebtn{
+            color: white;
+            background-color: dark;
+            font-weight: bold;
+            padding: 15px 20px;
+        }
+        .thursday{
+            border: 2px solid black;
+            margin-top: 10px;
+            padding: 20px;
+        }
+        .thursday h2{
+            font-size: 50px;
+        }
+        .thursday p{
+            font-size: 20px;
+            font-weight: bold;
+            color: gray;
+        }
+        .thursday_darkmode{
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            border: 2px solid black;
+            margin-top: 10px;
+
+        }
+        .h2_darkmode{
+            font-size: 50px;
+            color: yellow;
+        }
+        .p_darkmode{
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide s1">
+                <h1>slide1</h1>
+                <p>첫번쨰 슬라이드 입니다</p>
+            </div>
+            <div class="swiper-slide s2">
+                <h1>slide2</h1>
+                <p>두번쨰 슬라이드 입니다</p>
+            </div>
+            <div class="swiper-slide s3">
+                <h1>slide3</h1>
+                <p>세번쨰 슬라이드 입니다</p>
+            </div>
+            </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop : true,
+        });
+    </script>
+
+    <hr>
+
+    <button id="btn">클릭</button>
+    <div id="box" class="h200">오늘은 목요일입니다</div>
+    <div id="box2" class="h200">오늘은 금요일입니다</div>
+    <div id="box3" class="h200">하루만 더 지나면 주말!</div>
+    <script>
+        $('#btn').click(function(){
+
+            //btn버튼을 클릭했을떄 --> 아이디가 box인 클래스가 h200인 얘를 --> 삭제하겠다
+            box.classList.remove('h200');
+            $('#box').removeClass('h200');
+            
+
+            // box.classList.toggle('h200');
+            // $('#box').toggleClass('h200');
+
+
+            //btn버튼을 클릭했을떄 --> 아이디가 box인 얘한테 --> 클래스가 changebox를 넣겠다
+            // 자바스크립트식
+            // document.getElementById('box').classList.add('changebox');
+            // box2.classList.add('changebox');
+            // // 제이쿼리식
+            // $('#box3').addClass('changebox');
+
+
+
+            // box.style.color='red';
+            // $('#box').css('text-decoration','underline');
+            // $('#box').css('border','5px dotted black');
+            // box.style.fontSize='40px';
+            // box.style.backgroundColor='yellow';
+        })
+
+    </script>
+    
+    <div class="mybox happybox redbox bluebox" id="mybox">hello</div>
+    <script>
+        console.log(mybox.classList);
+        //mybox안에 클래스가 redbox가 있는가 없는가(true or false)
+        console.log(mybox.classList.contains('redbox'));
+
+        //클래스가 mybox를 yourbox로 바꿔버린다
+        mybox.classList.replace('mybox','yourbox');
+        console.log(mybox.classList);
+    </script>
+
+    <hr>
+
+    <div class="darkbox">
+        <button class="darkbtn" id="darkbtn">dark mode</button>
+        <button class="whitebtn" id="whitebtn">white mode</button>
+        <div class="thursday" id="thursday">
+            <h2 id="day_h" class="day_h">목요일</h2>
+            <p id="day_p" class="day_p">목요일(木曜日/Thursday)은 월요일 기준으로 주중의 4번쨰 날이다.한 주가 월요일이 시작이라면 정가운데이다.</p>     
+        </div>
+    </div>
+    <script>
+        document.querySelector('.darkbtn').onclick=function(){
+            
+            thursday.classList.replace('thursday','thursday_darkmode');
+            day_h.classList.replace('day_h','h2_darkmode');
+            day_p.classList.replace('day_p','p_darkmode');
+           
+        }
+        document.querySelector('.whitebtn').onclick=function(){
+            thursday.classList.replace('thursday_darkmode','thursday');
+            day_h.classList.replace('h2_darkmode','day_h');
+            day_p.classList.replace('p_darkmode','day_p');
+        }
+
+       
+        
+    </script>
+
+
+
+</body>
+</html>

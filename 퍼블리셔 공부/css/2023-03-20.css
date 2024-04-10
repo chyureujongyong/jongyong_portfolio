@@ -1,0 +1,138 @@
+body{
+    background-color: green;
+
+}
+p{
+    display: none;
+    font-size: 20px;
+}
+
+
+/* 미드어쿼리(조건에따라)사용하겠다
+현재디바이스 넓이< 600px */
+
+/* mobile */
+@media screen and (max-width:600px){
+    body{
+        background-color:yellow;
+    }
+    h1{
+        display: none;
+    }
+    .txt3{
+        display: block;
+    }
+    
+}
+
+ /* pc */
+@media screen and (min-width: 1001px){
+    h1{
+        color: #fff;     
+    }
+    .txt1{
+        display: block;
+    }
+     
+}
+
+/* tablet */
+@media  screen and (min-width:601px) and (max-width:1000px){
+    body{
+        background-color: red;
+    }
+    .txt2{
+        display: block;
+    } 
+}
+    
+/* *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.place{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.place li{
+    width: 20%;
+    font-size: 30px;
+    color: white;
+    border-radius: 30px;
+    padding: 30px;
+    height: 120px;
+    
+}
+
+@media screen and (max-width:640px){
+    .place li{
+        width: 35%;
+    }
+    .e1,.e4{
+        background-color: black;
+    }
+    .e2,.e3{
+        background-color: purple;
+    }
+}
+@media screen and (min-width:641px){
+    .e1,.e3{
+        background-color: black;
+    }
+    .e2,.e4{
+        background-color: purple;
+    }
+    
+}  */
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.banner{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px
+
+}
+.banner li{
+    background-color: black;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+    font-size: 25px;
+    color: #fff;
+    align-items: center;
+    border-radius: 30px;
+}
+.banner li:nth-child(2),.banner li:nth-child(4){
+    background-color: purple;
+}
+
+@media(max-width:1000px){
+    .banner{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .banner{
+        grid-template-columns: 1fr 1fr;
+    }
+    .banner li:nth-child(3){
+        background-color: purple;
+    }
+    .banner li:nth-child(4){
+        background-color: black;
+    }
+}
+    

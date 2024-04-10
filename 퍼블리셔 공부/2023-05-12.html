@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/2023-05-12.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        /* body{
+            font-size: 50px;
+            text-align: center;
+        } */
+
+        /* 밑에서 스르륵올라오게하는방법 */
+        section{
+            display: none;
+            animation: fadeup 1s;
+        }
+        @keyframes fadeup{
+            0%{
+                opacity: 0;
+                margin-top: 200px;
+            }
+            100%{
+                opacity: 1;
+                margin-top: 0;
+            }
+        }
+
+        .circle{
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 10px solid #ccc;
+            border-top: 10px solid orange;
+            animation: spin 1s infinite linear;
+/*                              ㄴ무한히   ㄴ같은속도로 */
+        }
+        @keyframes spin{
+            /* 위치선정한 트렌스폼이랑 같이써줘야된다(띄어쓰기로) */
+            0%{transform: translate(-50%,-50%) rotate(0deg);}
+            100%{transform: translate(-50%,-50%) rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <script src="./js/jquery-3.6.4.js"></script>
+
+<!-- 예1 -->
+    <!-- <p>안녕하세요!</p>
+    <script>
+        // 설정한 몇초후에 딱 한번만 실행
+        setTimeout(function(){
+            $('p').hide();
+            $('body').css('background-color','red');
+        });
+    </script> -->
+
+<!-- 예2 -->
+    <!-- <section>
+        <h1>오늘은 금요일</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quos reiciendis assumenda quibusdam, enim eveniet libero ab culpa ex itaque delectus expedita asperiores, corrupti eos magnam at quisquam ut repudiandae?</p>
+    </section>
+    <div class="circle"></div>
+    <script>
+        setTimeout(showpage,3000);
+        function showpage(){
+            $('.circle').hide();
+            $('section').show();
+        }
+
+    </script> -->
+
+<!-- 예3 -->
+
+    <div class="top_menubar">
+        <h1>Animals</h1>  
+        <ul>
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu"></i>
+    </div>
+    <div class="imgbox">
+            <div class="imgname">Lovely animals</div>
+            <div class="i-l"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="i-r"><i class="fa-solid fa-chevron-right"></i></div>
+    </div>  
+    <div class="closeX">
+        <i class="fa-solid fa-xmark" onclick="closemenu"></i>
+    </div>
+   
+
+    <script>
+       function openmenu(){
+            document.querySelector('.top_menubar').style.display='block';
+       }
+       function closemenu(){
+            document.querySelector('.top_menubar').style.display='none';
+       }
+    </script>
+
+
+
+
+
+</body>
+</html>

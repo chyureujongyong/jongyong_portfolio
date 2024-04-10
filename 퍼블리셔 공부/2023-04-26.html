@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <title>Document</title>
+    <style>
+        .btn{
+            background-color: blue;
+            padding: 10px 20px;
+            color: white;
+            font-size: 2rem;
+            width: 500px;
+          
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .contents{
+            width: 500px;
+            background-color: black;
+            color: white;
+            font-size: 1.5rem;
+            padding: 20px;
+            display: none;
+        }
+        .xi-close{
+            display: none;
+        }
+    </style>
+
+
+
+
+
+
+</head>
+<body>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <h1>제이쿼리</h1>
+    <p>제이쿼리 테스트</p>
+    <p>제이쿼리 테스트</p>
+    <p>제이쿼리 테스트</p>
+    <script>
+        document.querySelector('h1').style.display='none';
+        
+        $('p').hide();
+        $('p:first-of-type').show();
+    </script>
+
+    <!-- <div id="topbox">자세히보기
+        <p id="x_btn">X</p>
+    </div>
+    <div id="bottombox">ZZZZZZZZZZZZZZZZZZZZZZZZZZZZ</div>
+    <script>
+        bottombox.style.display='none';
+
+        if(bottombox.display=='none'){
+            x_btn.onClick=function(){
+                $('bottombox').show();
+            }
+        } 
+    </script> -->
+
+    <div class="btn">
+        <span>자세히보기</span>
+        <i class="xi-close" onclick="contentsClose()"></i>
+    </div>
+    <div class="contents">ZZZZZZ ZZZZZZ ZZZZZZZ ZZZZZZZ zzzzzzzzzz zzzzzzzzzzzzZZ</div>
+    <script>
+        
+        document.querySelector('span').onclick=function(){
+            // $('.contents').show();
+            $('.contents').slideDown();
+            $('.xi-close').show();
+        };
+       function contentsClose(){
+            // $('.contents').hide();
+            $('.contents').slideUp();
+            $('.xi-close').hide();
+       };
+    </script>
+
+    <button id="btn2">버튼</button>
+    <div id="contents2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum sapiente facilis quas dolores omnis maiores dicta natus blanditiis nemo eaque ullam recusandae, sit, ea modi nam amet vitae nesciunt praesentium.
+    </div>
+    <script>
+        // $('#contents2').hide();
+
+        btn2.onclick=function(){
+
+             $('#contents2').slideToggle(); //slideToggle 그랬다가말았다가
+            
+            // $('#contents2').fadeIn();           //서서히 나오는
+            // $('#contents2').fadeOut();          //서서히 사라지는
+            // $('#contents2').fadeToggle('slow'); //서서히 나왔다가 사라졌다가
+            // $('#contents2').fadeTo('slow',0.5);    //투명해지게 opcacity
+        }
+    </script>
+
+    <h5>오늘은 수요일</h5>
+    <h6>내일은 목요일</h6>
+    <script>
+        var mytxt = document.querySelector('h5').innerHTML;
+        console.log(mytxt);
+
+        // 제이쿼리식으로 요소안에있는 글자를 가져올떄!!
+        var mytxt2 =$('h6').html(); 
+        console.log(mytxt2);
+
+        
+        document.querySelector('h5').innerHTML="안녕";
+        //제이쿼리식으로 안에있는글자를 바꾸는방법!!
+        $('h6').html('반가워');
+
+    </script>
+
+    <div class="happy">ABC</div>
+    <div>수요일</div>
+    <div>어린이날</div>
+    <script>
+        //해피를 클릭하면..
+        $('.happy').click(function(){
+            // document.querySelector('#happy').style.backgroundColor='yellow';
+
+        // css변경할떄
+        $('.happy').css('background-color','yellow');
+                 //        ㄴ무엇을!!         ㄴ뭐로바꿀까!!
+
+        $('.happy').css('font-size','100px')
+
+
+
+        });
+
+    </script>
+
+
+
+</body>
+</html>

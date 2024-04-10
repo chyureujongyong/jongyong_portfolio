@@ -1,0 +1,268 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #333;
+}
+/* a테그한테는 꼭 display inline-block */
+.container{
+    width: 1200px;
+    height: 700px;
+    margin: 0 auto; 
+}
+
+/* --header-- */
+header{
+    /* 요고** */
+    position: relative;
+
+    height: 100px;
+    background-color: beige;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 밑에이걸추가해야된다 */
+.submenubg{
+    /* 요고** */
+    position: absolute;
+    top: 74px;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    background-color: aqua;
+    
+    display: none;
+    /* 이걸추가하고 밑에 .sub도 z-index추가 */
+    z-index: 30;
+}
+.menu{
+    display: flex;
+}
+.menu>li{
+    /* -이놈이 .sub의 엄마- */
+    position: relative;
+}
+/* --a테그놈한테 크기를주는게 좋다!!-- */
+.bigmenu{
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: pink;
+    text-decoration: none;
+    font-size: 20px;
+}
+.sub{
+    display: none;
+
+    position: absolute;
+    /* -엄마크기만큼의 가로값- */
+    width: 100%;
+    /* 세로값은 따로설정 */
+    height: 130px;
+    text-align: center;
+    background-color: skyblue;
+
+    z-index: 60;
+}
+.sub a{
+    display: inline-block;
+    /* -width100%- */
+    width: 100%;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    
+}
+.menu>li:hover .bigmenu{
+    background-color: red;
+    color: white;
+}
+.sub a:hover{
+
+    background-color: aqua;
+}
+
+
+
+/* --slidebox-- */
+.slidebox{
+    height: 300px;
+
+    /* 딱붙게할려면(여백이생겨서) */
+    font-size: 0;
+
+    overflow: hidden;
+}
+.slidewrap{
+    width: 300%;
+    height: 100%;
+    display: flex;
+}
+
+
+
+
+/* --bannerbox-- */
+.bannerbox{
+    height: 200px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/* 공지사항 */
+.board{
+    background-color: darkcyan;
+}   
+.tab-title-box{
+    display: flex;
+}
+.tab-title{
+    display: inline-block;
+    background-color: pink;
+    padding: 10px 30px;
+}
+.title1{
+    background-color: #fff19f;
+}
+.noticebox{
+    height: 150px;
+    background-color: #fff19f;
+}
+.noticebox a{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.gallbox{
+    display: none;
+    text-align: center;
+    padding-top: 10px;
+    height: 150px;
+    background-color: pink;
+}
+.gallbox img{
+    /* width보다 height로 맞춰주는게좋다 */
+    height: 130px;
+}
+
+
+/* 배너 */
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+}
+/* 바로가기 */
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    background-image: url('../img/links.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.bannerbox h2{
+    padding: 10px 30px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+}
+
+
+/* --footer-- */
+footer{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    height: 100px;
+    text-align: center;
+}
+.logobox{
+    grid-row: 1/3;
+    background-color: pink;
+}
+.logobox img{
+    filter: grayscale(100%);
+    margin-top: 30px;
+}
+
+.bottommenu{
+    padding-top: 12px;
+    background-color: #ffffe5;
+}
+.bottommenu li{
+    display: inline-block;
+}
+.bottommenu li::after{
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 10px;
+    margin: 0 10px;
+    background-color: black;
+}
+.bottommenu li:last-child::after{
+    display: none;
+}
+
+.copyright{
+    padding-top: 12px;
+    background-color: #ffe6c8;
+}
+
+
+
+
+/* --레이어팝업-- */
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: beige;
+    border: 10px solid violet;
+    width: 400px;
+    height: 250px;
+    padding: 30px;
+    z-index: 100;
+
+    display: none;
+}
+.popup a{
+    display: inline-block;
+    padding: 10px 20px;
+
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    color: #fff;
+    background-color: red;
+}
+
+.popupbg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1;
+
+    display: none;
+}
+
+
+
+
+/* ctrl+f 찾기기능 */

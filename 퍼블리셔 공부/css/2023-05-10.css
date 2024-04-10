@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.slide{
+    width: 1000px;
+    height: 300px;
+    margin: 20px auto;
+    border: 10px solid black;
+    overflow: hidden;
+    position: relative;
+}
+.slide h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 100px;
+    font-weight: 700;
+    text-shadow: 0 0 20px #000;
+}
+.img1,.img2,.img3{
+    width: 1000px;
+    height: 300px;
+}
+.img1{
+    background-image: url(../img/grid1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img2{
+    background-image: url(../img/grid2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img3{
+    background-image: url(../img/grid3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* ------------------------------------------ */
+
+
+.myslide{
+    width: 400px;
+    height: 250px;
+    border: 10px solid black;
+    margin: 50px auto;
+    overflow: hidden;
+}
+.myslide ul{
+    width: 1200px;
+    height: 250px;
+    display: flex;
+}
+.myslide li{
+    width: 400px;
+    height: 250px;
+    font-size: 60px;
+    color: white;
+}
+.redbox{
+    background-color: red;
+}
+.bluebox{
+    background-color: blue;
+}
+.pinkbox{
+    background-color: pink;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .box{
+            width: 50px;
+            height: 50px;
+            border-radius:50%;
+            background-color: red;
+            color: yellow;
+            display: inline-block;
+            text-align: center;
+            line-height:50px;
+            font-size: 2rem;
+        }
+        .box:nth-child(2n){
+            background-color: cyan;
+            color: black;
+        }
+
+        p{
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            border-radius:50%; 
+            background-color: black;
+        } */
+
+        #mycircle{
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
+
+
+</head>
+<body>
+    <script>     
+        // for(var i=1;i<10;i++){
+        //     document.write('<div class="box">'+i+'</div>');
+        // };
+
+        // console.log(1);
+        // console.log(2);
+        // console.log(3);
+        // console.log(4);
+        // console.log(5);
+        // console.log(6);
+        // console.log(7);
+        // var num= 1;     //초기값
+        // while(num<8){   //종료값
+        //     console.log(num);
+        //     num++;      //증가
+        // };
+
+        // var mycolor = ['red','blue','purple','green','orange'];
+        // for(var i=0;i<mycolor.length;i++){
+        //     document.write('<p style="background-color:'+mycolor[i]+'"></p>');
+        // };
+    </script>
+
+    <h1 id="title">자바스크립트의 활용</h1>
+    <script>
+        // var mytitle = prompt('제목을 무엇으로 할까요??');
+        var title_color = prompt('제목은 무슨색으로 할까요??');
+
+        var inner = document.getElementById('title').innerHTML;
+        console.log(inner);
+
+        document.getElementById('title').style.color = title_color; 
+        document.getElementById('title').style.fontSize = '100px';
+        //                                         ㄴ' - '이거못써서 대문자로
+        document.getElementById('title').style.backgroundColor = 'yellow';
+        document.getElementById('title').style.textDecoration = 'line-through';
+    </script>
+
+    <div id="mycircle"></div>
+    <script>
+        var circle_size = prompt('원의 반지름을 입력하세요');
+        document.getElementById('mycircle').style.height= (2*circle_size)+'px';
+        document.getElementById('mycircle').style.width= (2*circle_size)+'px';
+    </script>
+
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <li>d</li>
+        <li>e</li>
+        <li>f</li>
+        <li>g</li>
+        <li>h</li>
+        <li>i</li>
+        <li>j</li>
+    </ul>
+    <script>
+        var myh1 = document.getElementById('title');
+        console.log(myh1);
+
+        var myli = document.getElementsByTagName('li');
+        console.log(myli);
+
+    var myli = document.getElementsByTagName('li')[0].style.color = 'red';
+    </script>
+
+
+
+</body>
+</html>

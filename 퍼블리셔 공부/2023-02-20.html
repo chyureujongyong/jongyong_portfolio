@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body  {background-color: yellow;}
+        section{background-color: red;}
+        footer{background-color:black;}
+        footer{color: white;}
+        footer{font-size : 50px;}        
+        footer{text-decoration:underline;}
+        /* 
+        header{text-decoration : line-through;}
+        header{background-color: purple;}
+        header{color:pink;}
+        header{font-size:30px;}
+        header{font-weight:bold;}
+        header{border:13px solid green;}
+         */
+
+       /* 이렇게한번에적는다 */
+        header{
+            /* 취소선을 긋는 코드 */
+            text-decoration : line-through;
+            background-color: purple;
+            color:pink;
+            font-size:30px;
+            font-weight:bold;
+            /* 테두리를 만들어주는코드
+            border-width 
+            border-style
+            border-color*/
+            border:13px solid green;
+        }
+
+        p{
+            background-color: green;
+            color: white;           
+            font-size: 30px;
+        }
+        a{text-decoration: line-through;
+            color: white;  
+        }
+
+        /* p테그중에 id설정한거 */
+        #tomorrow{background-color: blue;}
+        #인풋창{
+            background-color: red;
+            border: 5px violet;
+            }
+
+    </style>
+</head>
+<body>
+    <!-- 이거 별로임 쓰지마셈 아래꺼로쓰셈
+    <div id="header"></div>
+    <div id="navi"></div>
+    <div id="main_container">
+        <div id="aside-menu"></div>
+    </div>
+    <div id="footer"></div> 
+    -->
+
+    <!-- 시멘틱태그 -->
+    <!-- <header>
+        header
+        <nav>menu</nav>
+    </header>   
+    <section>section</section>
+    <aside>aside</aside>
+    <footer>footer</footer> -->
+
+    <header>
+        header
+    </header>   
+    <section>
+        section</section>
+    <footer>footer</footer>
+
+    <p>오늘은 <a href="#">월요일</a>입니다</p>
+    <p id="tomorrow">내일은 화요일입니다</p>
+    <p>이번주 주말은 날이 좋았으면 좋겠어요</p>
+
+    <input type="text">
+    <input type="text" id="인풋창">
+    <input type="text">
+
+
+    
+</body>
+</html>

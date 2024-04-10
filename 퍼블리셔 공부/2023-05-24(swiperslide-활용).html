@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <title>Document</title>
+    <style>
+        .byebye{
+            width: 80%;
+            margin: 10px auto;
+            height: 500px;
+        }
+        .swiper-slide{
+            height: 400px;
+            font-size: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .myslide1{
+            background-color: red;
+        }
+        .myslide2{
+            background-color: yellow;
+        }
+        .myslide3{
+            background-color: green;
+        }
+        .myslide4{
+            background-image: url('./img/grid1.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+        
+
+        .partner-slide{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .partner-slide .swiper-slide{
+            height: 400px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            text-align: center;
+            font-size: 2rem;
+        }
+        .img1{
+            width: 100%;
+            position: relative;
+        }
+        .img1_txt{
+            color: white;
+            font-weight: bold;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Swiper -->
+    <div class="swiper byebye">
+        <div class="swiper-wrapper">
+            <!--두개 이상의 클래스를 가질수있다(띄어쓰기)-->
+            <div class="swiper-slide myslide1">Slide 1</div>  
+            <div class="swiper-slide myslide2">Slide 2</div>
+            <div class="swiper-slide myslide3"></div>
+            <div class="swiper-slide myslide4">Slide 4</div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+        </div>
+        <!--버튼쪽-->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Initialize Swiper -->
+   <script>
+        var swiper = new Swiper(".byebye", {
+//  이름    ㄴ여기는 바꿔도됨  ㄴ여기는 바꾸면안됨
+
+//=================가로===================
+//         autoplay: {
+//             delay: 2500,
+//             disableOnInteraction: false,
+//         },
+//         navigation: {
+//             nextEl: ".swiper-button-next",
+//             prevEl: ".swiper-button-prev",
+//         },
+// //      다시 9번에서 1번으로 넘어가게함!!
+//         loop : true,
+
+//=================세로======================
+      direction: "vertical",
+
+
+
+        });
+      
+   </script>
+
+   <h1>Partner</h1>
+
+    <!-- Swiper -->
+    <div class="swiper partner-slide">
+        <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="./img/google.png" alt="google">
+        </div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <script>
+        var swiper = new Swiper('.partner-slide',{
+            slidesPerView: 3,
+            spaceBetween: 30,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    
+    <div class="swiper meSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./img/grid1.jpg" alt="1번" class="img1">
+                <dl class="img1_txt">
+                    <dt>Slide1</dt>
+                    <dd>첫번쨰 슬라이드입니다</dd>
+                </dl>
+            </div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    
+    <script>
+        var swiper = new Swiper('.meSwiper',{
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+</body>
+</html>
