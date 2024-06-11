@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Cards Effects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/InstagramCards.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Instagram Cards (반응형 제작) </h1>
+            <p class="header_link">By
+                <a href="https://github.com/chyureujongyong/jongyong_portfolio">
+                    <i class="fa-brands fa-github"></i>
+                    <i>jong yong</i>
+                </a>
+            </p>
+            <p class="effect_emphasis">
+                A collection of <span>advanced CSS</span> styles to create <span>realistic-looking effects</span> for the faces of Instagram cards. The cards use <span>3d transforms</span>, <span>filters</span>, <span>blend modes</span>, <span>css gradients</span> and interactions to provide a unique experience when taking a closer look!
+            </p>
+            <div class="prologue_box">
+                <div class="header_prologue">
+                    <div class="prologue_front prologue">
+                        <img src="./img(Instagram)/Chloe_hi_instagram.png" alt="Chloe">
+                    </div>
+                    <div class="prologue_back prologue">
+                        <img src="./img(Instagram)/Chloe_hi_instagram.png" alt="Chloe">
+                    </div>
+                </div>
+            </div>
+            <div class="explanation">
+                <div>Click or hover over the card for more information.</p>
+                <hr>
+            </div>
+        </header>  
+
+        <!-- section1 --> 
+        <h2 class="title title1">360°</h2>
+        <p class="subtitle subtitle1">모든 카드는 <span>Click</span>시 css를 활용하여 <span>360°</span>회전합니다.</p>
+        <section class="scene1">
+            <div class="first">
+                <div class="first_card front">
+                    <img src="./img(Instagram)/Irem_hi_instagram.png" alt="Irem">
+                </div>
+                <div class="first_card back">
+                    <img src="./img(Instagram)/Irem_hi_black.png" alt="Irem">
+                </div>
+            </div>
+            <div class="first">
+                <div class="first_card front">
+                    <img src="./img(Instagram)/Irem_angry_instagram.png" alt="Irem">
+                </div>
+                <div class="first_card back">
+                    <img src="./img(Instagram)/Irem_angry_black.png" alt="Irem">
+                </div>
+            </div>
+            <div class="first">
+                <div class="first_card front">
+                    <img src="./img(Instagram)/Irem_crying_instagram.png" alt="Irem">
+                </div>
+                <div class="first_card back">
+                    <img src="./img(Instagram)/Irem_crying_black.png" alt="Irem">
+                </div>
+            </div>
+        </section>
+
+        <!-- section3 -->
+        <h2 class="title title3">Hover(중앙) & Click</h2>
+        <p class="subtitle subtitle3">
+            모든 카드는 <span>hover</span>시 CSS를 활용하여 중앙에서 일어나게끔 <span>애니메이션 효과</span>를 추가하였습니다.<br>
+            커서에 있는 카드를 <span>click</span>시 <span>z-index</span>값을 활용하여 맨앞,원래위치로 이동시킵니다.<br>
+            클릭 상태에서 <span>mouseleave</span>시 초기화 합니다.
+        </p>
+        <section class="scene3">
+            <div class="second">
+                <img src="./img(Instagram)/Irem_hi_instagram.png" alt="">
+            </div>
+            <div class="second">
+                <img src="./img(Instagram)/Irem_hi_instagram.png" alt="">
+            </div>
+            <div class="second">
+                <img src="./img(Instagram)/Irem_hi_instagram.png" alt="">
+            </div>
+        </section>
+
+        <!-- section4 -->
+        <h2 class="title title4">Transform ( perspective, rotateX, rotateY )</h2>
+        <p class="subtitle subtitle4">
+            모든 카드는 <span>mousemove</span>시 <span>커서 위치에 따라</span> 카드가 움직이게 합니다.<br>
+            모든 카드는 <span>mouseleave</span>시 <span>초기화</span>합니다.<br>
+            화면(가로900px)이하에선 카드 <span>클릭</span> 시 <span>z-index</span>를 활용해 자세히 보실 수 있습니다.
+        </p>
+        <section class="scene4">
+            <div class="fourth">
+                <img src="./img(Instagram)/Adina_sad_instagram.png" alt="Adina">
+            </div>
+            <div class="fourth">
+                <img src="./img(Instagram)/Adina_surprise_instagram.png" alt="Adina">
+            </div>
+            <div class="fourth">
+                <img src="./img(Instagram)/Adina_panic_instagram.png" alt="Adina">
+            </div>
+        </section>
+
+
+
+        <!-- section2 -->
+        <h2 class="title title2">180° & 3D ( linear-gradient )</h2>
+        <p class="subtitle subtitle2">
+            모든 카드는 커서 위치를 기반으로 <span>3D</span> 회전합니다.<br>
+            <span>선형 그라데이션</span>이 커서 위치에 따라 이동합니다.<br>
+            카드를 클릭 시 검은 화면으로 확인하실 수 있습니다.
+        </p>
+        <section class="scene2">
+            <div class="card">
+                <div class="cardoverlay"></div>
+                <div class="card-side front">
+                    <img src="./img(Instagram)/Charlotte_heart_instagram.png" alt="Charlotte">
+                </div>
+                <div class="card-side back">
+                    <img src="./img(Instagram)/Charlotte_heart_black.png" alt="Charlotte">
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardoverlay"></div>
+                <div class="card-side front">
+                    <img src="./img(Instagram)/Charlotte_no_instagram.png" alt="Charlotte">
+                </div>
+                <div class="card-side back">
+                    <img src="./img(Instagram)/Charlotte_no_black.png" alt="Charlotte">
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardoverlay"></div>
+                <div class="card-side front">
+                    <img src="./img(Instagram)/Charlotte_sad_instagram.png" alt="Charlotte">
+                </div>
+                <div class="card-side back">
+                    <img src="./img(Instagram)/Charlotte_sad_black.png" alt="Charlotte">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <script src="./js/InstagramCards.js"></script>
+</body>
+</html>
