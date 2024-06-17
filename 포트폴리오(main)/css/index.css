@@ -234,10 +234,10 @@ html,body{
     width: 77%;
 }
 .skill4{
-    width: 50%;
+    width: 68%;
 }
 .skill5{
-    width: 68%;
+    width: 78%;
 }
 @keyframes skill{
     0%{
@@ -361,7 +361,11 @@ html,body{
         padding: 4px;
     }
 }
-
+.slide0{
+    background-image: url('../index_img/popol_InstagramCard.png');
+    background-position: center;
+    background-size: cover;
+}
 .slide1{
     background-image: url('../index_img/popol1_sbuck5.jpg');
     background-position: center;

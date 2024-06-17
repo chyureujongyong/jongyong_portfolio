@@ -468,3 +468,28 @@ header>p>a{
 .card.is-flipped .back {
     transform: rotateY(0deg); /* 뒷면을 회전하여 보이도록 설정 */
 }
+
+/* footer */
+footer{
+    padding: 50px 0;
+}
+.footer_content{
+    max-width: 723px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media(min-width:576px){
+    .footer_content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.footer_logo>img{
+    width: 100px;
+}
+.footer_copyright{
+    margin-left: 12px;
+    font-size: 11px;
+    color: white;
+}
