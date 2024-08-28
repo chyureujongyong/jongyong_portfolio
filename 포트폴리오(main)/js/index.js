@@ -33,19 +33,22 @@ $(document).ready(function(){
 
       
     //링크이동
+    $('#Instagram_link_bg').click(function(){
+        window.location.href = './포트폴리오(main)/Instagram Cards★.html'
+    });
     $('#STARBUCK_link_bg').click(function(){
-        window.location.href = 'popol1.html';
+        window.location.href = './포트폴리오(main)/popol1.html';
     });
     $('#LOSKARK_link_bg').click(function(){
-        window.location.href = 'popol2.html';
+        window.location.href = './포트폴리오(main)/popol2.html';
     });
     
     $('#Burgerking_link_bg').click(function(){
-        window.location.href = 'popol3.html';
+        window.location.href = './포트폴리오(main)/popol3.html';
     });
     
     $('#Momstouch_link_bg').click(function(){
-        window.location.href = 'popol4.html';
+        window.location.href = './포트폴리오(main)/popol4.html';
     });
     
     
